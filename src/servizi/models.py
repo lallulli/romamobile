@@ -755,7 +755,11 @@ class Messaggio(models.Model):
 
 	def save(self, *args, **kwargs):
 		if self.markdown:
-			s = markdown.markdown(self.content, extensions=['extra']).strip('<p>').strip('</p>')
+			s = markdown.markdown(self.content, extensions=['extra'])
+			if s.startswith('<p>'):
+				s = s[3:]
+			if s.endswith('</p>'):
+				s = s[:-4]
 			self.cached_content = s
 		else:
 			self.cached_content = self.content
