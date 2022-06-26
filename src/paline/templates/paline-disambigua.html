@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load history %}
+{% load format_extras %}
+
+{% block content %}
+
+	<p>
+		<form id="linea" method="get" action="/paline">
+		{{ form.cerca }}
+	  <input type="submit" name="Submit" value="Cerca" />
+	  {% formhist %}
+	 </form>
+	</p>
+
+	{% if paline_semplice %}
+		<h2>{% trans "Fermate trovate" %}</h2>
+		{% for p in paline_semplice %}
+			<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+			<a href='{% hist %}/paline/palina/{{ p.id_palina }}{% endhist %}'>{{ p.nome_ricapitalizzato }} ({{ p.id_palina}})</a><br />
+		{% endfor %}
+	{% endif %}
+
+	{% if paline_extra %}
+		<h2>{% trans "Fermate trovate" %}</h2>
+		{% for p in paline_extra %}
+			{% if request.GET.mostra_tutto or not p.nascosta %}
+				<p class="vskip">
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+					<a href='{% hist %}/paline/palina/{{ p.id_palina }}{% endhist %}'>{{ p.nome_ricapitalizzato }} ({{ p.id_palina}})</a>
+					{% if p.distanza %}
+						({{ p.distanza|arrotonda_distanza }})
+					{% endif %}
+					<br />
+					{% for l in p.linee_info %}
+						&nbsp;&nbsp;<a class="noa" href='{% hist %}/paline/linea/{{ l.linea.id_linea }}{% endhist %}'><span class="linea">{{ l.linea.id_linea }}</span>
+						<span class="b">{{ l.arrivo.nome_ricapitalizzato }}</span></a><br />
+					{% endfor %}
+					{% if p.linee_extra %}
+						&nbsp;&nbsp;
+						{% trans "Altre linee:" %}
+							{% for l in p.linee_extra %}
+								<a href='{% hist %}/paline/linea/{{ l.linea.id_linea }}{% endhist %}'><span class="linea">{{ l.linea.id_linea }}</span></a>
+							{% endfor %}				
+					{% endif %}
+				</p>
+			{% endif %}
+		{% endfor %}
+		{% if paline_nascoste and not request.GET.mostra_tutto %}
+			<p class="vskip">
+				{% trans "Alcune fermate sono state nascoste perch&eacute; non vi transitano altre linee bus" %}
+				(<a href="{% addparam "mostra_tutto=1" %}">{% trans "mostra tutto" %}</a>).
+			</p>
+		{% endif %}
+	<p>
+		<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+		<a href="/percorso/js/?hl={{ lingua.codice }}&amp;query={{ cerca }}&amp;cl=1&amp;lf=0" target="_blank">{% trans "Mappa" %}</a>
+	</p>		
+	{% endif %}
+	
+	{% if percorsi %}
+		<h2>{% trans "Linee trovate" %}</h2>
+		<table>
+		{% for p in percorsi %}
+			{% if request.GET.inactive or not p.nascondi_percorso %}
+				<tr class="top">
+				<td>
+					<a class="noa" href='{% hist %}/paline/percorso/{{ p.id_percorso }}{% endhist %}'><span class="linea">
+						{% if p.descrizione %}
+							{{ p.descrizione }}
+						{% else %}
+							{{ p.linea.id_linea }}
+						{% endif %}
+					</span>
+					</a>
+				</td><td><a class="noa" href='{% hist %}/paline/percorso/{{ p.id_percorso }}{% endhist %}'>
+					<span class="b">{{ p.arrivo.nome_ricapitalizzato }}</span>{% if p.dest_zone %} ({{ p.dest_zone }}){% endif %}
+				{% if not p.linea.monitorata %}
+					<br />({% trans "non monitorata" %})
+				{% else %}
+					{% if not p.abilitata_complessivo %}
+						<br />
+						{% if p.news_disabilitazione_complessivo %}
+							(<a href="{% hist %}/news/dettaglio/{{ p.news_disabilitazione_complessivo.prima_categoria.id_categoria }}/{{ p.news_disabilitazione_complessivo.id_news }}{% endhist %}">{% trans "non disponibile" %}</a>)
+						{% else %}
+							({% trans "non disponibile" %})
+						{% endif %}
+					{% endif %}
+				{% endif %}
+				{% if p.departures_count or p.departures_count == 0 %}
+					<br />🚍 {{ p.vehicles_count }} 🕒 {{ p.departures_count }}
+					{% if p.alerts %}
+						<img width="20" height="18" src="/paline/s/img/warning_{{ p.alerts.max_severity }}.png" />
+					{% endif %}
+					{% if p.decodeCarteggio %} - {{ p.decodeCarteggio }}{% endif %}
+				{% endif %}
+				</a></td></tr>
+			{% endif %}
+		{% endfor %}
+		</table>
+		{% if nascondi_percorsi and request.GET.inactive != '1' %}
+			<p class="vskip">(<a href="{% addparam "inactive=1" %}">{% if nascondi_percorsi == 1 %}{% blocktrans %}Mostra una linea non attiva adesso{% endblocktrans %}{% else %}{% blocktrans %}Mostra {{ nascondi_percorsi }} linee non attive adesso{% endblocktrans %}{% endif %}</a>)</p>
+		{% endif %}
+
+		{% if request.GET.legend %}
+			<div id="legend">
+
+			<h2 class="vskip">{% trans "Legenda" %}</h2>
+			<p>
+				🚍 = {% trans "Numero di veicoli sul percorso" %}<br />
+				🕒 = {% trans "Numero di partenze programmate all'ora" %}<br />
+				<img width="20" height="18" src="/paline/s/img/warning_0.png" /> = {% trans "Perturbazione del servizio" %}<br />
+				<img width="20" height="18" src="/paline/s/img/warning_1.png" /> = {% trans "Problemi al servizio" %}<br />
+				<img width="20" height="18" src="/paline/s/img/warning_2.png" /> = {% trans "Interruzione del servizio" %}<br />
+
+			</p>
+			</div>
+		{% else %}
+			<p class="vskip">(<a href="{% addparam "legend=1#legend" %}">{% trans "Mostra legenda" %}</a>)</p>
+		{% endif %}
+
+
+	{% endif %}
+
+{% endblock %}

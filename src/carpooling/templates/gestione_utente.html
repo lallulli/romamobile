@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+	<h2>Pagina di gestione degli utenti Carpooling di {{organizzazione}}</h2>
+	{% if error %}
+		Errore caricamento pagina. Tornare alla pagina principale del servizio Carpooling.
+	{% endif %}
+	<h4>Elenco Utenti</h4>
+	
+	<!--<div align="center" style="width:200px;height:100px;overflow-y: scroll; border:1px solid black;">-->
+	<table cellpadding="4" width="180" border=1>
+	<tr bgcolor=#822433>
+		<th><h3> Cognome </h3></th>
+		<th><h3> Nome </h3></th>
+		<th><h3> Passaggi Richiesti  </h3></th>
+		<th><h3> Richieste Annullate </h3></th>
+		<th><h3> Passaggi Offerti </h3></th>
+		<th><h3>Offerte Annullate </h3></th>
+		<th><h3> Passaggi Forniti </h3></th>
+		<th><h3> Feedback Offerente </h3></th>
+		<th><h3> Feedback Richiedente </h3></th>
+		<th><h3> Valutazione </h3></th>
+		<th><h3> Stato </h3></th>
+	</tr>
+	{% for utente in listamanager %}
+		<tr>
+			<td class="b">{{ utente.user.last_name }}</td>
+			<td class="b">{{ utente.user.first_name }}</td>
+			{% for statistiche in utente.stats %}
+				<td align="center" class="i">{{statistiche}}</td>
+			{% endfor %}
+			<td align="center">
+				Mobility Manager
+			</td>
+		</tr>
+	{% endfor %}
+	{% for utente in listautenti %}
+		<tr>
+			<td class="b">{{ utente.user.last_name }}</td>
+			<td class="b">{{ utente.user.first_name }}</td>
+			{% for statistiche in utente.stats %}
+				<td align="center" class="i">{{statistiche}}</td>
+			{% endfor %}
+			<td align="right">
+			{%if not utente.abilitato%}
+				<a href="{% hist %}/carpooling/abilita/{{ utente.pk }}{% endhist %}" class ="abilita">Abilita</a>
+			{%else%}
+				<a href="{% hist %}/carpooling/disabilita/{{ utente.pk }}{% endhist %}" class ="disabilita">Disabilita</a>
+			{%endif%}
+		</tr>
+	{% endfor %}
+	</table>
+{% endblock %}

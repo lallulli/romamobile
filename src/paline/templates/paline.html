@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block fullscript %}
+{% endblock %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+
+{% if errore %}
+	<p><b>{% trans "Nessun risultato trovato." %}</b></p>
+{% endif %}
+
+<p>
+	<form id="linea" method="get" {{ formaction }}>
+	{% trans "Cerca per numero o nome della fermata, per linea o per indirizzo" %}{% if not request.GET.legend %} (<a href="{% addparam "legend=1" %}">{% trans "Esempi" %}</a>){% endif %}:<br />
+	{% if request.GET.legend %}
+	<p class="infobox" id="legend">
+		{% blocktrans %}
+			<span class="b">Esempi</span><br/>
+			&nbsp;<br />	
+			<span class="b">70100</span>: Cerca la fermata con codice 70100 (si tratta del numero,
+			generalmente di 5 cifre, che puoi leggere sulla palina di fermata, in basso a sinistra)<br />
+			<span class="b">90</span>: Cerca la linea 90<br />
+			<span class="b">ost pref</span>: Cerca la fermata Ostiense/Prefettura<br />
+			<span class="b">Via Cassia 1036</span>: Cerca le fermate vicine all'indirizzo indicato
+		{% endblocktrans %}
+	</p>
+	{% endif %}
+	{{ form.cerca }}
+  <input type="submit" name="Submit" value="{% trans "Cerca" %}" />
+  {% formhist %}
+ </form>
+</p>
+
+{% if False %}
+	<h3>{% trans "Fermate preferite" %}</h3>
+	{% if request.user.is_authenticated %}
+		{% for g in gruppi_preferiti %}
+			<img class="icon" src="/paline/s/img/paline_gruppo.gif" height="16" width="16" alt="*" /> <a href='{% hist %}/paline/gruppo/{{ g.pk }}{% endhist %}'>{{ g.nome }}</a>
+			{% if not request.user|in_group:"readonly" %}
+				(<a href='{% hist %}/paline/preferiti/escludi_linee/{{ g.pk }}{% endhist %}'>{% trans "Modifica" %}</a> |
+				<a href='{% hist %}/paline/preferiti/elimina/{{ g.pk }}{% endhist %}'>{% trans "Elimina" %}</a>)
+			{% endif %}
+			<br />
+		{% endfor %}
+		{% for p in paline_preferite %}
+			<img class="icon" src="/paline/s/img/icon.gif" height="16" width="16" alt="*" /> <a href='{% hist %}/paline/gruppo/{{ p.gruppo.pk }}{% endhist %}'>{{ p.nome }}</a>
+			{% if not request.user|in_group:"readonly" %}
+				(<a href='{% hist %}/paline/preferiti/escludi_linee/{{ p.gruppo.pk }}{% endhist %}'>{% trans "Modifica" %}</a> |
+				<a href='{% hist %}/paline/preferiti/elimina/{{ p.gruppo.pk }}{% endhist %}'>{% trans "Elimina" %}</a>)
+			{% endif %}
+			<br />
+		{% endfor %}
+		{% if nessun_preferito %}
+			{% trans "Ancora non hai impostato alcuna fermata come preferita." %}
+		{% endif %}
+	{% else %}
+		{% trans "<a href='http://login.muoversiaroma.it/Login.aspx?IdSito=1'>Registrati o accedi</a> per impostare le tue fermate preferite, ottenere notifiche e segnalare disservizi." %}
+	{% endif %}
+{% endif %}
+
+{% endblock %}
+
+{% block didyouknow %}
+	<h2>{% trans "Lo sapevi?" %}</h2>
+	<p>
+		{% blocktrans %}
+			Puoi saltare questa pagina! Nella <a href="/">home page
+			di Roma mobile</a> inserisci la fermata, la linea o l'indirizzo
+			cercato, nella casella <b>Sono qui</b>. Si aprir&agrave; direttamente il Cerca Linea, e potrai consultare
+			i tempi di attesa dei bus che ti interessano.
+		{% endblocktrans %}
+	</p>
+{% endblock %}

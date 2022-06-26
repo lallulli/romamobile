@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<h2>{% trans "Disservizio tempi di attesa bus" %}</h2>
+<p>
+	{% blocktrans %}
+		Usa questa sezione per segnalare un disservizio di <span class="b">Muoversi a Roma mobile</span>:
+		l'arrivo di un bus non segnalato da Tempi di attesa bus, l'arrivo di una linea diversa da quanto
+		segnalato, o il mancato arrivo di un autobus segnalato.  
+	{% endblocktrans %}	
+</p>
+{% if error == 'uguali' %}
+	<p><span class="b">{% trans "Non hai indicato un disservizio di Muoversi a Roma mobile, in quanto la linea prevista coincide con la linea effettivamente passata." %}</span></p>
+{% endif %}
+{% if error == 'non-errore' %}
+	<span class="b">{% trans "E' corretto che un autobus diretto al deposito non sia segnalato da Muoversi a Roma." %}</span>
+{% endif %}
+
+<form id="tempi_attesa" method="get" {{ formaction }}>
+<p>{% trans "Fermata:" %}<br />{{ form.id_palina }}</p>
+<p>{% trans "Linea in arrivo secondo Muoversi a Roma mobile:" %}<br />{{ form.id_linea_segnalata }}</p>
+<p>{% trans "Linea passata effettivamente:" %}<br />{{ form.id_linea_passata }}</p>
+<p>{% trans "Numero del veicolo (facoltativo):" %}<br />{{ form.id_veicolo }}</p>
+<p>{% trans "Eventuali note (facoltative):" %}<br />{{ form.note }}</p>
+<input type="submit" name="submit" value="{% trans "Segnala disservizio tempi di attesa" %}" />
+{% formhist %}
+</form>
+<h2>{% trans "Guasto palina elettronica" %}</h2>
+<p>
+	{% blocktrans %}
+		Usa questa sezione per segnalare il guasto di una palina elettronica collocata presso una fermata.
+	{% endblocktrans %}	
+</p>
+
+<form id="palina_elettronica" method="get" {{ formaction }}>
+<p>{% trans "Fermata:" %}<br />{{ pe_form.id_palina }}</p>
+<input type="submit" name="pe_submit" value="{% trans "Segnala guasto palina elettronica" %}" />
+{% formhist %}
+</form>
+{% endblock %}

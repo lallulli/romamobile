@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+{% load format_extras %}
+
+{% block content %}
+<p>
+	{% trans "Atac non fornisce la posizione in tempo reale dei treni delle metropolitane. Sono disponibili gli orari di partenza dal capolinea." %}
+</p>
+
+<h2 class="vskip">{% trans "Mappa" %}</h2>
+<p>
+	{% trans "Puoi scaricare la mappa della rete delle metropolitane e ferrovie urbane (dal sito Atac)" %}.
+</p>
+<p>
+	&#11015; <a href="https://www.atac.roma.it/docs/default-source/mappe-tpl/mappa-metro-e-ferrovie-metropolitane.pdf">{% trans "Scarica la mappa in PDF (624 KB)" %}</a>
+</p>
+
+<h2 class="vskip">{% trans "Metropolitane" %}</h2>
+<p>
+{% for l in linee_metro %}
+	<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+	<a href="/paline/linea/{{ l.id_linea }}"><span class="linea">{{ l.descrizione }}</span></a>
+	{% if l.alerts %}
+		<img src="/paline/s/img/warning_{{ l.alerts.max_severity }}.png" />
+	{% endif %}
+	<br />
+{% endfor %}
+</p>
+
+<h2 class="vskip">{% trans "Ferrovie concesse" %}</h2>
+<p>
+{% for l in linee_fc %}
+	<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+	<a href="/paline/linea/{{ l.id_linea }}"><span class="linea">{{ l.descrizione }}</span></a>
+	{% if l.alerts %}
+		<img src="/paline/s/img/warning_{{ l.alerts.max_severity }}.png" />
+	{% endif %}
+	<br />
+{% endfor %}
+</p>
+
+{% if request.GET.legend %}
+	<div id="legend">
+
+	<h2 class="vskip">{% trans "Legenda" %}</h2>
+	<p>
+		<img src="/paline/s/img/warning_0.png" /> = {% trans "Perturbazione del servizio" %}<br />
+		<img src="/paline/s/img/warning_1.png" /> = {% trans "Problemi al servizio" %}<br />
+		<img src="/paline/s/img/warning_2.png" /> = {% trans "Interruzione del servizio" %}<br />
+
+	</p>
+	</div>
+{% else %}
+	<p class="vskip">(<a href="{% addparam "legend=1#legend" %}">{% trans "Mostra legenda" %}</a>)</p>
+{% endif %}
+
+
+{% endblock %}

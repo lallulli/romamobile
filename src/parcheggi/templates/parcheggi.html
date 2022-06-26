@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 class="vskip">{% trans "Posti liberi (per non abbonati)" %}</h2>
+<p>
+{% for p in parcheggi %}
+	<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />{{ p.nome }}: 
+	{% if not p.fuori_servizio and p.valido %}
+		{% blocktrans with pd=p.posti_disponibili_non_abbonati pt=p.posti_totali%}{{ pd }} su {{ pt }}{% endblocktrans %}
+	{% else %}
+		{% trans "dati non disponibili" %}
+	{% endif %}<br />
+{% endfor %}
+</p>
+{% endblock %}

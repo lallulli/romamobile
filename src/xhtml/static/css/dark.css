@@ -1,0 +1,46 @@
+body, #main {
+  background-color: #13985F;
+  color: #ffffff;
+}
+h1, .linea {
+  color: white;
+  background-color: #861128;
+}
+h2 {
+  color: #8e001c;
+  background-color: white;
+  filter: alpha(opacity=70);
+  opacity: .7;
+}
+h3, #orario, #footer #info {
+  color: #ffffff;
+}
+.menulink, a {
+  color: #FFFFFF;
+}
+.percorso .indicazioni .icon {
+  border-left-color: #861128;
+  color: #861128
+}
+#footer {
+  border-top-color: #861128;
+}
+#beta {
+  border-top-color: #861128;
+  border-bottom-color: #861128;
+  color: #861128;
+}
+.banda0, .banda1, .banda2 {
+  border-bottom: #84132D dashed 0.1em;
+  background-color: inherit;
+}
+
+.banda1 {
+	border-left: #84132D solid 0.3em;
+}
+.banda2, .banda0 {
+	border-left: #B8E0CF solid 0.3em;
+}
+.banda0 {
+	border-top: #84132D dashed 0.1em;
+}

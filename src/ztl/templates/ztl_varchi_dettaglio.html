@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block InternalStyle %}
+<style type="text/css">
+.hlform {
+	background-color: #D2B0B6;
+}
+.nound {
+	text-decoration:none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<h2 class="vskip">{{ accessi.toponimo_ztl }} - {% trans "Varchi di accesso" %}:</h2>
+<p>
+{% for a in accessi.lista_varchi %}
+		<img src="/ztl/s/img/{%if a.attivo %}on{% else %}off{%endif%}.png" class="icon" alt="off" width="16" height="16" /> {{a.descrizione}}<br />
+{% endfor %}
+</p>
+
+{% if request.GET.legend %}
+	<div id="legend">
+	
+	<h2 class="vskip">{% trans "Legenda" %}</h2>
+	<p>
+	<img class="dot" src="/ztl/s/img/on.png" alt="on" width="16" height="16" /> = {% trans "Varco attivo adesso" %}<br />
+	<img class="dot" src="/ztl/s/img/off.png" alt="off" width="16" height="16" /> = {% trans "Varco non attivo adesso" %}<br />
+	</p>
+	</div>
+{% else %}
+	<p class="vskip">(<a href="{% hist %}{% addparam "legend=1#legend" %}{% endhist %}">{% trans "Mostra legenda" %}</a>)</p>
+{% endif %}
+
+<h2 class="vskip">{% trans "Altre ZTL:" %}</h2>
+<p>
+	
+{% for z in altre_ztl %}
+&raquo; <a href="{% hist %}/ztl/ztl/{{z.codice}}/{% endhist %}">{{ z.descrizione }}</a><br />
+{% endfor %}
+</p>
+
+{% endblock %}

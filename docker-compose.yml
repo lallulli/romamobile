@@ -1,0 +1,56 @@
+version: "3.7"
+
+services:
+  postgis:
+    image: postgis/postgis:14-3.2-alpine
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DBNAME=django
+      - POSTGRES_USER=django
+      - POSTGRES_PASSWORD_FILE=/run/secrets/db_user_password
+    secrets:
+      - source: db_user_password
+        target: /run/secrets/db_user_password
+    ports:
+      - "5432:5432"
+
+  web:
+    image: romamobile
+    build: .
+    depends_on:
+      - postgis
+      - giano
+    command: sh -c 'python manage.py wait_for_database &&
+              python manage.py runserver 0.0.0.0:8000'
+    volumes:
+      - "./src:/app"
+      - "./src/paline/rete:/app/paline/rete/"
+    ports:
+      - "8000:8000"
+    secrets:
+      - source: settings
+        target: /app/secrets/settings.json
+
+  giano:
+    image: romamobile
+    build: .
+    depends_on:
+      - postgis
+    command: sh -c 'python manage.py wait_for_database &&
+      python manage.py runtrovalinea_new cpd tr in_docker'
+    volumes:
+      - "./src:/app"
+      - "./src/paline/rete:/app/paline/rete/"
+    secrets:
+      - source: settings
+        target: /app/secrets/settings.json
+
+volumes:
+  db_data:
+
+secrets:
+  db_user_password:
+    file: ./secrets/db_user_password
+  settings:
+    file: ./secrets/settings.json

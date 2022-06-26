@@ -1,0 +1,208 @@
+body{
+margin: 0;
+}
+
+#widget {
+		position: absolute;
+		left: 80px;
+		top: 25px;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: small;
+		font-stretch: condensed;
+		margin-top:2px;
+}
+.button{
+/* Impostiamo la grandezza del nostro bottone. */
+width: 70px;
+height:20px;
+display:inline;
+/* Scegliamo il colore di sfondo. */
+background-color: #8E001C;
+
+/* Utilizziamo la proprietà CSS3 per arrotondare il bottone. */
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+ 
+/* Utilizziamo la proprietà CSS3 per aggiungere un'ombra al bottone. */
+-moz-box-shadow: 1px 1px 0 #145278;
+-webkit-box-shadow: 1px 1px 0 #145278;
+ 
+/* Impostiamo un bordo chiaro al bottone. */
+border: 1px solid black;
+ 
+/* Impostiamo il cursore come "manina" */
+cursor: pointer;
+ 
+/* Aggiungiamo dei margini interni ed esterni */
+padding: 0px;
+margin: 0px;
+
+/* Formattiamo il testo */
+font-size: 0.8em;
+font-family: Myriad Pro, Tahoma, Sans-serif;
+font-weight: bold;
+color: #ffffff;
+text-shadow: 0 1px 0 #363636;
+line-height: 0px;
+text-align: center;
+text-decoration: none;
+}
+.button-cl{
+/* Impostiamo la grandezza del nostro bottone. */
+position: absolute;
+top:0px;
+left:235px;
+width: 80px;
+height:44px;
+display:inline;
+/* Scegliamo il colore di sfondo. */
+background-color: #8E001C;
+
+/* Utilizziamo la proprietà CSS3 per arrotondare il bottone. */
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+ 
+/* Utilizziamo la proprietà CSS3 per aggiungere un'ombra al bottone. */
+-moz-box-shadow: 1px 1px 0 #145278;
+-webkit-box-shadow: 1px 1px 0 #145278;
+ 
+/* Impostiamo un bordo chiaro al bottone. */
+border: 1px solid black;
+ 
+/* Impostiamo il cursore come "manina" */
+cursor: pointer;
+ 
+/* Aggiungiamo dei margini interni ed esterni */
+padding: 0px;
+margin: 0px;
+
+/* Formattiamo il testo */
+font-size: 0.8em;
+font-family: Myriad Pro, Tahoma, Sans-serif;
+font-weight: bold;
+color: #ffffff;
+text-shadow: 0 1px 0 #363636;
+line-height: 0px;
+text-align: center;
+text-decoration: none;
+}
+ 
+a.button:hover{
+background-color: #45a2dc;
+}
+ 
+a.button:active{
+background-color: #2a7aab;
+}
+
+/*bottone selezione iframe*/
+.button2{
+/* Impostiamo la grandezza del nostro bottone. */
+width: 130px;
+height:20px;
+display:inline;
+/* Scegliamo il colore di sfondo. */
+background-color: #8E001C;
+
+/* Utilizziamo la proprietà CSS3 per arrotondare il bottone. */
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+ 
+/* Utilizziamo la proprietà CSS3 per aggiungere un'ombra al bottone. */
+-moz-box-shadow: 1px 1px 0 #145278;
+-webkit-box-shadow: 1px 1px 0 #145278;
+ 
+/* Impostiamo un bordo chiaro al bottone. */
+border: 1px solid black;
+ 
+/* Impostiamo il cursore come "manina" */
+cursor: pointer;
+ 
+/* Aggiungiamo dei margini interni ed esterni */
+padding: 0px;
+margin: 0px;
+
+/* Formattiamo il testo */
+font-size: 0.8em;
+font-family: Myriad Pro, Tahoma, Sans-serif;
+font-weight: bold;
+color: #ffffff;
+text-shadow: 0 1px 0 #363636;
+line-height: 0px;
+text-align: center;
+text-decoration: none;
+}
+ 
+a.button2:hover{
+background-color: #45a2dc;
+}
+ 
+a.button2:active{
+background-color: #2a7aab;
+}
+
+.start{
+font-size: 10;
+font-family: Myriad Pro, Tahoma,  Sans-serif;
+font-weight: bold;
+}
+/*blocco header*/
+#header {
+	margin-bottom: 0px;
+	height: 74px;
+	background-color: #0F975F;
+}
+#rsm-dx {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width: 400px;
+	height: 74px;
+	background-image: url(/xhtml/s/img/sfondo-logo.png);
+	background-repeat: repeat-x;
+	z-index: -2;
+}
+#rsm-sx {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:74px;
+	width:400px;
+}
+
+/*parti widget*/
+#box{
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	width:450px !important;width /**/:250px;
+    height:20px !important; height /**/:20px;
+    margin: 0;padding: 2px 2px 2px;
+    background:#006600 no-repeat;    
+    }
+    
+
+.textarea{width: 230px;height: 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    background: #D3FFB6 no-repeat top left;
+    margin-bottom: 10px;
+    margin-right:10px;
+    font-weight: bold;
+    }
+ .textarea2{float: left;width: 330px;height: 220px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    background: #D3FFB6 no-repeat top left;
+    font-weight: bold;
+    }
+#da {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#a {
+	position:absolute;
+	top:24px;
+	left:0px;
+}

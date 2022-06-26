@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<h2>{% trans "Aggiungi fermata ai preferiti" %}</h2>
+<form id="palina" method="get" {{ formaction }}>
+<p>
+	{% trans "Nome della fermata" %}:<br />
+	{{ form.nome_palina }}
+</p>
+
+<h3>{% trans "Fermata singola" %}</h3>
+<p>
+	<input type="submit" name="Singola" value="{% trans "Imposta fermata singola" %}" />
+</p>
+<h3>{% trans "Aggiungi a gruppo di fermate" %}</h3>
+<p>
+	{% trans "Crea nuovo gruppo" %}:
+	{% if request.GET.legend %}
+	<p class="infobox" id="legend">
+		{% trans "Definendo un gruppo composto da pi&ugrave; fermate, avrai la possibilit&agrave; di visualizzare, in un'unica schermata, gli autobus in arrivo fra tutte le fermate del gruppo, ordinati in base al tempo di arrivo stimato." %}
+		{% trans "Cos&igrave; facendo, se sei indeciso, potrai scegliere la fermata a cui ti conviene recarti!" %}
+	</p>
+	{% else %}
+		(<a href="{% addparam "legend=1#legend" %}">{% trans "Che cos'&egrave;" %}</a>) <br/>
+	{% endif %}
+	{{ form.nome_gruppo }}
+</p>
+<p>
+	{% trans "Oppure aggiungi a un gruppo esistente" %}:<br />
+	{{ form.gruppo }}
+</p>
+<p>
+	{% formhist %}
+	<input type="submit" name="Gruppo" value="{% trans "Aggiungi a gruppo di fermate" %}" />
+</p>
+</form>
+{% endblock %}

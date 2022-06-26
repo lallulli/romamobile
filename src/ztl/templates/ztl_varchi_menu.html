@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block InternalStyle %}
+<style type="text/css">
+.hlform {
+	background-color: #D2B0B6;
+}
+.nound {
+	text-decoration:none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<h2 class="vskip">{% trans "Varchi di accesso" %}</h2>
+<p>
+{% for z in ztl %}
+&raquo; <a href="{% hist %}/ztl/varchi/dettaglio/{{z.codice}}/{% endhist %}">{{ z.descrizione }}</a><br />
+{% endfor %}
+</p>
+
+{% endblock %}

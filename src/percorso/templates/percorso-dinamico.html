@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+
+{% block content %}
+
+{% if errors %}
+<p><span class="b">{% trans "Correggi le seguenti informazioni:" %}</span></p>
+<p>
+	{% for e in errors %}
+	<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />{{ e }}<br />
+	{% endfor %}
+</p>
+{% endif %}
+
+{% if request.user.is_authenticated and not request.user|in_group:"readonly" %}
+	{% blocktrans with sa=infopoint.start.address sp=infopoint.start.place ta=infopoint.stop.address tp=infopoint.stop.place %}
+	<h2>Percorso trovato</h2>
+	<p>
+		<span class="b">Partenza:</span> {{sa}} ({{sp}}) (<a href="/percorso/preferiti/aggiungi/s">Imposta come preferito</a>)<br />
+		<span class="b">Arrivo:</span> {{ta}} ({{tp}}) (<a href="/percorso/preferiti/aggiungi/t">Imposta come preferito</a>)<br />
+	</p>
+	{% endblocktrans %}
+{% else %}
+<h2 class="vskip">
+	{% blocktrans with sa=infopoint.start.address sp=infopoint.start.place ta=infopoint.stop.address tp=infopoint.stop.place %}
+	<h2>Da {{ sa }} ({{ sp }}) a {{ ta }} ({{ tp }})</h2>
+	{% endblocktrans %}
+</h2>
+{% endif %}
+
+{% if not carpooling %}
+	<h3>
+		{% trans "Come:" %}
+		{% if modo == 0 %}
+			{% trans "Mezzo privato" %}
+		{% elif modo == 1 %}
+			{% trans "Mezzo pubblico" %}
+		{% elif modo == 2 %}
+			{% trans "Park and ride" %}
+		{% elif modo == 3 %}
+			{% trans "Bike and ride" %}
+		{% else %}
+			{% trans "Car sharing" %}
+		{% endif %}
+	</h3>
+
+	<p>
+		<a href="{% nohist %}/percorso/modo/1{% endnohist %}" class="nound" title="{% trans "Mezzo pubblico" %}"><img class="{% if modo == 1 %}active{% else %}inactive{% endif %}" src="/percorso/s/img/modo_tpl.png" /></a>
+		<a href="{% nohist %}/percorso/modo/3{% endnohist %}" class="nound" title="{% trans "Bike and ride" %}"><img class="{% if modo == 3 %}active{% else %}inactive{% endif %}" src="/percorso/s/img/modo_bnr.png" /></a>
+		<!--<a href="{% nohist %}/percorso/modo/4{% endnohist %}" class="nound" title="{% trans "Car sharing" %}"><img class="{% if modo == 4 %}active{% else %}inactive{% endif %}" src="/percorso/s/img/modo_carsharing.png" /></a><br />-->
+		<a href="{% nohist %}/percorso/modo/0{% endnohist %}" class="nound" title="{% trans "Mezzo privato" %}"><img class="{% if modo == 0 %}active{% else %}inactive{% endif %}" src="/percorso/s/img/modo_auto.png" /></a>
+		<!--<a href="{% nohist %}/percorso/modo/2{% endnohist %}" class="nound" title="{% trans "Park and ride" %}"><img class="{% if modo == 2 %}active{% else %}inactive{% endif %}" src="/percorso/s/img/modo_pnr.png" /></a>-->
+	</p>
+	<p>
+		<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+		<a href="#opzioni">{% trans "Opzioni avanzate" %}</a>
+	</p>
+{% endif %}
+
+{% if mappa %}
+	<div class="c">
+	<p>
+		<img src="http://maps.googleapis.com/maps/api/staticmap?{{mappa}}" alt="Mappa"/><br/>
+			{% if zoom_down %}
+				<a href="{% nohist %}/percorso/mappa-din/static/{{zoom_down}}/{{center_x}}/{{center_y}}{% endnohist %}" class="nound">[-]</a>
+			{% else %}
+				<span class="disabled">[-]</span>
+			{% endif %}
+			{% if zoom_up %}
+				<a href="{% nohist %}/percorso/mappa-din/static/{{zoom_up}}/{{center_x}}/{{center_y}}{% endnohist %}" class="nound">[+]</a>
+			{% else %}
+				<span class="disabled">[+]</span>
+			{% endif %}<br />
+			<a href="{% nohist %}/percorso/mappa-din/static/{{zoom}}/{{center_x}}/{{up}}{% endnohist %}" class="nound">^</a><br />
+			<a href="{% nohist %}/percorso/mappa-din/static/{{zoom}}/{{left}}/{{center_y}}{% endnohist %}" class="nound">&lt;</a> +
+			<a href="{% nohist %}/percorso/mappa-din/static/{{zoom}}/{{right}}/{{center_y}}{% endnohist %}" class="nound">&gt;</a><br />
+			<a href="{% nohist %}/percorso/mappa-din/static/{{zoom}}/{{center_x}}/{{down}}{% endnohist %}" class="nound">v</a>
+	</p>
+	</div>
+<p>
+	<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+	<a href="/percorso/js/?{{ params }}" target="_blank">{% trans "Mappa interattiva" %}</a>
+</p>
+{% else %}
+<p>
+	{% comment %}<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+	<a href="{% nohist %}/percorso/mappa-din/static{% endnohist %}">{% trans "Mappa base" %}</a><br />{% endcomment %}
+	<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+	<a href="/percorso/js/?{{ params }}" target="_blank">{% trans "Mappa" %}</a>
+</p>
+{% endif %}
+
+{% if tempo_reale %}
+	<h3>{% trans "Indicazioni in tempo reale" %}</h3>
+{% else %}
+	<h3>{% trans "Indicazioni" %}</h3>
+{% endif %}
+{% if carpooling %}
+	<p>
+	{% if carpooling_trovato %}
+		<span class="b">Complimenti, abbiamo trovato un percorso con un passaggio in Car Pooling!</span> Verifica il percorso: se
+		vuoi chiedere un passaggio, fai clic su <span class="b">Chiedi un passaggio</span>. Se vuoi cercare un'alternativa, fai clic su <span class="b">Escludi</span>.
+	{% else %}
+		<span class="b">Spiacenti, non abbiamo trovato alcun passaggio in Car Pooling.</span> Ti proponiamo un percorso con
+		i mezzi pubblici. In alternativa, puoi tornare indietro e provare con un altro orario di partenza, oppure
+		essere tu ad <a href="{% hist %}/carpooling/offri_passaggio{% endhist %}">offrire un passaggio con la tua auto</a>!		  
+	{% endif %}
+	</p>
+{% endif %}
+
+<p>
+	<span class="b">{% trans "Durata spostamento" %}</span>: {{ stat.tempo_totale_format }}<br />
+	<span class="b">{% trans "Distanza percorsa" %}</span>: {{ stat.distanza_totale_format }}<br />
+	<span class="b">{% trans "Di cui a piedi" %}</span>: {{ stat.distanza_piedi_format }}<br />
+</p>
+
+<div class="percorso">
+	<table class="indicazioni">
+		{% for i in indicazioni_icona %}
+			{% if i.nodo %}
+				<tr class="nodo">
+					<td class="fc">
+						<div class="icon">
+							<img src="/percorso/s/img/{% if i.nodo.numero == 0 %}partenza.png{% else %}{% if i.nodo.numero == numero_ultimo_nodo %}arrivo.png{% else %}nodo.png{% endif %}{% endif %}" height="24" width="24" /><br />
+							{{ i.nodo.t }}
+						</div>
+					</td>
+					<td>
+						{% if i.nodo.tipo == 'F' %}
+							{% trans "Fermata" %}
+						{% endif %}
+						{% if i.nodo.url %}
+							<a href="{% hist %}{{ i.nodo.url }}{% endhist %}">{{ i.nodo.nome }}</a>
+						{% else %}
+							<span class="b">{{ i.nodo.nome }}</span>
+						{% endif %}
+						{% if i.nodo.tipo == 'L' %}
+							(<a class="small" href='{% nohist %}/percorso/escludi/{{ i.nodo.id }}?nome={{ i.nodo.nome|urlencode }}{% endnohist %}'>{% trans "Escludi" %}</a>)
+						{% endif %}
+						<br />
+						{% comment %}{% if i.nodo.punto %}(<a class="small" href="{% nohist %}/percorso/mappa-din/static/15/{{ i.nodo.punto.x }}/{{ i.nodo.punto.y }}{% endnohist %}">{% trans "Mappa" %}</a>){% endif %}{% endcomment %}
+						{% if i.nodo.id and i.nodo.numero < numero_ultimo_nodo %}
+							(<a class="small" href="{% nohist %}/percorso/aggiorna_posizione/{{ i.nodo.id }}{% endnohist %}">{% trans "Sono qui" %}</a>)
+						{% endif %}
+						{% if i.nodo.numero == 0 and not i.nodo.id %}
+							{% if not bici %}
+								(<a class="small" href="{% nohist %}/percorso/bici/1{% endnohist %}">{% trans "Parti in bici" %}</a>)
+							{% else %}
+								(<a class="small" href="{% nohist %}/percorso/bici/0{% endnohist %}">{% trans "Parti a piedi" %}</a>)
+							{% endif %}
+						{% endif %}						
+					</td>
+				</tr>
+			{% else %}
+				<tr class="tratto">
+					<td class="fc">
+						<div class="icon">
+							<img src="/percorso/s/img/{{ i.tratto.icona }}" height="50" width="50" />
+						</div>
+					</td>
+					<td>
+						{% if i.tratto.id and i.tratto.info_tratto_exp %}
+							<a id="dettagli"></a>
+						{% endif %}
+						{% if i.tratto.mezzo == 'Z' %}
+							{% trans "Teletrasporto" %}
+						{% elif i.tratto.mezzo == 'I' %}
+							{% trans "Cambia linea" %}
+						{% else %}
+							{% if i.tratto.mezzo != 'P' and i.tratto.mezzo != 'C' and i.tratto.mezzo != 'CP' and i.tratto.mezzo != 'A' and i.tratto.mezzo != 'CS' %}
+								{% if i.tratto.url %}
+									<a href="{% hist %}{{ i.tratto.url }}{% endhist %}"><span class="linea">{{ i.tratto.linea }}</span></a>
+									{% trans "direz." %} {{ i.tratto.dest }} 
+								{% else %}
+									<span class="b linea">{{ i.tratto.linea }}</span>
+									{% trans "direz." %} {{ i.tratto.dest }} 
+								{% endif %}
+								(<a class="small" href='{% nohist %}/percorso/escludi/{{ i.tratto.id_linea }}?nome={{ i.tratto.linea|urlencode }}{% endnohist %}'>{% trans "Escludi" %}</a>)
+							{% endif %}
+							{% if i.tratto.mezzo == 'P' %}
+								{% trans "A piedi" %}
+							{% elif i.tratto.mezzo == 'C' %}
+								{% trans "In bicicletta" %}
+							{% elif i.tratto.mezzo == 'A' %}
+								{% trans "In automobile" %}
+							{% elif i.tratto.mezzo == 'CS' %}
+								{% trans "Car sharing" %}
+							{% elif i.tratto.mezzo == 'CP' %}
+								{% trans "Car pooling" %}
+								(<a  class="small" href='{% nohist %}/carpooling/richiedi/{{ i.tratto.id }}{% endnohist %}'>{% trans "Chiedi un passaggio" %}</a>)
+								(<a  class="small" href='{% nohist %}/carpooling/escludi/{{ i.tratto.id }}{% endnohist %}'>{% trans "Escludi" %}</a>)
+							{% endif %}
+							<br />
+							{% if i.tratto.tempo_attesa %}
+								{% if i.tratto.tipo_attesa == 'O' %}
+									{% trans "Partenza ore" %}
+								{% elif i.tratto.tipo_attesa == 'S' %}
+									{% trans "Attesa circa" %}
+								{% elif i.tratto.tipo_attesa == 'P' %}
+									{% if i.tratto.numero == 0 %}
+										{% trans "In arrivo fra" %}
+									{% else %}
+										{% trans "In arrivo dopo" %}
+									{% endif %}
+								{% elif i.tratto.tipo_attesa == 'E' %}
+									{% trans "Attesa" %}
+								{% elif i.tratto.tipo_attesa == 'Z' %}
+									{% trans "Apertura ZTL ore" %}
+								{% endif %}
+								{{ i.tratto.tempo_attesa }}<br />
+							{% endif %}
+							{% if i.tratto.id %}
+								{% if i.tratto.info_tratto_exp %}
+									{{ i.tratto.info_tratto }}:
+								{% else %}
+									<a href="{% nohist %}/percorso/espandi/{{ i.tratto.id }}#dettagli{% endnohist %}">{{ i.tratto.info_tratto }}</a>
+								{% endif %}
+							{% else %}
+								{{ i.tratto.info_tratto }}
+							{% endif %}
+							{% if i.tratto.info_tratto_exp %}
+								<br />{{ i.tratto.info_tratto_exp }}
+							{% endif %}
+						{% endif %}
+					</td>
+				</tr>			
+			{% endif %}
+		{% endfor %}
+	</table>
+</div>
+
+{% if linee_escluse %}
+	<h3>{% trans "Esclusioni" %}</h3>
+	<p>
+	{% for l in linee_escluse %}
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+		{{ l.nome }} (<a class="small" href="{% nohist %}/percorso/includi/{{ l.id_linea }}{% endnohist %}">{% trans "Includi" %}</a>)<br />
+	{% endfor %}
+	</p>
+{% endif %}
+{% if auto %}
+	<h2>Car pooling</h2>
+	<a href="{% nohist %}/percorso/offri-passaggio{% endnohist %}">{% trans "Offri un passaggio lungo questo percorso" %}</a>
+{% endif %}
+
+{% if not carpooling %}
+	<h2 id="opzioni">{% trans "Opzioni avanzate" %}</h2>
+	<form id="path" method="get" action="/percorso/avanzate">
+	{% if opzioni_tpl %}
+		<h3>{% trans "Propensione spostamenti a piedi e in bici:" %}</h3>
+		<p>
+			{{ form.av_piedi }}
+		</p>
+
+		<h3>{% trans "Mezzi pubblici da utilizzare:" %}</h3>
+		<p>
+			{{ form.av_bus }} {% trans "Autobus e tram" %}<br />
+			{{ form.av_metro }} {% trans "Metropolitana" %}<br />
+			{{ form.av_ferro }} {% trans "Ferrovie urbane" %}<br />
+			{% if now.day == 1 and now.month == 4 %}
+			{{ form.av_teletrasporto }} {% trans "Teletrasporto" %}
+			{% endif %}
+		</p>
+	{% endif %}
+	{% if opzioni_bnr %}
+		<h3>{% trans "Bike and ride:" %}</h3>
+		<p>
+			{{ form.av_bici_sul_tpl }} {% trans "Porta la bici sui mezzi pubblici" %}<br />
+			{% blocktrans with mdb=form.av_max_distanza_bici %}
+			Massima percorrenza in bici: {{ mdb }} km
+			{% endblocktrans %}
+		</p>
+	{% endif %}
+	{% if opzioni_pnr %}
+		<h3>{% trans "Park and ride:" %}</h3>
+			<p>
+				{{ form.av_parcheggi_scambio }} {% trans "Parcheggi di scambio" %}<br />
+				{{ form.av_parcheggi_autorimesse }} {% trans "Autorimesse private" %}<br />
+			</p>
+	{% endif %}
+
+	<h3 class="vskip">{% trans "Quando" %}</h3>
+	<p>
+		{{ form.av_quando }}
+	</p>
+	<p>
+		{{ form.av_wd }} {% trans "alle" %} {{ form.av_hour }}:{{ form.av_minute }}
+	</p>
+
+	<p class="vskip"><input type="submit" name="Submit" value="{% trans "Cerca" %}" /></p>
+	{% formnohist %}
+	</form>
+{% endif %}
+
+<!--Tempo di calcolo (incluso geocoding): {{ tempo_calcolo }}-->
+{% endblock %}

@@ -1,0 +1,109 @@
+      @-webkit-keyframes pulse {
+        0% {
+          opacity: 1.0;
+          -webkit-transform: scale(1.25);
+        }
+        45% {
+          opacity: .20;
+          -webkit-transform: scale(.80);
+        }
+        100% {
+          opacity: 1.0;
+          -webkit-transform: scale(1.25);
+        }
+      }
+      #map_graphics_layer {
+        -webkit-animation-duration:3s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-name:pulse;
+        -webkit-animation-timing-function:ease-in-out;
+      }
+      .page-map, #mapcontent.ui-content {
+        width:100%;
+        height:100%;
+        padding:0;
+        overflow:hidden;
+      }
+      .page-map #mapcontent, #map {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+      }
+      #map {
+        height:100%;
+        width:100%;
+        overflow:hidden;
+      }
+      #mapDetails {
+        font-size:12px;
+        color:#024672;
+      }
+      #snippet {
+        color:#004267;
+        font-size:16px;
+        font-weight:600;
+      }
+      .esriPopupMobile .titlePane {
+        border: 1px solid #55666b /*{a-bar-border}*/;
+        background: #55666b /*{a-bar-background-color}*/;
+        color: #ffffff /*{a-bar-color}*/;
+        font-weight: bold;
+        text-shadow:  0  /*{a-bar-shadow-x}*/  1px  /*{a-bar-shadow-y}*/  1px  /*{a-bar-shadow-radius}*/ #444444 /*{a-bar-shadow-color}*/;
+        background-image: -webkit-gradient(linear, left top, left bottom, from( #5D7075 /*{a-bar-background-start}*/), to( #4C5B60 /*{a-bar-background-end}*/)); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient( #5D7075 /*{a-bar-background-start}*/, #4C5B60 /*{a-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+        background-image:  -moz-linear-gradient( #5D7075 /*{a-bar-background-start}*/, #4C5B60 /*{a-bar-background-end}*/); /* FF3.6 */
+        background-image:  -ms-linear-gradient( #5D7075 /*{a-bar-background-start}*/, #4C5B60 /*{a-bar-background-end}*/); /* IE10 */
+        background-image:  -o-linear-gradient( #5D7075 /*{a-bar-background-start}*/, #4C5B60 /*{a-bar-background-end}*/); /* Opera 11.10+ */
+        background-image:   linear-gradient( #5D7075 /*{a-bar-background-start}*/, #4C5B60 /*{a-bar-background-end}*/);
+      }
+      .esriPopupMobile .pointer.top {
+        background:url(../images/pointertop.png)
+      }
+      .esriPopupMobile .pointer.bottom {
+        background:url(../images/pointerbottom.png);
+      }
+      .customIcons .ui-btn .ui-btn-inner {
+        padding-top:40px!important;
+      }
+      .customIcons .ui-btn .ui-icon {
+        width:32px!important;
+        height:32px!important;
+        margin-left:-15px!important;
+        box-shadow:none!important;
+        -moz-box-shadow:none!important;
+        -webkit-box-shadow:none!important;
+        -webkit-border-radius:none!important;
+        border-radius:none!important;
+      }
+      #info .ui-icon {
+        background:url(../images/info.png) 50% 50% no-repeat;
+        background-size:32px 32px;
+      }
+      #geolocate .ui-icon {
+        background:url(../images/geolocate.png) 50% 50% no-repeat;
+        background-size:32px 32px;
+      }
+      #legend .ui-icon {
+        background:url(../images/legend.png) 50% 50% no-repeat;
+        background-size:32px 32px;
+      }
+      #details .ui-icon {
+        background:url(../images/mapDetails.png) 50% 50% no-repeat;
+        background-size:32px 32px;
+      }
+      #searchMap .ui-icon {
+        background:url(../images/search.png) 50% 50% no-repeat;
+        background-size:32px 32px;
+      }
+      
+/* Custom CSS */
+	#header {
+		height: 58px;		
+		background: #13985f url('/ztl/s/images/logo-sx.png');
+		background-repeat: no-repeat;
+	}
+	
+	#header h1 {
+		height: 58px;
+		vertical-align: middle;
+	}

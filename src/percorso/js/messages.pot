@@ -1,0 +1,1593 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-24 16:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\main.py:72
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t<b>Una ricerca, tanti servizi</b><br />\n"
+"\t\t\t\t\t\t\t\tPer i tempi di attesa bus, il cerca linea e il cerca "
+"percorso usa la casella qui sotto.\n"
+"\t\t\t\t\t\t\t\tInserisci il numero di fermata, la linea bus o l'indirizzo, "
+"oppure tocca la mappa.\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+
+#: .\main.py:86
+msgid "Chiudi suggerimento"
+msgstr ""
+
+#: .\main.py:92 .\main.py:1247 .\main.py:1279 .\util.py:248 .\main.py:1284
+#: .\main.py:1309 .\util.py:322
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1346
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:345
+msgid "Non mostrare pi&ugrave;"
+msgstr ""
+
+#: .\main.py:271
+msgid "Linea"
+msgstr ""
+
+#: .\main.py:275
+msgid "Luogo"
+msgstr ""
+
+#: .\main.py:413 .\main.py:478 .\main.py:484 .\main.py:518 .\main.py:566
+#: .\main.py:568 .\main.py:698 .\main.py:760 .\main.py:789 .\main.py:812
+#: .\main.py:842 .\main.py:846 .\main.py:860
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:883
+#, python-format
+msgid "Posizione attuale <punto:(%f,%f)>"
+msgstr ""
+
+#: .\main.py:444
+msgid "Mappa"
+msgstr ""
+
+#: .\main.py:481 .\main.py:647 .\main.py:655 .\main.py:693 .\main.py:695
+#: .\main.py:747 .\main.py:749 .\main.py:889 .\main.py:954 .\main.py:983
+#: .\main.py:1025 .\main.py:1057 .\main.py:1061 .\main.py:1075
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1099
+msgid "Ora presenti sulla mappa"
+msgstr ""
+
+#: .\main.py:541 .\main.py:702 .\main.py:710 .\main.py:748 .\main.py:750
+#: .\main.py:802 .\main.py:804 .\main.py:944 .\main.py:1009 .\main.py:1038
+#: .\main.py:1079 .\main.py:1111 .\main.py:1115 .\main.py:1129
+msgid "Pannelli VMS"
+msgstr ""
+
+#: .\cerca_percorso.py:112 .\cerca_percorso.py:114 .\cerca_percorso.py:386
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:405
+msgid "Dove"
+msgstr ""
+
+#: .\cerca_percorso.py:123 .\cerca_percorso.py:125 .\cerca_percorso.py:397
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:416
+msgid "Da: "
+msgstr ""
+
+#: .\cerca_percorso.py:158 .\cerca_percorso.py:159 .\cerca_percorso.py:431
+#: .\cerca_percorso.py:432
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:451
+msgid "A: "
+msgstr ""
+
+#: .\cerca_percorso.py:198 .\cerca_linea.py:211 .\cerca_luogo.py:108
+#: .\cerca_linea.py:214 .\main.py:128 .\main.py:121 .\cerca_linea.py:217
+#: .\cerca_linea.py:292 .\main.py:151 .\main.py:152 .\cerca_linea.py:331
+#: .\cerca_luogo.py:112 .\main.py:180 .\main.py:181 .\cerca_linea.py:365
+#: .\cerca_linea.py:386 .\main.py:184 .\cerca_percorso.py:470
+#: .\cerca_percorso.py:794 .\cerca_percorso.py:471 .\cerca_percorso.py:791
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:490
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:817
+msgid "Cerca"
+msgstr ""
+
+#: .\cerca_percorso.py:209 .\cerca_percorso.py:481 .\cerca_percorso.py:805
+#: .\cerca_percorso.py:482 .\cerca_percorso.py:802
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:501
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:828
+msgid "Ritorno"
+msgstr ""
+
+#: .\cerca_percorso.py:217 .\cerca_percorso.py:489 .\cerca_percorso.py:490
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:509
+msgid "Come: Trasporto pubblico"
+msgstr ""
+
+#: .\cerca_percorso.py:231 .\cerca_percorso.py:552 .\cerca_percorso.py:566
+#: .\cerca_percorso.py:235 .\cerca_percorso.py:572 .\cerca_percorso.py:571
+#: .\cerca_percorso.py:507 .\cerca_percorso.py:922 .\cerca_percorso.py:508
+#: .\cerca_percorso.py:919
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:528
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:945
+msgid "Trasporto pubblico"
+msgstr ""
+
+#: .\cerca_percorso.py:238 .\cerca_percorso.py:239 .\cerca_percorso.py:243
+#: .\cerca_percorso.py:515 .\cerca_percorso.py:516
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:536
+msgid "Bike and ride"
+msgstr ""
+
+#: .\cerca_percorso.py:245 .\cerca_percorso.py:1138 .\cerca_percorso.py:272
+#: .\cerca_percorso.py:1160 .\cerca_percorso.py:276 .\cerca_percorso.py:1166
+#: .\cerca_percorso.py:1167 .\cerca_percorso.py:1165 .\cerca_percorso.py:548
+#: .\cerca_percorso.py:1061 .\cerca_percorso.py:549 .\cerca_percorso.py:1062
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1088
+msgid "Car sharing"
+msgstr ""
+
+#: .\cerca_percorso.py:252 .\cerca_percorso.py:552 .\cerca_percorso.py:256
+#: .\cerca_percorso.py:566 .\cerca_percorso.py:260 .\cerca_percorso.py:572
+#: .\cerca_percorso.py:571 .\cerca_percorso.py:532 .\cerca_percorso.py:922
+#: .\cerca_percorso.py:533 .\cerca_percorso.py:919
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:553
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:945
+msgid "Trasporto privato"
+msgstr ""
+
+#: .\cerca_percorso.py:259 .\cerca_percorso.py:264 .\cerca_percorso.py:268
+#: .\cerca_percorso.py:540 .\cerca_percorso.py:541
+msgid "Park and ride"
+msgstr ""
+
+#: .\cerca_percorso.py:268 .\cerca_percorso.py:282 .\cerca_percorso.py:288
+#: .\cerca_percorso.py:560 .\cerca_percorso.py:561
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:581
+msgid "Opzioni avanzate"
+msgstr ""
+
+#: .\cerca_percorso.py:275 .\cerca_percorso.py:289 .\cerca_percorso.py:295
+#: .\cerca_percorso.py:567 .\cerca_percorso.py:568
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:588
+msgid "Opzioni"
+msgstr ""
+
+#: .\cerca_percorso.py:281 .\cerca_percorso.py:295 .\cerca_percorso.py:301
+#: .\cerca_percorso.py:573 .\cerca_percorso.py:574
+msgid "Cerca un luogo lungo il percorso"
+msgstr ""
+
+#: .\cerca_percorso.py:301 .\cerca_percorso.py:315 .\cerca_percorso.py:321
+#: .\cerca_percorso.py:593 .\cerca_percorso.py:594
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:614
+msgid "Permessi di accesso ZTL"
+msgstr ""
+
+#: .\cerca_percorso.py:324 .\cerca_percorso.py:338 .\cerca_percorso.py:344
+#: .\cerca_percorso.py:616 .\cerca_percorso.py:617
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:637
+msgid "Propensione spostamenti a piedi"
+msgstr ""
+
+#: .\cerca_percorso.py:329 .\cerca_percorso.py:343 .\cerca_percorso.py:349
+#: .\cerca_percorso.py:621 .\cerca_percorso.py:622
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:642
+msgid "Bassa (camminatore lento)"
+msgstr ""
+
+#: .\cerca_percorso.py:334 .\cerca_percorso.py:348 .\cerca_percorso.py:354
+#: .\cerca_percorso.py:626 .\cerca_percorso.py:627
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:647
+msgid "Media"
+msgstr ""
+
+#: .\cerca_percorso.py:340 .\cerca_percorso.py:354 .\cerca_percorso.py:360
+#: .\cerca_percorso.py:632 .\cerca_percorso.py:633
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:653
+msgid "Alta (camminatore veloce)"
+msgstr ""
+
+#: .\cerca_percorso.py:345 .\cerca_percorso.py:359 .\cerca_percorso.py:365
+#: .\cerca_percorso.py:637 .\cerca_percorso.py:638
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:658
+msgid "Mezzi pubblici da utilizzare"
+msgstr ""
+
+#: .\cerca_percorso.py:350 .\cerca_percorso.py:364 .\cerca_percorso.py:370
+#: .\cerca_percorso.py:642 .\cerca_percorso.py:643
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:663
+msgid "Autobus e tram"
+msgstr ""
+
+#: .\cerca_percorso.py:356 .\cerca_percorso.py:370 .\cerca_percorso.py:376
+#: .\cerca_percorso.py:648 .\cerca_percorso.py:649
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:669
+msgid "Metropolitana"
+msgstr ""
+
+#: .\cerca_percorso.py:362 .\cerca_percorso.py:376 .\cerca_percorso.py:382
+#: .\cerca_percorso.py:654 .\cerca_percorso.py:655
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:675
+msgid "Ferrovie urbane"
+msgstr ""
+
+#: .\cerca_percorso.py:368 .\cerca_percorso.py:382 .\cerca_percorso.py:388
+#: .\cerca_percorso.py:660 .\cerca_percorso.py:661
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:681
+msgid "Teletrasporto"
+msgstr ""
+
+#: .\cerca_percorso.py:383 .\cerca_percorso.py:397 .\cerca_percorso.py:403
+#: .\cerca_percorso.py:683 .\cerca_percorso.py:684
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:704
+msgid "Max distanza in bici:&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:395 .\cerca_percorso.py:409 .\cerca_percorso.py:415
+#: .\cerca_percorso.py:695 .\cerca_percorso.py:696
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:716
+msgid "&nbsp;km"
+msgstr ""
+
+#: .\cerca_percorso.py:407 .\cerca_percorso.py:421 .\cerca_percorso.py:427
+#: .\cerca_percorso.py:709 .\cerca_percorso.py:710
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:730
+msgid "Parcheggi Park and Ride"
+msgstr ""
+
+#: .\cerca_percorso.py:412 .\cerca_percorso.py:426 .\cerca_percorso.py:432
+#: .\cerca_percorso.py:714 .\cerca_percorso.py:715
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:735
+msgid "Parcheggi di scambio"
+msgstr ""
+
+#: .\cerca_percorso.py:418 .\cerca_percorso.py:432 .\cerca_percorso.py:438
+#: .\cerca_percorso.py:720 .\cerca_percorso.py:721
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:741
+msgid "Autorimesse private"
+msgstr ""
+
+#: .\cerca_percorso.py:426 .\cerca_percorso.py:440 .\cerca_percorso.py:446
+#: .\cerca_percorso.py:728 .\cerca_percorso.py:729
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:755
+msgid "Quando"
+msgstr ""
+
+#: .\cerca_percorso.py:432 .\cerca_percorso.py:446 .\cerca_percorso.py:452
+#: .\cerca_percorso.py:734 .\cerca_percorso.py:735
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:761
+msgid "Adesso"
+msgstr ""
+
+#: .\cerca_percorso.py:439 .\cerca_percorso.py:453 .\cerca_percorso.py:459
+#: .\cerca_percorso.py:741
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:767
+msgid "Fra 5 minuti"
+msgstr ""
+
+#: .\cerca_percorso.py:449 .\cerca_percorso.py:463 .\cerca_percorso.py:469
+#: .\cerca_percorso.py:751 .\cerca_percorso.py:750
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:776
+msgid "Parti alle:&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:456 .\cerca_percorso.py:470 .\cerca_percorso.py:476
+#: .\cerca_percorso.py:758 .\cerca_percorso.py:756
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:782
+msgid "Arriva alle:&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:476 .\cerca_percorso.py:490 .\cerca_percorso.py:496
+#: .\cerca_percorso.py:778 .\cerca_percorso.py:775
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:801
+msgid "&nbsp;&nbsp;Ore:&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:491
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t\tQuesto servizio calcola il miglior percorso con i mezzi\n"
+"\t\t\t\t\t\t\t\t\t\tAtac, Roma TPL e le ferrovie regionali Trenitalia.\n"
+"\t\t\t\t\t\t\t\t\t\tUsa i dati in tempo reale per tener conto dello stato\n"
+"\t\t\t\t\t\t\t\t\t\tdel traffico e della posizione degli autobus.\n"
+"\t\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t\t\tIl software, sviluppato dall'Agenzia per la "
+"Mobilit&agrave;\n"
+"\t\t\t\t\t\t\t\t\t\tdi Roma, &egrave; <a href=\"http://www-test."
+"agenziamobilita.roma.it/servizi/open-data/codice-sorgente.html\" target="
+"\"_blank\">rilasciato\n"
+"\t\t\t\t\t\t\t\t\t\tcon licenza open source.</a>\n"
+"\t\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t\t"
+msgstr ""
+
+#: .\cerca_percorso.py:522 .\cerca_percorso.py:536 .\cerca_percorso.py:542
+#: .\cerca_percorso.py:541 .\cerca_percorso.py:851 .\cerca_percorso.py:848
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:874
+msgid "Seleziona tutte"
+msgstr ""
+
+#: .\cerca_percorso.py:552 .\cerca_percorso.py:566 .\cerca_percorso.py:572
+#: .\cerca_percorso.py:571 .\cerca_percorso.py:922 .\cerca_percorso.py:919
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:945
+msgid "Park and Ride"
+msgstr ""
+
+#: .\cerca_percorso.py:552 .\cerca_percorso.py:566 .\cerca_percorso.py:572
+#: .\cerca_percorso.py:571 .\cerca_percorso.py:922 .\cerca_percorso.py:919
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:945
+msgid "Bike and Ride"
+msgstr ""
+
+#: .\cerca_percorso.py:552 .\cerca_percorso.py:566 .\cerca_percorso.py:572
+#: .\cerca_percorso.py:571 .\cerca_percorso.py:922 .\cerca_percorso.py:919
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:945
+msgid "Car Sharing"
+msgstr ""
+
+#: .\cerca_percorso.py:584 .\cerca_percorso.py:601 .\cerca_percorso.py:607
+#: .\cerca_percorso.py:606 .\cerca_percorso.py:957 .\cerca_percorso.py:954
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:980
+#, python-format
+msgid "Come: %s"
+msgstr ""
+
+#: .\cerca_percorso.py:721 .\cerca_percorso.py:738 .\cerca_percorso.py:744
+#: .\cerca_percorso.py:745 .\cerca_percorso.py:1199 .\cerca_percorso.py:1195
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1256
+msgid "Cerca percorso da qui"
+msgstr ""
+
+#: .\cerca_percorso.py:722 .\cerca_percorso.py:739 .\cerca_percorso.py:745
+#: .\cerca_percorso.py:746 .\cerca_percorso.py:1200 .\cerca_percorso.py:1196
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1257
+msgid "Cerca percorso fino a qui"
+msgstr ""
+
+#: .\cerca_percorso.py:797 .\cerca_percorso.py:1085 .\cerca_percorso.py:814
+#: .\cerca_percorso.py:1101 .\cerca_percorso.py:820 .\cerca_percorso.py:1107
+#: .\cerca_percorso.py:821 .\cerca_percorso.py:1108 .\cerca_percorso.py:1106
+#: .\cerca_percorso.py:1277 .\cerca_percorso.py:1510 .\cerca_percorso.py:1629
+#: .\cerca_percorso.py:1265 .\cerca_percorso.py:1502 .\cerca_percorso.py:1621
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1326
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1697
+msgid "Percorso trovato"
+msgstr ""
+
+#: .\cerca_percorso.py:1024 .\cerca_percorso.py:1040 .\cerca_percorso.py:1046
+#: .\cerca_percorso.py:1047 .\cerca_percorso.py:1045 .\cerca_percorso.py:1574
+#: .\cerca_percorso.py:1566
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1642
+msgid "Riepilogo"
+msgstr ""
+
+#: .\cerca_percorso.py:1054 .\cerca_percorso.py:1070 .\cerca_percorso.py:1076
+#: .\cerca_percorso.py:1077 .\cerca_percorso.py:1075 .\cerca_percorso.py:1604
+#: .\cerca_percorso.py:1596
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1672
+msgid "Esclusioni"
+msgstr ""
+
+#: .\cerca_percorso.py:1066 .\cerca_percorso.py:1082 .\cerca_percorso.py:1088
+#: .\cerca_percorso.py:1089 .\cerca_percorso.py:1087 .\cerca_percorso.py:1616
+#: .\cerca_percorso.py:1608
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1684
+msgid "Indicazioni"
+msgstr ""
+
+#: .\cerca_percorso.py:1078 .\cerca_percorso.py:1094 .\cerca_percorso.py:1100
+#: .\cerca_percorso.py:1101 .\cerca_percorso.py:1099
+#, python-format
+msgid ""
+"&copy; %d\n"
+"\t\t\t\t\t\t\t\t<a class=\"inl\" href=\"http://www.agenziamobilita.roma.it"
+"\">Roma servizi per la mobilit&agrave; s.r.l.</a>"
+msgstr ""
+
+#: .\cerca_percorso.py:1095 .\cerca_percorso.py:1111 .\cerca_percorso.py:1117
+#: .\cerca_percorso.py:1118 .\cerca_percorso.py:1116 .\cerca_percorso.py:1639
+#: .\cerca_percorso.py:1631
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1707
+#, python-format
+msgid "<b>Durata spostamento:</b> %s"
+msgstr ""
+
+#: .\cerca_percorso.py:1096 .\cerca_percorso.py:1112 .\cerca_percorso.py:1118
+#: .\cerca_percorso.py:1119 .\cerca_percorso.py:1117 .\cerca_percorso.py:1640
+#: .\cerca_percorso.py:1632
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1708
+#, python-format
+msgid "<b>Distanza percorsa:</b> %s<br />"
+msgstr ""
+
+#: .\cerca_percorso.py:1097 .\cerca_percorso.py:1113 .\cerca_percorso.py:1119
+#: .\cerca_percorso.py:1120 .\cerca_percorso.py:1118 .\cerca_percorso.py:1641
+#: .\cerca_percorso.py:1633
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1709
+#, python-format
+msgid "<b>Di cui a piedi:</b> %s"
+msgstr ""
+
+#: .\cerca_percorso.py:1126 .\cerca_percorso.py:1145 .\cerca_percorso.py:1151
+#: .\cerca_percorso.py:1152 .\cerca_percorso.py:1150 .\cerca_percorso.py:1048
+#: .\cerca_percorso.py:1049
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1075
+msgid "Cambia linea"
+msgstr ""
+
+#: .\cerca_percorso.py:1130 .\cerca_percorso.py:1149 .\cerca_percorso.py:1155
+#: .\cerca_percorso.py:1156 .\cerca_percorso.py:1154 .\cerca_percorso.py:1052
+#: .\cerca_percorso.py:1053
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1079
+msgid "A piedi"
+msgstr ""
+
+#: .\cerca_percorso.py:1132 .\cerca_percorso.py:1151 .\cerca_percorso.py:1157
+#: .\cerca_percorso.py:1158 .\cerca_percorso.py:1156 .\cerca_percorso.py:1054
+#: .\cerca_percorso.py:1055
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1081
+msgid "In bici"
+msgstr ""
+
+#: .\cerca_percorso.py:1134 .\cerca_percorso.py:247 .\cerca_percorso.py:1153
+#: .\cerca_percorso.py:251 .\cerca_percorso.py:1159 .\cerca_percorso.py:1160
+#: .\cerca_percorso.py:1158 .\cerca_percorso.py:523 .\cerca_percorso.py:1056
+#: .\cerca_percorso.py:524 .\cerca_percorso.py:1057
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1083
+msgid "Car pooling"
+msgstr ""
+
+#: .\cerca_percorso.py:1136 .\cerca_percorso.py:1158 .\cerca_percorso.py:1164
+#: .\cerca_percorso.py:1165 .\cerca_percorso.py:1163 .\cerca_percorso.py:1059
+#: .\cerca_percorso.py:1060
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1086
+msgid "In automobile"
+msgstr ""
+
+#: .\cerca_percorso.py:1141 .\cerca_percorso.py:1163 .\cerca_percorso.py:1169
+#: .\cerca_percorso.py:1170 .\cerca_percorso.py:1168 .\cerca_percorso.py:1065
+#: .\cerca_percorso.py:1066
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1092
+msgid "Apertura ZTL ore&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:1145 .\cerca_percorso.py:1167 .\cerca_percorso.py:1173
+#: .\cerca_percorso.py:1174 .\cerca_percorso.py:1172 .\cerca_percorso.py:1071
+#: .\cerca_percorso.py:1072
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1098
+msgid "Linea&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:1150 .\cerca_percorso.py:1172 .\cerca_percorso.py:1178
+#: .\cerca_percorso.py:1179 .\cerca_percorso.py:1177 .\cerca_percorso.py:1076
+#: .\cerca_percorso.py:1077
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1103
+msgid "&nbsp;direz. "
+msgstr ""
+
+#: .\cerca_percorso.py:1158 .\cerca_percorso.py:1180 .\cerca_percorso.py:1186
+#: .\cerca_percorso.py:1187 .\cerca_percorso.py:1185 .\cerca_percorso.py:1085
+#: .\cerca_percorso.py:1086
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1112
+msgid "Partenza ore&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:1160 .\cerca_percorso.py:1182 .\cerca_percorso.py:1188
+#: .\cerca_percorso.py:1189 .\cerca_percorso.py:1187 .\cerca_percorso.py:1087
+#: .\cerca_percorso.py:1088
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1114
+msgid "Attesa circa&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:1162 .\cerca_percorso.py:1184 .\cerca_percorso.py:1190
+#: .\cerca_percorso.py:1191 .\cerca_percorso.py:1189 .\cerca_percorso.py:1089
+#: .\cerca_percorso.py:1090
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1116
+msgid "In arrivo fra&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:1164 .\cerca_percorso.py:1186 .\cerca_percorso.py:1192
+#: .\cerca_percorso.py:1193 .\cerca_percorso.py:1191 .\cerca_percorso.py:1091
+#: .\cerca_percorso.py:1092
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1118
+msgid "In arrivo dopo&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:1212 .\cerca_percorso.py:1234 .\cerca_percorso.py:1240
+#: .\cerca_percorso.py:1241 .\cerca_percorso.py:1239 .\cerca_percorso.py:240
+#: .\cerca_percorso.py:1745 .\cerca_percorso.py:1737
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:259
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1813
+msgid "Fermata&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:1261 .\cerca_percorso.py:1292 .\cerca_percorso.py:1298
+#: .\cerca_percorso.py:1299 .\cerca_percorso.py:1300 .\cerca_percorso.py:1829
+#: .\cerca_percorso.py:1821
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1897
+msgid "Link al percorso completo:"
+msgstr ""
+
+#: .\cerca_percorso.py:1267 .\cerca_percorso.py:1298 .\cerca_percorso.py:1304
+#: .\cerca_percorso.py:1305 .\cerca_percorso.py:1306 .\cerca_percorso.py:1835
+#: .\cerca_percorso.py:1827
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1903
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\tQuesto link mostrer&agrave; le indicazioni e la mappa del "
+"percorso\n"
+"\t\t\t\t\t\tda %s a %s.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\cerca_percorso.py:1282 .\cerca_percorso.py:1313 .\cerca_percorso.py:1319
+#: .\cerca_percorso.py:1320 .\cerca_percorso.py:1321 .\cerca_percorso.py:1850
+#: .\cerca_percorso.py:1842
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1918
+#, python-format
+msgid "Link al cerca percorso fino a %s:"
+msgstr ""
+
+#: .\cerca_percorso.py:1288 .\cerca_percorso.py:1319 .\cerca_percorso.py:1325
+#: .\cerca_percorso.py:1326 .\cerca_percorso.py:1327 .\cerca_percorso.py:1856
+#: .\cerca_percorso.py:1848
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1924
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\tQuesto link chieder&agrave; un punto di partenza, a partire dal "
+"quale\n"
+"\t\t\t\t\t\tcercher&agrave; il percorso fino a %s.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\cerca_percorso.py:1338 .\cerca_percorso.py:1369 .\cerca_percorso.py:1375
+#: .\cerca_percorso.py:1376 .\cerca_percorso.py:1377 .\cerca_percorso.py:1906
+#: .\cerca_percorso.py:1898
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1974
+msgid "Indirizzo email del destinatario:"
+msgstr ""
+
+#: .\cerca_percorso.py:1352 .\cerca_percorso.py:1383 .\cerca_percorso.py:1389
+#: .\cerca_percorso.py:1390 .\cerca_percorso.py:1391 .\cerca_percorso.py:1920
+#: .\cerca_percorso.py:1912
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1988
+msgid "Invia"
+msgstr ""
+
+#: .\cerca_percorso.py:1357 .\cerca_percorso.py:1388 .\util.py:1341
+#: .\cerca_percorso.py:1394 .\cerca_percorso.py:1395 .\util.py:1360
+#: .\util.py:1381 .\util.py:1393 .\cerca_percorso.py:1396 .\util.py:477
+#: .\util.py:1608 .\util.py:480 .\util.py:1615 .\util.py:1642 .\util.py:1641
+#: .\cerca_linea.py:1239 .\util.py:564 .\util.py:1736 .\util.py:568
+#: .\util.py:1740 .\util.py:1748 .\cerca_percorso.py:1925
+#: .\cerca_linea.py:1315 .\cerca_percorso.py:1917 .\util.py:642 .\util.py:1883
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1993
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:665
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:1906
+msgid "Annulla"
+msgstr ""
+
+#: .\main.py:266
+msgid "Percorso"
+msgstr ""
+
+#: .\cerca_linea.py:85 .\cerca_linea.py:89 .\cerca_linea.py:90
+#: .\cerca_linea.py:94 .\cerca_linea.py:100
+#, python-format
+msgid "&nbsp;Direz. %s"
+msgstr ""
+
+#: .\cerca_linea.py:91 .\cerca_linea.py:95 .\cerca_linea.py:96
+#: .\cerca_linea.py:100 .\cerca_linea.py:106 .\cerca_linea.py:115
+msgid "Altre linee:&nbsp;"
+msgstr ""
+
+#: .\cerca_linea.py:115 .\cerca_linea.py:119 .\cerca_linea.py:122
+#: .\cerca_linea.py:197 .\cerca_linea.py:206 .\cerca_linea.py:240
+#: .\cerca_linea.py:261
+#, python-format
+msgid "%s %s Direz. %s"
+msgstr ""
+
+#: .\cerca_linea.py:142 .\cerca_linea.py:146 .\cerca_linea.py:149
+#: .\cerca_linea.py:224 .\cerca_linea.py:235 .\cerca_linea.py:269
+#: .\cerca_linea.py:290 .\cerca_linea.py:307
+#, python-format
+msgid "<b>%s:</b> %s"
+msgstr ""
+
+#: .\cerca_linea.py:149 .\cerca_linea.py:153 .\cerca_linea.py:156
+#: .\cerca_linea.py:231 .\cerca_linea.py:242 .\cerca_linea.py:276
+#: .\cerca_linea.py:297
+msgid ""
+"Siamo spiacenti, non sono disponibili gli orari di partenza dal capolinea "
+"per il percorso selezionato."
+msgstr ""
+
+#: .\cerca_linea.py:151 .\cerca_linea.py:155 .\cerca_linea.py:158
+#: .\cerca_linea.py:233 .\cerca_linea.py:244 .\cerca_linea.py:278
+#: .\cerca_linea.py:299 .\cerca_linea.py:296 .\cerca_linea.py:313
+msgid "Nella giornata selezionata il percorso non &egrave; attivo."
+msgstr ""
+
+#: .\cerca_linea.py:171 .\cerca_linea.py:175 .\cerca_linea.py:178
+#: .\cerca_linea.py:253 .\cerca_linea.py:292 .\cerca_linea.py:326
+#: .\cerca_linea.py:347 .\cerca_linea.py:364
+msgid "Fermata, linea o indirizzo"
+msgstr ""
+
+#: .\cerca_linea.py:274 .\cerca_linea.py:275 .\cerca_linea.py:278
+#: .\cerca_linea.py:358 .\cerca_linea.py:400 .\cerca_linea.py:434
+#: .\cerca_linea.py:455 .\cerca_linea.py:473
+msgid "Fermate vicine"
+msgstr ""
+
+#: .\cerca_linea.py:320 .\cerca_linea.py:739 .\cerca_linea.py:750
+#: .\cerca_linea.py:323 .\cerca_linea.py:784 .\cerca_linea.py:326
+#: .\cerca_linea.py:802 .\cerca_linea.py:411 .\cerca_linea.py:921
+#: .\cerca_linea.py:458 .\cerca_linea.py:977 .\cerca_linea.py:976
+#: .\cerca_linea.py:492 .\cerca_linea.py:1022 .\cerca_linea.py:1026
+#: .\cerca_linea.py:513 .\cerca_linea.py:1068 .\cerca_linea.py:534
+#: .\cerca_linea.py:1144
+msgid "Fermate trovate"
+msgstr ""
+
+#: .\cerca_linea.py:366 .\cerca_linea.py:377 .\cerca_linea.py:390
+#: .\cerca_linea.py:393 .\cerca_linea.py:478 .\cerca_linea.py:525
+#: .\cerca_linea.py:559 .\cerca_linea.py:562 .\cerca_linea.py:599
+#: .\cerca_linea.py:620
+msgid "Linee della fermata"
+msgstr ""
+
+#: .\cerca_linea.py:378 .\cerca_linea.py:389 .\cerca_linea.py:402
+#: .\cerca_linea.py:405 .\cerca_linea.py:490 .\cerca_linea.py:537
+#: .\cerca_linea.py:571 .\cerca_linea.py:574 .\cerca_linea.py:611
+#: .\cerca_linea.py:633
+msgid "Tutti gli arrivi"
+msgstr ""
+
+#: .\cerca_linea.py:413 .\cerca_linea.py:424 .\cerca_linea.py:437
+#: .\cerca_linea.py:440 .\cerca_linea.py:526 .\cerca_linea.py:573
+#: .\cerca_linea.py:607 .\cerca_linea.py:610 .\cerca_linea.py:649
+#: .\cerca_linea.py:673
+msgid "Non disponibile"
+msgstr ""
+
+#: .\cerca_linea.py:415 .\cerca_linea.py:426 .\cerca_linea.py:439
+#: .\cerca_linea.py:442 .\cerca_linea.py:528 .\cerca_linea.py:575
+#: .\cerca_linea.py:609 .\cerca_linea.py:612 .\cerca_linea.py:651
+#: .\cerca_linea.py:675
+msgid "Non monitorata"
+msgstr ""
+
+#: .\cerca_linea.py:417 .\cerca_linea.py:428 .\cerca_linea.py:441
+#: .\cerca_linea.py:444 .\cerca_linea.py:530 .\cerca_linea.py:577
+#: .\cerca_linea.py:611 .\cerca_linea.py:614 .\cerca_linea.py:653
+#: .\cerca_linea.py:677
+msgid "Nessun autobus"
+msgstr ""
+
+#: .\cerca_linea.py:422 .\cerca_linea.py:448 .\cerca_linea.py:433
+#: .\cerca_linea.py:459 .\cerca_linea.py:446 .\cerca_linea.py:472
+#: .\cerca_linea.py:449 .\cerca_linea.py:475 .\cerca_linea.py:535
+#: .\cerca_linea.py:561 .\cerca_linea.py:582 .\cerca_linea.py:608
+#: .\cerca_linea.py:616 .\cerca_linea.py:642 .\cerca_linea.py:619
+#: .\cerca_linea.py:645 .\cerca_linea.py:658 .\cerca_linea.py:684
+#: .\cerca_linea.py:682 .\cerca_linea.py:713
+#, python-format
+msgid " (partenza %s)"
+msgstr ""
+
+#: .\cerca_linea.py:509 .\cerca_linea.py:520 .\cerca_linea.py:538
+#: .\cerca_linea.py:532 .\cerca_linea.py:619 .\cerca_linea.py:667
+#: .\cerca_linea.py:666 .\cerca_linea.py:700 .\cerca_linea.py:703
+#: .\cerca_linea.py:742 .\cerca_linea.py:783
+#, python-format
+msgid "%(id_linea)s %(carteggio_dec)s direz. %(arrivo)s"
+msgstr ""
+
+#: .\cerca_linea.py:515 .\cerca_linea.py:526 .\cerca_linea.py:553
+#: .\cerca_linea.py:562 .\cerca_linea.py:649 .\cerca_linea.py:697
+#: .\cerca_linea.py:696 .\cerca_linea.py:730 .\cerca_linea.py:733
+#: .\cerca_linea.py:772 .\cerca_linea.py:813
+msgid "Partenze da capolinea"
+msgstr ""
+
+#: .\cerca_linea.py:526 .\cerca_linea.py:537 .\cerca_linea.py:564
+#: .\cerca_linea.py:573 .\cerca_linea.py:660 .\cerca_linea.py:708
+#: .\cerca_linea.py:707 .\cerca_linea.py:741 .\cerca_linea.py:744
+#: .\cerca_linea.py:783 .\cerca_linea.py:824
+msgid "Fermate"
+msgstr ""
+
+#: .\cerca_linea.py:532 .\cerca_linea.py:543 .\cerca_linea.py:570
+msgid ""
+"Seleziona una fermata, oppure un veicolo per conoscerne gli orari di arrivo."
+msgstr ""
+
+#: .\cerca_linea.py:545 .\cerca_linea.py:556 .\cerca_linea.py:583
+#: .\cerca_linea.py:594 .\cerca_linea.py:681 .\cerca_linea.py:729
+#: .\cerca_linea.py:728 .\cerca_linea.py:762 .\cerca_linea.py:765
+#: .\cerca_linea.py:804 .\cerca_linea.py:846
+msgid "Altri percorsi della linea"
+msgstr ""
+
+#: .\cerca_linea.py:557 .\cerca_linea.py:568 .\cerca_linea.py:595
+#: .\cerca_linea.py:606 .\cerca_linea.py:693 .\cerca_linea.py:741
+#: .\cerca_linea.py:740 .\cerca_linea.py:774 .\cerca_linea.py:777
+#: .\cerca_linea.py:816 .\cerca_linea.py:858
+msgid "Gestore"
+msgstr ""
+
+#: .\cerca_linea.py:606 .\cerca_linea.py:617 .\cerca_linea.py:644
+#: .\cerca_linea.py:658 .\cerca_linea.py:745 .\cerca_linea.py:791
+#: .\cerca_linea.py:790 .\cerca_linea.py:824 .\cerca_linea.py:827
+#: .\cerca_linea.py:866 .\cerca_linea.py:909
+#, python-format
+msgid "La linea %s &egrave; gestita da %s."
+msgstr ""
+
+#: .\cerca_linea.py:774 .\cerca_linea.py:785 .\cerca_linea.py:821
+#: .\cerca_linea.py:839 .\cerca_linea.py:979 .\cerca_linea.py:1059
+#: .\cerca_linea.py:1058 .\cerca_linea.py:1104 .\cerca_linea.py:1108
+#: .\cerca_linea.py:1150 .\cerca_linea.py:1226
+msgid "Linee trovate"
+msgstr ""
+
+#: .\cerca_linea.py:787 .\cerca_linea.py:798 .\cerca_linea.py:834
+#: .\cerca_linea.py:852 .\cerca_linea.py:992 .\cerca_linea.py:1072
+#: .\cerca_linea.py:1071 .\cerca_linea.py:1117 .\cerca_linea.py:1121
+#: .\cerca_linea.py:1163 .\cerca_linea.py:1239
+msgid ""
+"Alcune fermate sono state nascoste perch&eacute; non vi transitano altre "
+"linee bus.&nbsp"
+msgstr ""
+
+#: .\cerca_linea.py:788 .\cerca_linea.py:799 .\cerca_linea.py:835
+#: .\cerca_linea.py:853 .\cerca_linea.py:993 .\cerca_linea.py:1073
+#: .\cerca_linea.py:1072 .\cerca_linea.py:1118 .\cerca_linea.py:1122
+#: .\cerca_linea.py:1164 .\cerca_linea.py:1240
+msgid "Mostra tutte le fermate"
+msgstr ""
+
+#: .\cerca_linea.py:817 .\cerca_linea.py:828
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t<b>%(ricerca)s</b><br /><br />\n"
+"\t\t\t\t\t<a id=\"link-cpa\" href=\"#\">Cerca percorso fino a qui</a>\n"
+"\t\t\t\t\t<a id=\"link-cpda\" href=\"#\">Cerca percorso da qui</a>\n"
+"\t\t\t\t\t<a id=\"link-cl\" href=\"#\">Cerca fermate vicine</a>\n"
+"\t\t\t\t\t<a id=\"link-cr\" href=\"#\">Cerca luoghi vicini</a>\n"
+"\t\t\t\t"
+msgstr ""
+
+#: .\cerca_linea.py:391 .\cerca_luogo.py:224 .\cerca_linea.py:402
+#: .\cerca_linea.py:415 .\cerca_linea.py:608 .\cerca_linea.py:773
+#: .\cerca_linea.py:418 .\cerca_linea.py:619 .\cerca_linea.py:791
+#: .\cerca_linea.py:503 .\cerca_linea.py:706 .\cerca_linea.py:910
+#: .\cerca_linea.py:550 .\cerca_linea.py:754 .\cerca_linea.py:966
+#: .\cerca_luogo.py:228 .\cerca_linea.py:753 .\cerca_linea.py:965
+#: .\cerca_linea.py:584 .\cerca_linea.py:787 .\cerca_linea.py:1011
+#: .\cerca_linea.py:587 .\cerca_linea.py:790 .\cerca_linea.py:1015
+#: .\cerca_linea.py:624 .\cerca_linea.py:829 .\cerca_linea.py:1057
+#: .\cerca_linea.py:646 .\cerca_linea.py:871 .\cerca_linea.py:1133
+msgid "Risultati"
+msgstr ""
+
+#: .\cerca_luogo.py:68 .\cerca_luogo.py:69 .\cerca_luogo.py:73
+msgid "Indirizzo"
+msgstr ""
+
+#: .\cerca_luogo.py:142 .\cerca_luogo.py:146 .\cerca_luogo.py:139
+msgid "Cerca luogo lungo un percorso"
+msgstr ""
+
+#: .\cerca_luogo.py:189 .\cerca_luogo.py:193 .\cerca_luogo.py:186
+msgid "Luoghi vicini"
+msgstr ""
+
+#: .\cerca_luogo.py:243 .\cerca_luogo.py:247
+msgid "Luoghi trovati"
+msgstr ""
+
+#: .\cerca_percorso.py:491 .\cerca_percorso.py:505 .\cerca_percorso.py:511
+#: .\cerca_percorso.py:510
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t\tQuesto servizio calcola il miglior percorso con i mezzi\n"
+"\t\t\t\t\t\t\t\t\t\tAtac, Roma TPL e le ferrovie regionali Trenitalia.\n"
+"\t\t\t\t\t\t\t\t\t\tUsa i dati in tempo reale per tener conto dello stato\n"
+"\t\t\t\t\t\t\t\t\t\tdel traffico e della posizione degli autobus.\n"
+"\t\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t\t\tIl software, sviluppato dall'Agenzia per la "
+"Mobilit&agrave;\n"
+"\t\t\t\t\t\t\t\t\t\tdi Roma, &egrave; <a href=\"http://www.agenziamobilita."
+"roma.it/servizi/open-data/codice-sorgente.html\" target=\"_blank"
+"\">rilasciato\n"
+"\t\t\t\t\t\t\t\t\t\tcon licenza open source.</a>\n"
+"\t\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t\t"
+msgstr ""
+
+#: .\map.py:320 .\map.py:323 .\map.py:326 .\map.py:327 .\map.py:335
+#: .\map.py:354 .\map.py:367 .\map.py:410
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/map.py:408
+msgid "Cerca un percorso, una linea o una fermata per mostrarla sulla mappa."
+msgstr ""
+
+#: .\cerca_percorso.py:1302
+msgid "\\Chiudi"
+msgstr ""
+
+#: .\cerca_percorso.py:1302 .\cerca_percorso.py:1333 .\cerca_percorso.py:1517
+#: .\cerca_percorso.py:1566 .\cerca_percorso.py:1339 .\cerca_percorso.py:1523
+#: .\cerca_percorso.py:1572 .\cerca_percorso.py:1340 .\cerca_percorso.py:1524
+#: .\cerca_percorso.py:1573 .\cerca_percorso.py:1341 .\cerca_percorso.py:1526
+#: .\cerca_percorso.py:1575 .\cerca_percorso.py:1525 .\cerca_percorso.py:1574
+#: .\util.py:1866 .\util.py:1865 .\util.py:1960 .\util.py:1964 .\util.py:1972
+#: .\cerca_percorso.py:1870 .\cerca_percorso.py:2055 .\cerca_percorso.py:2104
+#: .\cerca_percorso.py:1862 .\cerca_percorso.py:2047 .\cerca_percorso.py:2096
+#: .\util.py:2107
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1938
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2123
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2172
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:2142
+msgid "Chiudi"
+msgstr ""
+
+#: .\cerca_percorso.py:566 .\cerca_percorso.py:572 .\cerca_percorso.py:571
+#: .\cerca_percorso.py:922 .\cerca_percorso.py:919
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:945
+msgid "Car Pooling"
+msgstr ""
+
+#: .\cerca_percorso.py:1430 .\cerca_percorso.py:1436 .\cerca_percorso.py:1437
+#: .\cerca_percorso.py:1438 .\cerca_percorso.py:1967 .\cerca_percorso.py:1959
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2035
+msgid "Trovato un passaggio in car pooling"
+msgstr ""
+
+#: .\cerca_percorso.py:1436 .\cerca_percorso.py:1442 .\cerca_percorso.py:1443
+#: .\cerca_percorso.py:1444 .\cerca_percorso.py:1973 .\cerca_percorso.py:1965
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2041
+msgid ""
+"Trovata un'offerta di passaggio in car pooling compatibile con il tuo "
+"spostamento."
+msgstr ""
+
+#: .\cerca_percorso.py:1445 .\cerca_percorso.py:1451 .\cerca_percorso.py:1452
+#: .\cerca_percorso.py:1453 .\cerca_percorso.py:1982 .\cerca_percorso.py:1974
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2050
+msgid "Chiedi un passaggio"
+msgstr ""
+
+#: .\cerca_percorso.py:1450 .\cerca_percorso.py:1456 .\cerca_percorso.py:1457
+#: .\cerca_percorso.py:1458 .\cerca_percorso.py:1987 .\cerca_percorso.py:1979
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2055
+msgid "Cerca un altro passaggio"
+msgstr ""
+
+#: .\cerca_percorso.py:1499 .\cerca_percorso.py:1505 .\cerca_percorso.py:1506
+#: .\cerca_percorso.py:1508 .\cerca_percorso.py:1507 .\cerca_percorso.py:2037
+#: .\cerca_percorso.py:2029
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2105
+msgid "Richiesta effettuata"
+msgstr ""
+
+#: .\cerca_percorso.py:1505 .\cerca_percorso.py:1511 .\cerca_percorso.py:1512
+#: .\cerca_percorso.py:1514 .\cerca_percorso.py:1513 .\cerca_percorso.py:2043
+#: .\cerca_percorso.py:2035
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2111
+msgid ""
+"\n"
+"\t\t\t\t\t\tLa tua richiesta di passaggio &egrave; stata inviata. Riceverai "
+"una notifica con ulteriori dettagli\n"
+"\t\t\t\t\t\tquando l'offerente avr&agrave; accettato o rifiutato la "
+"richiesta.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\cerca_percorso.py:1542 .\cerca_percorso.py:1548 .\cerca_percorso.py:1549
+#: .\cerca_percorso.py:1551 .\cerca_percorso.py:1550 .\cerca_percorso.py:2080
+#: .\cerca_percorso.py:2072
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2148
+msgid "Nessun passaggio trovato"
+msgstr ""
+
+#: .\cerca_percorso.py:1548 .\cerca_percorso.py:1554 .\cerca_percorso.py:1555
+#: .\cerca_percorso.py:1557 .\cerca_percorso.py:1556 .\cerca_percorso.py:2086
+#: .\cerca_percorso.py:2078
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2154
+msgid ""
+"\n"
+"\t\t\t\t\t\tNessun'offerta di passaggio soddisfa la tua richiesta. Ti "
+"proponiamo un percorso con i soli mezzi\n"
+"\t\t\t\t\t\tpubblici. In alternativa prova a modificare l'orario della "
+"ricerca, oppure\n"
+"\t\t\t\t\t\toffri tu stesso un passaggio in car pooling!\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\cerca_percorso.py:1561 .\cerca_percorso.py:1615 .\cerca_percorso.py:1567
+#: .\cerca_percorso.py:1621 .\cerca_percorso.py:1568 .\cerca_percorso.py:1622
+#: .\cerca_percorso.py:1570 .\cerca_percorso.py:1624 .\cerca_percorso.py:1569
+#: .\cerca_percorso.py:1623 .\cerca_percorso.py:2099 .\cerca_percorso.py:2153
+#: .\cerca_percorso.py:2091 .\cerca_percorso.py:2145
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2167
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2221
+msgid "Offri un passaggio"
+msgstr ""
+
+#: .\cerca_percorso.py:1595 .\cerca_percorso.py:1601 .\cerca_percorso.py:1602
+#: .\cerca_percorso.py:1604 .\cerca_percorso.py:1603 .\cerca_percorso.py:2133
+#: .\cerca_percorso.py:2125
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2201
+msgid "Condividi il tuo viaggio"
+msgstr ""
+
+#: .\cerca_percorso.py:1601 .\cerca_percorso.py:1607 .\cerca_percorso.py:1608
+#: .\cerca_percorso.py:1610 .\cerca_percorso.py:1609 .\cerca_percorso.py:2139
+#: .\cerca_percorso.py:2131
+msgid ""
+"\n"
+"\t\t\t\t\t\tFai car pooling, offri un passaggio! Se vuoi condividere il tuo "
+"viaggio, Muoversi a Roma lo proporr&agrave;\n"
+"\t\t\t\t\t\tad altri utenti che cercano un percorso, proprio come se la tua "
+"auto diventasse un autobus.\n"
+"\t\t\t\t\t\tPotrai anche accordarti con le persone a cui offri un passaggio "
+"per ricevere un contributo\n"
+"\t\t\t\t\t\talle spese di viaggio, suggerito da Muoversi a Roma.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\cerca_percorso.py:1620 .\cerca_percorso.py:1626 .\cerca_percorso.py:1627
+#: .\cerca_percorso.py:1629 .\cerca_percorso.py:1628 .\cerca_percorso.py:2158
+#: .\cerca_percorso.py:2150
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2226
+msgid "No, grazie"
+msgstr ""
+
+#: .\main.py:150 .\main.py:142 .\main.py:173 .\main.py:174 .\main.py:210
+#: .\main.py:211 .\main.py:214
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:237
+msgid "Linea, fermata o indirizzo"
+msgstr ""
+
+#: .\main.py:151
+msgid "Preferiti"
+msgstr ""
+
+#: .\main.py:152 .\main.py:143 .\main.py:174 .\main.py:175 .\main.py:211
+#: .\main.py:212 .\main.py:215
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:238
+msgid "Imposta posizione corrente"
+msgstr ""
+
+#: .\main.py:291 .\main.py:297 .\main.py:326 .\main.py:365 .\main.py:367
+#: .\main.py:445 .\main.py:494 .\main.py:499 .\main.py:505 .\main.py:519
+#: .\main.py:522 .\main.py:530
+msgid "Caricamento account utente"
+msgstr ""
+
+#: .\main.py:296 .\main.py:302 .\main.py:336 .\main.py:375 .\main.py:377
+#: .\main.py:455 .\main.py:504 .\main.py:509 .\main.py:515 .\main.py:529
+#: .\main.py:532 .\main.py:540
+msgid "Versione precedente"
+msgstr ""
+
+#: .\main.py:301 .\main.py:307 .\main.py:341 .\main.py:380 .\main.py:382
+#: .\main.py:460 .\main.py:509 .\main.py:514 .\main.py:525 .\main.py:539
+#: .\main.py:542 .\main.py:550
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:573
+msgid "Language"
+msgstr ""
+
+#: .\main.py:306 .\main.py:312 .\main.py:346 .\main.py:385 .\main.py:387
+#: .\main.py:465 .\main.py:514 .\main.py:519 .\main.py:530 .\main.py:544
+#: .\main.py:547 .\main.py:555
+msgid "Esci"
+msgstr ""
+
+#: .\main.py:363 .\main.py:369 .\main.py:407 .\main.py:455 .\main.py:457
+#: .\main.py:552 .\main.py:601 .\main.py:613 .\main.py:633 .\main.py:663
+#: .\main.py:666 .\main.py:680
+#, python-format
+msgid "Ciao, %s (Gestisci account)"
+msgstr ""
+
+#: .\main.py:368 .\main.py:374 .\main.py:412 .\main.py:460 .\main.py:462
+#: .\main.py:557 .\main.py:606 .\main.py:618 .\main.py:638 .\main.py:668
+#: .\util.py:1739 .\main.py:671 .\util.py:1747 .\main.py:685 .\util.py:1882
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:1905
+msgid "Accedi"
+msgstr ""
+
+#: .\main.py:570 .\main.py:578 .\main.py:616 .\main.py:618 .\main.py:670
+#: .\main.py:672 .\main.py:812 .\main.py:874 .\main.py:903 .\main.py:932
+#: .\main.py:962 .\main.py:966 .\main.py:980
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1004
+msgid "Italiano"
+msgstr ""
+
+#: .\main.py:575 .\main.py:583 .\main.py:621 .\main.py:623 .\main.py:675
+#: .\main.py:677 .\main.py:817 .\main.py:879 .\main.py:908 .\main.py:937
+#: .\main.py:967 .\main.py:971 .\main.py:985
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1009
+msgid "English"
+msgstr ""
+
+#: .\util.py:1337 .\util.py:1356 .\util.py:1377 .\util.py:1389 .\util.py:1604
+#: .\util.py:1611 .\util.py:1638 .\util.py:1637 .\util.py:1732 .\util.py:1736
+#: .\util.py:1744 .\util.py:1879
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:1902
+msgid "Accesso richiesto"
+msgstr ""
+
+#: .\util.py:1338 .\util.py:1357 .\util.py:1378 .\util.py:1390 .\util.py:1605
+#: .\util.py:1612 .\util.py:1639 .\util.py:1638 .\util.py:1733 .\util.py:1737
+#: .\util.py:1745 .\util.py:1880
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:1903
+msgid "Per continuare devi effettuare l'accesso."
+msgstr ""
+
+#: .\util.py:1340 .\util.py:1359 .\util.py:1380 .\util.py:1392 .\util.py:1607
+#: .\util.py:1614 .\util.py:1641 .\util.py:1640 .\util.py:1735
+msgid "Accedi o registrati"
+msgstr ""
+
+#: .\main.py:275 .\main.py:281 .\main.py:306 .\main.py:345 .\main.py:347
+#: .\main.py:425 .\main.py:474 .\main.py:479 .\main.py:485 .\main.py:498
+#: .\main.py:501 .\main.py:508
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:531
+msgid "toolbar/percorso.png"
+msgstr ""
+
+#: .\main.py:280 .\main.py:286 .\main.py:311 .\main.py:350 .\main.py:352
+#: .\main.py:430 .\main.py:479 .\main.py:484 .\main.py:490 .\main.py:503
+#: .\main.py:506 .\main.py:513
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:536
+msgid "toolbar/linea.png"
+msgstr ""
+
+#: .\main.py:284 .\main.py:290 .\main.py:315 .\main.py:354 .\main.py:356
+#: .\main.py:434 .\main.py:483 .\main.py:488 .\main.py:494 .\main.py:507
+#: .\main.py:510 .\main.py:517
+msgid "toolbar/luogo.png"
+msgstr ""
+
+#: .\main.py:505 .\main.py:511 .\main.py:545 .\main.py:593 .\main.py:595
+#: .\main.py:735 .\main.py:797 .\main.py:826 .\main.py:581 .\main.py:851
+#: .\main.py:881 .\main.py:596 .\main.py:885 .\main.py:604 .\main.py:899
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:627
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:922
+msgid "toolbar/mappa.png"
+msgstr ""
+
+#: .\cerca_linea.py:850 .\cerca_linea.py:868 .\cerca_linea.py:1008
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t<b>%(ricerca)s</b><br /><br />\n"
+"\t\t\t\t<a id=\"link-cpa\" href=\"#\">Cerca percorso fino a qui</a>\n"
+"\t\t\t\t<a id=\"link-cpda\" href=\"#\">Cerca percorso da qui</a>\n"
+"\t\t\t\t<a id=\"link-cl\" href=\"#\">Cerca fermate vicine</a>\n"
+"\t\t\t\t<a id=\"link-cr\" href=\"#\">Cerca luoghi vicini</a>\n"
+"\t\t\t"
+msgstr ""
+
+#: .\map.py:432 .\map.py:433 .\map.py:443 .\map.py:462 .\map.py:497
+#: .\map.py:540 /home/luca/Documenti/dev/romamobile/mar/percorso/js/map.py:541
+msgid "<br/>Caricamento..."
+msgstr ""
+
+#: .\main.py:278 .\main.py:317 .\main.py:319 .\main.py:398 .\main.py:447
+#: .\main.py:452 .\main.py:459 .\main.py:471 .\main.py:474 .\main.py:481
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:504
+msgid "Conferma"
+msgstr ""
+
+#: .\main.py:278 .\main.py:317 .\main.py:319 .\main.py:398 .\main.py:447
+#: .\main.py:452 .\main.py:459 .\main.py:471 .\main.py:474 .\main.py:481
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:504
+msgid "Vuoi cancellare il preferito?"
+msgstr ""
+
+#: .\main.py:278 .\main.py:317 .\main.py:319 .\main.py:398 .\main.py:447
+#: .\main.py:452 .\main.py:459 .\main.py:471 .\main.py:474 .\main.py:481
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:504
+msgid "No"
+msgstr ""
+
+#: .\main.py:319 .\main.py:358 .\main.py:360 .\main.py:438 .\main.py:487
+#: .\main.py:492 .\main.py:498 .\main.py:511 .\main.py:639 .\main.py:514
+#: .\main.py:642 .\main.py:521 .\main.py:656
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:544
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:679
+msgid "toolbar/preferiti.png"
+msgstr ""
+
+#: .\main.py:331 .\news.py:84 .\news.py:89 .\main.py:370 .\main.py:372
+#: .\main.py:450 .\main.py:499 .\main.py:504 .\main.py:510 .\main.py:524
+#: .\main.py:527 .\main.py:535
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/news.py:89
+msgid "News"
+msgstr ""
+
+#: .\main.py:278 .\main.py:317 .\main.py:319 .\main.py:398 .\main.py:447
+#: .\main.py:452 .\main.py:459 .\main.py:471 .\main.py:474 .\main.py:481
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:504
+msgid "S&igrave;"
+msgstr ""
+
+#: .\cerca_linea.py:579 .\cerca_linea.py:666 .\cerca_linea.py:714
+#: .\cerca_linea.py:713 .\cerca_linea.py:747 .\cerca_linea.py:750
+#: .\cerca_linea.py:789 .\cerca_linea.py:830
+msgid "<b>Veicolo: </b>Seleziona un bus"
+msgstr ""
+
+#: .\cerca_linea.py:157 .\cerca_linea.py:169 .\cerca_linea.py:190
+#: .\cerca_linea.py:199
+msgid "Non disp."
+msgstr ""
+
+#: .\cerca_linea.py:159 .\cerca_linea.py:171 .\cerca_linea.py:192
+#: .\cerca_linea.py:201
+msgid "Non monitor."
+msgstr ""
+
+#: .\cerca_linea.py:161 .\cerca_linea.py:173 .\cerca_linea.py:194
+#: .\cerca_linea.py:203
+msgid "Nessun bus"
+msgstr ""
+
+#: .\cerca_linea.py:166 .\cerca_linea.py:178 .\cerca_linea.py:199
+#: .\cerca_linea.py:208
+#, python-format
+msgid " (p. %s)"
+msgstr ""
+
+#: .\main.py:74 .\main.py:80 .\main.py:81
+msgid "Muoversi a Roma"
+msgstr ""
+
+#: .\main.py:79
+#, python-format
+msgid ""
+"\n"
+"\t\t\t<p><b>Muoversi a Roma %(version)s</b><br />\n"
+"\t\t\t&copy; %(year)d Roma servizi per la mobilit&agrave; s.r.l.</p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tMuoversi a Roma &egrave; un progetto open source sviluppato "
+"dall'Agenzia per la Mobilit&agrave;\n"
+"\t\t\t\tdi Roma Capitale. I dati che alimentano il servizio sono liberamente "
+"disponibili come open data.\n"
+"\t\t\t</p>\n"
+"\t\t"
+msgstr ""
+
+#: .\main.py:390 .\main.py:392 .\main.py:470 .\main.py:519 .\main.py:524
+#: .\main.py:535 .\main.py:549 .\main.py:552 .\main.py:560
+msgid "Informazioni su Muoversi a Roma"
+msgstr ""
+
+#: .\util.py:453 .\util.py:456 .\util.py:540 .\util.py:544 .\util.py:618
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:641
+msgid "Ore"
+msgstr ""
+
+#: .\util.py:465 .\util.py:468 .\util.py:552 .\util.py:556 .\util.py:630
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:653
+msgid "Min"
+msgstr ""
+
+#: .\util.py:475 .\util.py:478 .\util.py:208 .\util.py:247 .\util.py:562
+#: .\util.py:566 .\util.py:282 .\util.py:321 .\util.py:640
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:305
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:344
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:663
+msgid "OK"
+msgstr ""
+
+#: .\main.py:79 .\main.py:85 .\main.py:86
+#, python-format
+msgid ""
+"\n"
+"\t\t\t<p><b>Muoversi a Roma %(version)s</b><br />\n"
+"\t\t\t&copy; %(year)d Roma servizi per la mobilit&agrave; s.r.l.</p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tMuoversi a Roma &egrave; un progetto open source sviluppato da Roma "
+"Servizi per la Mobilit&agrave;,\n"
+"\t\t\t\tAgenzia per la Mobilit&agrave;\n"
+"\t\t\t\tdi Roma Capitale. I dati che alimentano il servizio sono liberamente "
+"disponibili come open data.\n"
+"\t\t\t</p>\n"
+"\t\t"
+msgstr ""
+
+#: .\cerca_linea.py:256 .\cerca_linea.py:290 .\cerca_linea.py:311
+#: .\cerca_linea.py:328
+msgid "<b>Prossime partenze</b>: "
+msgstr ""
+
+#: .\cerca_linea.py:258 .\cerca_linea.py:292 .\cerca_linea.py:313
+#: .\cerca_linea.py:330
+msgid "Tutte le partenze"
+msgstr ""
+
+#: .\map.py:268 .\map.py:287 .\map.py:293 .\map.py:336
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/map.py:330
+msgid " a "
+msgstr ""
+
+#: .\util.py:1909 .\util.py:1982 .\util.py:1981 .\util.py:2076 .\util.py:2080
+#: .\util.py:2088 .\util.py:2223
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:2258
+msgid "Percorso<br />da qui"
+msgstr ""
+
+#: .\util.py:1921 .\util.py:1994 .\util.py:1993 .\util.py:2088 .\util.py:2092
+#: .\util.py:2100 .\util.py:2235
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:2270
+msgid "Fermate<br />vicine"
+msgstr ""
+
+#: .\util.py:1933 .\util.py:2006 .\util.py:2005 .\util.py:2100 .\util.py:2104
+#: .\util.py:2112 .\util.py:2247
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:2282
+msgid "Percorso<br />fino a qui"
+msgstr ""
+
+#: .\util.py:1945 .\util.py:2018 .\util.py:2017 .\util.py:2112 .\util.py:2116
+#: .\util.py:2124 .\util.py:2259
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:2294
+msgid "Luoghi<br />vicini"
+msgstr ""
+
+#: .\main.py:192 .\main.py:193 .\main.py:196
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:219
+msgid ""
+"\n"
+"\t\t\tTocca per usare la posizione corrente. Altrimenti cerca una linea, una "
+"fermata\n"
+"\t\t\t(per nome o codice), oppure un indirizzo.\n"
+"\t\t"
+msgstr ""
+
+#: .\main.py:195 .\main.py:196 .\main.py:199
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:222
+msgid "Capito, grazie."
+msgstr ""
+
+#: .\main.py:687 .\main.py:749 .\main.py:778 .\main.py:801 .\main.py:831
+#: .\main.py:835 .\main.py:849
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:872
+msgid "Impossibile determinare la posizione"
+msgstr ""
+
+#: .\main.py:372 .\main.py:379 .\main.py:382 .\main.py:389
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:412
+msgid "Versione app non supportata"
+msgstr ""
+
+#: .\main.py:378 .\main.py:385 .\main.py:388 .\main.py:395
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:418
+msgid ""
+"\n"
+"\t\t\t\t\t\tLa versione della tua app &egrave; troppo vecchia. Per "
+"continuare,\n"
+"\t\t\t\t\t\tdevi effettuare un aggiornamento.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\main.py:390 .\main.py:397 .\main.py:400 .\main.py:407
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:430
+msgid "Aggiorna"
+msgstr ""
+
+#: .\main.py:623 .\main.py:635 .\main.py:655 .\main.py:685 .\main.py:688
+#: .\main.py:702
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:726
+msgid "E' disponibile un aggiornamento"
+msgstr ""
+
+#: .\cerca_linea.py:208 .\cerca_linea.py:229 .\cerca_linea.py:238
+msgid "Dettagli fermata"
+msgstr ""
+
+#: .\cerca_linea.py:213 .\cerca_linea.py:234 .\cerca_linea.py:243
+msgid "Parti da questa fermata"
+msgstr ""
+
+#: .\cerca_linea.py:218 .\cerca_linea.py:239 .\cerca_linea.py:248
+msgid "Arriva a questa fermata"
+msgstr ""
+
+#: .\cerca_linea.py:223 .\cerca_linea.py:244 .\cerca_linea.py:253
+msgid "Cerca luoghi vicini"
+msgstr ""
+
+#: .\main.py:639 .\main.py:661 .\main.py:691 .\main.py:694 .\main.py:708
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:732
+msgid "Bentornato!"
+msgstr ""
+
+#: .\cerca_linea.py:142 .\cerca_linea.py:160 .\cerca_linea.py:169
+msgid "<b>Direzioni:</b> "
+msgstr ""
+
+#: .\main.py:520 .\main.py:534 .\main.py:537 .\main.py:545
+msgid "Invia il tuo feedback"
+msgstr ""
+
+#: .\main.py:1199 .\main.py:1231 .\main.py:1236 .\main.py:1261
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1298
+msgid "sulla nostra pagina Facebook"
+msgstr ""
+
+#: .\main.py:1203 .\main.py:1235 .\main.py:1240 .\main.py:1265
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1302
+msgid "sulla nostra Community Google+"
+msgstr ""
+
+#: .\main.py:1213 .\main.py:1245 .\main.py:1250 .\main.py:1275
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1312
+msgid "Aiutaci con il tuo feedback"
+msgstr ""
+
+#: .\main.py:1219 .\main.py:1251 .\main.py:1256 .\main.py:1281
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1318
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t<p>L'app ti &egrave; utile? Supporta lo sviluppo con la tua "
+"valutazione.\n"
+"\t\t\t\t\t\tPer inviare proposte e suggerimenti sull'app, scrivici %s. "
+"Grazie!</p>\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: .\main.py:1232 .\main.py:1264 .\main.py:1269 .\main.py:1294
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1331
+msgid "Vota"
+msgstr ""
+
+#: .\main.py:1237 .\main.py:1269 .\main.py:1274 .\main.py:1299
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1336
+msgid "Non ora"
+msgstr ""
+
+#: .\main.py:1242 .\main.py:1274 .\main.py:1279 .\main.py:1304
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:1341
+msgid "Scrivici"
+msgstr ""
+
+#: .\cerca_linea.py:1197 .\cerca_linea.py:1273
+msgid "Imposta notifica"
+msgstr ""
+
+#: .\cerca_linea.py:1203 .\cerca_linea.py:1279
+msgid "Notifica quando un veicolo sar&agrave; in arrivo tra circa&nbsp;"
+msgstr ""
+
+#: .\cerca_linea.py:1219 .\cerca_linea.py:1295
+msgid "&nbsp;minuti"
+msgstr ""
+
+#: .\cerca_linea.py:1227 .\cerca_linea.py:1303
+msgid "Linee:"
+msgstr ""
+
+#: .\cerca_linea.py:1238 .\util.py:2169 .\util.py:2214 .\util.py:2173
+#: .\util.py:2218 .\util.py:2181 .\util.py:2226 .\cerca_linea.py:1314
+#: .\util.py:2316 .\util.py:2361
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:2351
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:2396
+msgid "Notifica"
+msgstr ""
+
+#: .\cerca_linea.py:1263 .\cerca_linea.py:1339
+#, python-format
+msgid "Linea %s in arrivo tra circa %d minuti"
+msgstr ""
+
+#: .\cerca_linea.py:1264 .\cerca_linea.py:1340
+msgid "Veicolo in arrivo"
+msgstr ""
+
+#: .\cerca_linea.py:1296
+#, python-format
+msgid "Notifica fermata %d"
+msgstr ""
+
+#: .\cerca_linea.py:1301 .\cerca_linea.py:1377
+msgid ""
+"Non chiudere l'app. Puoi porla in background e bloccare lo schermo, se lo "
+"desideri."
+msgstr ""
+
+#: .\cerca_linea.py:1302 .\cerca_linea.py:1378
+msgid "Notifica impostata"
+msgstr ""
+
+#: .\main.py:633 .\main.py:636 .\main.py:650
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:673
+msgid "toolbar/preferiti_not.png"
+msgstr ""
+
+#: .\cerca_linea.py:1296 .\cerca_linea.py:1372
+#, python-format
+msgid "Notifica fermata %s"
+msgstr ""
+
+#: .\cerca_percorso.py:151
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:170
+msgid "<b>Esclusioni:</b>&nbsp;"
+msgstr ""
+
+#: .\cerca_percorso.py:164 .\cerca_percorso.py:342
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:183
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:361
+msgid "Opzioni di viaggio"
+msgstr ""
+
+#: .\cerca_percorso.py:169 .\cerca_percorso.py:347
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:188
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:366
+msgid "Cerca ritorno"
+msgstr ""
+
+#: .\cerca_percorso.py:174 .\cerca_percorso.py:352
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:193
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:371
+msgid "Ricalcola da posizione attuale"
+msgstr ""
+
+#: .\cerca_percorso.py:179 .\cerca_percorso.py:357
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:198
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:376
+msgid "Invia per email"
+msgstr ""
+
+#: .\cerca_percorso.py:184 .\cerca_percorso.py:362
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:203
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:381
+msgid "Link al percorso"
+msgstr ""
+
+#: .\cerca_percorso.py:249
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:268
+msgid "Tempi di attesa della fermata"
+msgstr ""
+
+#: .\cerca_percorso.py:315
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:334
+msgid "Escludi questa linea"
+msgstr ""
+
+#: .\cerca_percorso.py:337
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:356
+msgid "Sintesi del percorso"
+msgstr ""
+
+#: .\cerca_percorso.py:674 .\cerca_percorso.py:675
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:695
+msgid "Porta la bici sui mezzi pubblici"
+msgstr ""
+
+#: .\cerca_percorso.py:823 .\cerca_percorso.py:820
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\tQuesto servizio calcola il miglior percorso con i mezzi\n"
+"\t\t\t\t\t\t\tAtac, Roma TPL e le ferrovie regionali Trenitalia.\n"
+"\t\t\t\t\t\t\tUsa i dati in tempo reale per tener conto dello stato\n"
+"\t\t\t\t\t\t\tdel traffico e della posizione degli autobus.\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\tIl software, sviluppato dall'Agenzia per la Mobilit&agrave;\n"
+"\t\t\t\t\t\t\tdi Roma, &egrave; <a href=\"http://www.agenziamobilita.roma.it/"
+"servizi/open-data/codice-sorgente.html\" target=\"_blank\">rilasciato\n"
+"\t\t\t\t\t\t\tcon licenza open source.</a>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t&copy; %d\n"
+"\t\t\t\t\t\t\t<a class=\"inl\" href=\"http://www.agenziamobilita.roma.it"
+"\">Roma servizi per la mobilit&agrave; s.r.l.</a>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t"
+msgstr ""
+
+#: .\cerca_linea.py:95
+#, python-format
+msgid "a %s"
+msgstr ""
+
+#: .\util.py:80
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/util.py:103
+msgid "Impossibile scaricare i dati, riprova"
+msgstr ""
+
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:847
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\tQuesto servizio calcola il miglior percorso con i mezzi\n"
+"\t\t\t\t\t\t\tAtac, Roma TPL e le ferrovie regionali Trenitalia.\n"
+"\t\t\t\t\t\t\tUsa i dati in tempo reale per tener conto dello stato\n"
+"\t\t\t\t\t\t\tdel traffico e della posizione degli autobus.\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\tRoma mobile deriva da Muoversi a Roma (muovi.roma.it),\n"
+"\t\t\t\t\t\t\toriginariamente sviluppato dall'Agenzia per la "
+"Mobilit&agrave;\n"
+"\t\t\t\t\t\t\tdi Roma, e <a href=\"https://bitbucket.org/lallulli/muoversi-a-"
+"roma\" target=\"_blank\">pubblicato con licenza open source.</a>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t&copy; %d Roma mobile</a>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t"
+msgstr ""
+
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1557
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:1577
+#, python-format
+msgid "Percorso %d"
+msgstr ""
+
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/cerca_percorso.py:2207
+msgid ""
+"\n"
+"\t\t\t\t\t\tFai car pooling, offri un passaggio! Se vuoi condividere il tuo "
+"viaggio, Roma mobile lo proporr&agrave;\n"
+"\t\t\t\t\t\tad altri utenti che cercano un percorso, proprio come se la tua "
+"auto diventasse un autobus.\n"
+"\t\t\t\t\t\tPotrai anche accordarti con le persone a cui offri un passaggio "
+"per ricevere un contributo\n"
+"\t\t\t\t\t\talle spese di viaggio, suggerito da Roma mobile.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:102
+msgid "Roma mobile"
+msgstr ""
+
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:107
+#, python-format
+msgid ""
+"\n"
+"\t\t\t<p><b>Roma mobile %(version)s</b><br />\n"
+"\t\t\t&copy; %(year)d Roma mobile</p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tRoma mobile &egrave; un progetto open source derivato da Muoversi a "
+"Roma.\n"
+"\t\t\t\tMuoversi a Roma &egrave; stato sviluppato da Roma Servizi per la "
+"Mobilit&agrave;,\n"
+"\t\t\t\tAgenzia per la Mobilit&agrave;\n"
+"\t\t\t\tdi Roma Capitale. I dati che alimentano il servizio sono open data "
+"di\n"
+"\t\t\t\tRoma Servizi per la Mobilit&agrave;.\n"
+"\t\t\t</p>\n"
+"\t\t"
+msgstr ""
+
+#: /home/luca/Documenti/dev/romamobile/mar/percorso/js/main.py:583
+msgid "Informazioni su Roma mobile"
+msgstr ""

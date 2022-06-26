@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+{% if gruppo.singleton %}
+	<h2>{% blocktrans with nome=gruppo.palinapreferita_set.all.0.nome %}Fermata {{ nome }}{% endblocktrans %}</h2>
+{% else %}
+	<h2>{% blocktrans with nome=gruppo.nome %}Gruppo {{ nome }}{% endblocktrans %}</h2>
+	<h3>{% trans "Modifica nome del gruppo" %}</h3>
+	<p>
+	<form id="gruppo" method="get" {{ formaction }}>
+		{{ form_gruppo.nome_gruppo }}
+		<input type="submit" name="submit" value="{% trans "Modifica" %}" />
+		{% formnohist %}
+	</form>
+	</p>
+	<h3>{% trans "Fermate del gruppo" %}</h3>
+	<p>
+	{% for p in gruppo.palinapreferita_set.all %}
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />{{ p.nome }}
+		(<a href='{% hist %}/paline/preferiti/elimina_palina/{{ gruppo.pk }}/{{ p.pk }}{% endhist %}'>{% trans "Elimina" %}</a>) 
+		<br />	
+	{% endfor %}
+	</p>
+{% endif %}
+<h3>{% trans "Escludi linee" %}</h3>
+<form id="palina" method="get" {{ formaction }}>
+<p>
+	{% trans "Alcune linee non ti interessano? Ora hai la possibilit&agrave; di escluderle!" %}
+</p>
+<p>
+	{{ form.linee }}
+	{% formnohist %}
+</p>
+<p>
+	<input type="submit" name="submit" value="{% trans "Imposta esclusioni" %}" />
+</p>
+</form>
+<h3>{% trans "Imposta notifiche" %}</h3>
+<form id="notifica" method="get" {{ formaction }}>
+<p>
+	{{ form_notifiche.notifiche }} {% trans "Notifiche attivate" %}
+</p>
+<p>
+	{% blocktrans with min=form_notifiche.min_attesa max=form_notifiche.max_attesa %}
+		Ricevi una notifica se una linea &egrave; in arrivo tra {{ min }} e {{ max }} minuti.
+	{% endblocktrans %}
+</p>
+{% if notifiche_avanzate %}
+<p>
+	<a href="{% hist %}/servizi/notifiche/fasce/{{ notifiche_avanzate }}{% endhist %}">{% trans "Impostazioni avanzate notifiche" %}</a>
+</p>
+{% endif %}
+<p>
+	<input type="submit" name="submit" value="{% trans "Imposta notifiche" %}" />
+	{% formnohist %}	
+</p>
+</form>
+{% endblock %}

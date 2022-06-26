@@ -1,0 +1,24 @@
+Car pooling <carpooling@agenziamobilita.roma.it>
+Car pooling: ripetizione automatica offerte di passaggio
+Ciao {{ user.first_name }},
+
+come hai richiesto, sono stati riprogrammati per la prossima settimana alcuni passaggi che hai offerto in passato.
+
+Qualora alcune offerte non siano più valide, ti preghiamo di annullarle. In questo modo non saranno più ripetute in futuro.  
+
+{% for pc in pcs %}
+-----
+
+> Da: {{ pc.indirizzo_partenza }}
+> A: {{ pc.indirizzo_arrivo }}
+> Giorno: {{ pc.orario|date:"j M" }}
+
+Per verificare i dettagli o annullare l'offerta fai clic qui:
+http://muovi.roma.it/carpooling/dettaglio_offerta/{{ pc.pk }}?nav=1
+
+
+{% endfor %}
+-----
+
+Grazie,
+Il team Roma Car Pooling

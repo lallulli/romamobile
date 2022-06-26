@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block fullscript %}
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAmqlafHKMG7BFAMDKJj5jhNgpFiZDsBw&sensor=false"></script>
+	<script type="text/javascript" src="/paline/s/js/rpc.js"></script>
+	{{ mappa }}
+{% endblock %}
+
+{% block custombody %}<body onload="initialize()">{% endblock %}
+
+{% block content %}
+
+<h2>{% trans "Offri un passaggio" %}</h2>
+{% blocktrans with sa=infopoint.start.address sp=infopoint.start.place ta=infopoint.stop.address tp=infopoint.stop.place %}
+	<h3>Da {{ sa }} ({{ sp }}) a {{ ta }} ({{ tp }})</h3>
+{% endblocktrans %}
+<p>
+	Ti proponiamo un itinerario. Se non corrisponde all'itinerario che vuoi compiere, aggiungi punti di passaggio intermedi.
+</p>
+{% if errors %}
+	<p><span class="b">{% trans "Correggi le seguenti informazioni:" %}</span></p>
+	<p>
+		{% for e in errors %}
+			<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />{{ e }}<br />
+		{% endfor %}
+	</p>
+{% endif %}
+<p>
+	{% for p in infopoint.punti %}
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+		{{ p.address }}<br />
+		{% if p.indice %}
+			<form id="path{{ p.indice }}" method="get" action="/carpooling/aggiungi_punto">
+				<input type="hidden" name="index" value="{{ p.indice }}" /> 
+				<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					{% if p.form %}
+						{{ p.form.address }}
+					{% else %}
+						{{ form.address }}
+					{% endif %}
+					<input type="submit" name="submit" value="Aggiungi punto" />
+				<br />	
+				{% formhist %}
+			</form>
+		{% endif %}		
+	{% endfor %}
+</p>
+
+<p>
+	<span class="b">{% trans "Distanza percorsa" %}</span>: {{ stat.distanza_totale_format }}<br />
+</p>
+
+<p>
+	<a href="{% hist %}/carpooling/offri_passaggio_tempo{% endhist %}">Conferma itinerario e continua &gt;&gt;</a>
+</p>
+
+<div id="map_canvas" style="width: 94%; height: 600px;">Car pooling</div>
+
+<!--Tempo di calcolo (incluso geocoding): {{ tempo_calcolo }}-->
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+	<h2>Benvenuto al servizio Roma Car Pooling</h2>
+	
+	<p>
+		Ciao {{ user.first_name }}, ti preghiamo di impostare alcuni dati personali e le tue preferenze per il car pooling.
+	</p>
+	
+	{% if error %}
+		Il numero di telefono che hai impostato non &egrave; valido.
+	{% endif %}
+	
+	<form id="telefono" method="get" {{ formaction }}>
+		<p>
+			Telefono: {{ form.numero }}<br />
+			Sesso: {{ form.sesso }}
+		</p>
+		<p>
+			{{ form.fumatore }} Fumo durante lo spostamento<br />
+			{{ form.solo_non_fumatori }} Condivido gli spostamenti solo con persone che non fumano<br />
+			{{ form.solo_stesso_sesso }} Condivido gli spostamenti solo con persone del mio stesso sesso
+		</p>
+		<p>
+		 <input type="submit" name="Submit" value="{% trans "Imposta" %}" />
+		</p>
+	{% formhist %}
+	</form>
+
+
+{% endblock %}

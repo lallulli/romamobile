@@ -1,0 +1,60 @@
+{% load i18n %}
+{% load history %}
+<?xml version="1.0" encoding="utf-8"?>
+{% if  amFlavor == 'default' %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+{% else %}
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+{% endif %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		{% if autorefresh %}
+		<meta http-equiv="refresh" content="{{ autorefresh }}" />
+		{% endif %}
+		<meta name="robots" content="nofollow" />
+		<meta name="description" content="Muoversi a Roma nasce per informare e aggiornare sulla mobilità pubblica e privata i cittadini, i turisti, i pendolari, i city user" />
+		<meta name="keywords" content="muoversi, roma, mobilità, trasporto pubblico, informazione, infomobilità, mobile, atacmobile, tempi di attesa, trovalinea, calcolo del percorso, mappa" />
+		<title>Muoversiaroma.it Mobile</title>
+		<link href="/xhtml/s/css/screen.css" rel="stylesheet" type="text/css" />
+		{% block InternalStyle %}
+		{% endblock %}{% block fullscript %}{% endblock %}
+	</head>
+
+	{% block custombody %}<body>{% endblock %}
+	{% if not request.GET.onlycontent %}
+		<div id="header">
+			<div id="rsm-sx"><a class="nound" href="http://muovi.roma.it/"><img src="/xhtml/s/img/muoversiaroma.png" width="153" height="50" /></a></div>
+			<div id="rsm-dx"></div>
+			<div id="orario">{{ DateTime }}</div>
+		</div>
+		
+		<div id="main">
+
+			
+	{% endif %}
+
+	{% block content %}
+		<p>
+			Atac mobile cambia nome e diventa Muoversi a Roma.
+		</p>
+		<p>
+			Per continuare ad utilizzare il servizio, visita il sito <a href="http://muovi.roma.it">muovi.roma.it</a>.
+		</p>
+	{% endblock %}
+	
+	{% if not request.GET.onlycontent %}
+		</div>
+		<div id="footer">
+			<div class="navbottom">
+			</div>
+			<div id="info">
+				&copy; 2012 Roma servizi per la mobilit&agrave; s.r.l.
+			</div>
+		</div>
+	{% endif %}
+	</body>
+</html>
+
+
+

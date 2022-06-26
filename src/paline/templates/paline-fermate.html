@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block InternalStyle %}
+	<style>
+		.stato0, .stato1, .stato2, .stato3, .stato4, .stato-1 {
+			padding-left: 0.4em;
+			margin-bottom: 2px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.stato-1 {
+			border-left: #999999 solid 0.24em;
+		}
+		.stato0 {
+			border-left: none;
+			padding-left: 0.64em;
+		}
+		.stato1 {
+			border-left: #000000 solid 0.24em;
+		}
+		.stato2 {
+			border-left: #FF0000 solid 0.24em;
+		}
+		.stato3 {
+			border-left: #FFD800 solid 0.24em;
+		}
+		.stato4 {
+			border-left: #00FF00 solid 0.24em;
+		}
+	</style>
+{% endblock %}
+
+{% block content %}
+
+{% if percorso.descrizione %}
+	<h2>{{ percorso.descrizione }}{% if percorso.departures_count or percorso.departures_count == 0 %}&nbsp;&nbsp;🚍 {{ percorso.vehicles_count }} 🕒 {{ percorso.departures_count }}{% endif %}</h2>
+{% else %}
+	<h2>{% blocktrans with l=percorso.linea.id_linea c=percorso.decodificaCarteggio d=percorso.arrivo.nome_ricapitalizzato %}&nbsp;<span class="linea">{{ l }}</span> {{ c }} Direz. {{ d }}{% endblocktrans %}
+		{% if percorso.departures_count or percorso.departures_count == 0 %}&nbsp;&nbsp;🚍 {{ percorso.vehicles_count }} 🕒 {{ percorso.departures_count }}{% endif %}</h2>
+{% endif %}
+{% if id_veicolo %}
+<p>{% trans "Arrivi previsti per la vettura: " %}{% for v in id_veicoli %}{% if v == id_veicolo %}<span class="b">{{ v }} </span>{% else %}<a class="nound" href="{% nohist %}/paline/percorso/{{ percorso.id_percorso }}?id_veicolo={{ v }}{% if id_palina %}&amp;id_palina={{ id_palina }}{% endif %}{% if id_veicoli %}&amp;id_veicoli={{ id_veicoli|join:"," }}{% endif %}{% endnohist %}">{{ v }} </a>{% endif %}{% endfor %}</p>
+{% endif %}
+{% if mappa %}
+	<div class="c">
+	<p>
+		<img src="http://maps.googleapis.com/maps/api/staticmap?{{mappa}}" alt="Mappa"/><br/>
+			{% if zoom_down %}
+				<a href="{% nohist %}/paline/mappa/static/o{% endnohist %}" class="nound">[-]</a>
+			{% else %}
+				<span class="disabled">[-]</span>
+			{% endif %}
+			{% if zoom_up %}
+				<a href="{% nohist %}/paline/mappa/static/i{% endnohist %}" class="nound">[+]</a>
+			{% else %}
+				<span class="disabled">[+]</span>
+			{% endif %}<br />
+			<a href="{% nohist %}/paline/mappa/static/n{% endnohist %}" class="nound">^</a><br />
+			<a href="{% nohist %}/paline/mappa/static/w{% endnohist %}" class="nound">&lt;</a> +
+			<a href="{% nohist %}/paline/mappa/static/e{% endnohist %}" class="nound">&gt;</a><br />
+			<a href="{% nohist %}/paline/mappa/static/s{% endnohist %}" class="nound">v</a>
+	</p>
+	</div>
+	<p>
+		<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+		<a href="/percorso/js/?hl={{ lingua.codice }}&amp;id_percorso={{ percorso.id_percorso }}&amp;lf=0" target="_blank">{% trans "Mappa interattiva" %}</a>
+	</p>
+{% else %}
+	<p>
+		{% comment %}<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+		<a href="{% nohist %}/paline/mappa/static{% endnohist %}">{% trans "Mappa base" %}</a><br />{% endcomment %}
+		<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+		<a href="/percorso/js/?hl={{ lingua.codice }}&amp;id_percorso={{ percorso.id_percorso }}&amp;lf=0" target="_blank">{% trans "Mappa" %}</a>
+	</p>
+{% endif %}
+
+{% if not percorso.no_orari %}
+	<h2>{% trans "Partenze dal capolinea" %}</h2>
+	{% if orari_partenza %}	
+		<p>
+		{% for op in orari_partenza %}
+			{% if op.minuti %}
+				<span class="b">{{ op.ora }}:</span>{% for m in op.minuti %} {{ m }}{% endfor %}<br />
+			{% endif %}
+		{% endfor %}
+		{% if nessuna_partenza %}
+			{% trans "Nella giornata selezionata il percorso non &egrave; attivo." %}
+		{% endif %}
+		</p> 
+		<h3>{% trans "Altri giorni" %}</h3>
+		<p>
+			{% for g in giorni_partenza %}
+				{% if g.mysql == giorno_partenza %}
+					<span class="b">&raquo; {{ g.format }}</span> 
+				{% else %}
+					&raquo;  <a href="{% nohist %}/paline/percorso/{{ percorso.id_percorso }}?partenze=1&amp;data={{ g.mysql }}{% endnohist %}">{{ g.format }}</a> 
+				{% endif %}<br />
+			{% endfor %}
+		</p>
+	{% else %}
+		<p>
+			{% if nessuna_partenza %}
+				{% trans "Oggi il percorso non &egrave; attivo." %}
+			{% else %}
+				{% for o in orari_partenza_vicini %}{{ o.orario_partenza|time:"H:i" }} {% endfor %}
+			{% endif %}
+		</p>
+		<p>
+			(<a href="{% nohist %}/paline/percorso/{{ percorso.id_percorso }}?partenze=1{% endnohist %}">{% trans "Altri orari" %}</a>)
+		</p>
+	{% endif %}
+{% else %}
+	<p>
+		{{ percorso.note_no_orari }}
+	</p>
+{% endif %}
+
+{% if percorso.alerts %}
+	<h2>{% trans "Avvisi" %}</h2>
+	<p>
+		{% for m in percorso.alerts.alerts.it %}
+			<p>
+				<img width="20" height="18" src="/paline/s/img/warning_{{ m.severity }}.png" />
+				<span class="b">{{ m.header|safe }}</span><br />
+				{% if m.severity == 2 or request.GET.alert_details %}
+					{{ m.description|safe }}
+				{% endif %}
+			</p>
+		{% endfor %}
+		{% if not request.GET.alert_details %}
+			(<a href="{% addparam "alert_details=1#legend" %}">{% trans "Mostra dettagli" %}</a>)
+		{% endif %}
+	</p>
+
+
+{% endif %}
+
+<h2>{% trans "Fermate" %}</h2>
+{% if disabilitato %}
+	<p><span class="b">{% trans "Siamo spiacenti, il servizio temporaneamente non &egrave; disponibile per questo percorso." %}</span><br />
+	{% trans "In ogni caso ecco le fermate:" %}</p>
+{% else %}
+	<p>{% trans "Seleziona una fermata oppure una vettura." %}</p>	
+{% endif %}
+
+<p>
+	{% for f in fermate %}
+		{% if not f.soppressa %}
+			<div class="stato{{ f.stato_traffico }}">
+				{% if f.veicolo %}
+					<a class="nound" href="{% nohist %}/paline/percorso/{{ percorso.id_percorso }}?id_veicolo={{ f.veicolo.id_veicolo }}{% if id_palina %}&amp;id_palina={{ id_palina }}{% endif %}{% if f.id_veicoli|length > 1 %}&amp;id_veicoli={{ f.id_veicoli|join:"," }}{% endif %}{% endnohist %}"><img class="dot" {% if id_palina == f.id_palina %}id="pal" {% endif %}src="/paline/s/img/bus{% if f.id_veicoli|length > 1 %}_m{% endif %}{% if id_veicolo == f.veicolo.id_veicolo or id_veicolo in f.id_veicoli %}_hl{% endif %}.png" height="20" width="20" alt="B" /></a>
+				{% else %}
+					<img class="dot" {% if id_palina == f.id_palina %}id="pal" {% endif %}src="/paline/s/img/{% if f.id_palina == percorso.arrivo.id_palina %}stop_arrow.gif{% else %}down_arrow.gif{% endif %}" height="7" width="20" alt="*" />
+				{% endif %}
+				{% if f.stato_occupazione %}
+					<img width="21" height="20" src="/paline/s/img/people_{{ f.stato_occupazione_3l }}.png" />
+				{% else %}
+					<img width="21" height="20" src="/paline/s/img/people_0.png" />
+				{% endif %}
+				{% if mostra_arrivi %}
+					{% if f.orario_arrivo %}
+						{{ f.orario_arrivo }}
+					{% else %}
+						{% trans "--:--" %}
+					{% endif %}
+				{% endif %}
+				<a href='{% hist %}/paline/palina/{{ f.id_palina }}{% endhist %}'>{% if id_palina == f.id_palina %}<span class="emph">{{ f.nome_ricapitalizzato }}</span>{% else %}{{ f.nome_ricapitalizzato }}{% endif %}</a>
+				{% if request.user.is_superuser %}
+					(<a href="{% hist %}/paline/sospendi_fermata/{{ f.id_fermata }}{% endhist %}">sospendi</a>)
+				{% endif %}
+			</div>
+		{% endif %}
+	{% endfor %}
+</p>
+<h2>{% trans "Percorsi della linea" %}</h2>
+<table>
+	<table>
+	{% for p in percorsi %}
+		{% if request.GET.inactive or not p.nascondi_percorso %}
+			<tr class="top">
+			<td>
+				<a {% if percorso == p %}span class="selezionata" {% endif %}href='{% hist %}/paline/percorso/{{ p.id_percorso }}{% endhist %}'><span class="linea{% if percorso == p %} selezionata{% endif %}">
+					{% if p.descrizione %}
+						{{ p.descrizione }}
+					{% else %}
+						{{ p.linea.id_linea }}
+					{% endif %}
+				</span>
+				</a>
+			</td><td><a class="noa{% if percorso == p %} selezionata{% endif %}" href='{% hist %}/paline/percorso/{{ p.id_percorso }}{% endhist %}'>
+				<span class="b">{{ p.arrivo.nome_ricapitalizzato }}</span>{% if p.dest_zone %} ({{ p.dest_zone }}){% endif %}
+			{% if not p.linea.monitorata %}
+				<br />({% trans "non monitorata" %})
+			{% else %}
+				{% if not p.abilitata_complessivo %}
+					<br />
+					{% if p.news_disabilitazione_complessivo %}
+						(<a href="{% hist %}/news/dettaglio/{{ p.news_disabilitazione_complessivo.prima_categoria.id_categoria }}/{{ p.news_disabilitazione_complessivo.id_news }}{% endhist %}">{% trans "non disponibile" %}</a>)
+					{% else %}
+						({% trans "non disponibile" %})
+					{% endif %}
+				{% endif %}
+			{% endif %}
+			{% if p.departures_count or p.departures_count == 0 %}
+				<br />🚍 {{ p.vehicles_count }} 🕒 {{ p.departures_count }}
+				{% if p.decodeCarteggio %} - {{ p.decodeCarteggio }}{% endif %}
+			{% endif %}
+			</a></td></tr>
+		{% endif %}
+	{% endfor %}
+	</table>
+</table>
+{% if nascondi_percorsi and request.GET.inactive != '1' %}
+	<p class="vskip">(<a href="{% addparam "inactive=1" %}">{% if nascondi_percorsi == 1 %}{% blocktrans %}Mostra un percorso non attivo adesso{% endblocktrans %}{% else %}{% blocktrans %}Mostra {{ nascondi_percorsi }} percorsi non attivi adesso{% endblocktrans %}{% endif %}</a>)</p>
+{% endif %}
+<p>
+	{% blocktrans with l=percorso.linea.id_linea g=percorso.linea.gestore.descrizione %}La linea {{ l }} &egrave; gestita da {{ g }}.{% endblocktrans %}
+</p>
+{% if request.GET.legend %}
+	<div id="legend">
+	
+	<h2 class="vskip">{% trans "Legenda" %}</h2>
+	<p>
+		<img class="dot" src="/paline/s/img/green.gif" alt="S" width="15" height="8" /> = {% trans "Pi&ugrave di 15 km/h" %}<br />
+		<img class="dot" src="/paline/s/img/yellow.gif" alt="I" width="15" height="8" /> = {% trans "10-15 km/h" %}<br />
+		<img class="dot" src="/paline/s/img/red.gif" alt="C" width="15" height="8" /> = {% trans "5-10 km/h" %}<br />
+		<img class="dot" src="/paline/s/img/black.gif" alt="B" width="15" height="8" /> = {% trans "Meno di 5 km/h" %}<br />
+		<img class="dot" src="/paline/s/img/grey.gif" alt="N" width="15" height="8" /> = {% trans "Informazioni non disponibili" %}<br /><br />
+		<img width="21" height="20" src="/paline/s/img/people_1.png" />
+		= {% trans "Poco affollato" %}<br />
+		<img width="21" height="20" src="/paline/s/img/people_2.png" />
+		= {% trans "Mediamente affollato" %}<br />
+		<img width="21" height="20" src="/paline/s/img/people_3.png" />
+		= {% trans "Molto affollato" %}<br /><br />
+		🚍 = {% trans "Numero di veicoli sul percorso" %}<br />
+		🕒 = {% trans "Numero di partenze programmate all'ora" %}
+	</p>
+	</div>
+{% else %}
+	<p class="vskip">(<a href="{% addparam "legend=1#legend" %}">{% trans "Mostra legenda" %}</a>)</p>
+{% endif %}
+
+	
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<form id="path" method="get" {{ formaction }}>
+{% if errors %}
+	<p><span class="b">{% trans "Correggi le seguenti informazioni:" %}</span></p>
+	<p>
+		{% for e in errors %}
+			<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />{{ e }}<br />
+		{% endfor %}
+	</p>
+{% endif %}
+{% if offri %}
+	<h2 class="vskip">{% trans "Offri un passaggio" %}</h2>
+{% else %}
+	<h2 class="vskip">{% trans "Cerca un passaggio" %}</h2>
+{% endif %}
+<p>
+	<table>
+		<tr>
+			<td>{% trans "Da:" %}</td>
+			<td>{{ form.start_address }}</td>
+		</tr>
+		<tr>
+			<td>{% trans "A:" %}</td>
+			<td>{{ form.stop_address }}</td>
+		</tr>
+	</table>
+</p>
+
+<h2 class="vskip">{% trans "Quando" %}</h2>
+<p>
+	{{ form.day }}/{{ form.month }}/{{ form.year }} {% trans "alle" %} {{ form.hour }}:{{ form.minute }}
+</p>
+
+<p class="vskip">
+	<input type="submit" name="Submit" value="{% trans "Continua" %}" />
+	<input type="submit" name="Inverti" value="{% trans "Ritorno" %}" />
+</p>
+{% if not offri %}
+	<h2 class="vskip">{%trans "Come" %}</h2>
+	<h3>{% trans "Propensione spostamenti a piedi e in bici:" %}</h3>
+	<p>
+		{{ form.piedi }}
+	</p>
+	<p>
+		{{ form.bici }}
+		{% blocktrans with mdb=form.max_distanza_bici %}
+			Primo tratto in bici, max {{ mdb }} km
+		{% endblocktrans %}
+	</p>
+	<h3>{% trans "Mezzi pubblici da utilizzare:" %}</h3>
+	<p>
+		{{ form.bus }} {% trans "Autobus e tram" %}<br />
+		{{ form.metro }} {% trans "Metropolitana" %}<br />
+		{{ form.ferro }} {% trans "Ferrovie urbane" %}<br />
+	</p>
+	<p class="vskip"><input type="submit" name="Submit" value="{% trans "Continua" %}" /></p>
+{% endif %}
+{% formhist %}
+</form>
+{% endblock %}

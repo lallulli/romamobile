@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+
+<h2>{% trans "Offri un passaggio" %}</h2>
+{% blocktrans with sa=indirizzo_partenza ta=indirizzo_arrivo %}
+	<h3>Da {{ sa }} a {{ ta }}</h3>
+{% endblocktrans %}
+<p>
+	Verifica la durata dello spostamento e conferma di voler offrire un passaggio.
+</p>
+
+<form id="tempo" method="get" {{ formaction }} >
+	<h3 class="vskip">Durata dello spostamento:</h3>
+	<p>
+		{{ form.hours }} ore e {{ form.minutes }} minuti
+	</p>
+	
+	
+	<h3>Orario partenza:</h3>
+	<p>
+		{{ form.day }}{{ form.month }}{{ form.year }}{{ form.hour }}:{{ form.minute }}
+	</p>
+	
+	<h3 class="vskip">Flessibilit&agrave;:</h3>
+	<p>
+		Per venire incontro agli utenti che cercano passaggi, sei disposto a modificare leggermente l'orario di partenza?
+		Seleziona la tua disponibilit&agrave;
+	</p>
+	<p>
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />Anticipare il viaggio di max {{ form.flessibilita_ant }} minuti.<br />
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />Posticipare il viaggio di max {{ form.flessibilita_post }} minuti.
+	</p>
+	
+	<h3>{% trans "Ripeti" %}</h3>
+	Seleziona i giorni in cui desideri ripetere l'offerta di passaggio:
+	<table width=”100%”>
+		<tr><td>{{ form.giorno0 }}</td> <td>{{ data0|date:"D j F"|capfirst }}</td></tr>
+		<tr><td>{{ form.giorno1 }}</td> <td>{{ data1|date:"D j F"|capfirst }}</td></tr>
+		<tr><td>{{ form.giorno2 }}</td> <td>{{ data2|date:"D j F"|capfirst }}</td></tr>
+		<tr><td>{{ form.giorno3 }}</td> <td>{{ data3|date:"D j F"|capfirst }}</td></tr>
+		<tr><td>{{ form.giorno4 }}</td> <td>{{ data4|date:"D j F"|capfirst }}</td></tr>
+		<tr><td>{{ form.giorno5 }}</td> <td>{{ data5|date:"D j F"|capfirst }}</td></tr>
+		<tr><td>{{ form.giorno6 }}</td> <td>{{ data6|date:"D j F"|capfirst }}</td></tr>
+	</table>	
+	{% formhist %}
+	<p>
+		{{ form.ripeti }} Ripeti automaticamente ogni settimana
+	</p>
+	<p><input type="submit" name="Submit" value="Conferma offerta" /></p>
+</form>
+
+
+{% endblock %}

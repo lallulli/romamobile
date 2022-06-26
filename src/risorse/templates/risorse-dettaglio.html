@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+
+{% block InternalStyle %}
+<style type="text/css">
+.nound {
+	text-decoration:none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<h2>{% blocktrans with a=infopoint.point.address p=infopoint.point.place %}Rivendite vicine a {{ a }} ({{ p }}){% endblocktrans %}</h2>
+{% if mappa %}
+	<div class="c">
+	<p><img id="map" alt="Mappa" src="/risorse/mappaimg?nohist=1" width="200" height="150" /></p>
+	<p>
+		{% if infopoint.zoomlevel > infopoint.zoom_min %}
+			<a href="{% nohist %}/risorse/mappacmd/o?rnd={{ rnd }}#map{% endnohist %}" class="nound">[-]</a>
+		{% else %}
+			<span class="disabled">[-]</span>
+		{% endif %}
+		{% if infopoint.zoomlevel < infopoint.zoom_max %}
+			<a href="{% nohist %}/risorse/mappacmd/i?rnd={{ rnd }}#map{% endnohist %}" class="nound">[+]</a>
+		{% else %}
+			<span class="disabled">[+]</span>
+		{% endif %}<br />
+	<a href="{% nohist %}/risorse/mappacmd/n?rnd={{ rnd }}#map{% endnohist %}" class="nound">^</a><br />
+	<a href="{% nohist %}/risorse/mappacmd/w?rnd={{ rnd }}#map{% endnohist %}" class="nound">&lt;</a> +
+	<a href="{% nohist %}/risorse/mappacmd/e?rnd={{ rnd }}#map{% endnohist %}" class="nound">&gt;</a><br />
+	<a href="{% nohist %}/risorse/mappacmd/s?rnd={{ rnd }}&nohist=1#map{% endnohist %}" class="nound">v</a>
+	</p>
+	</div>
+{% else %}
+	<p>(<a href="{% nohist %}/risorse/mappa{% endnohist %}">{% trans "Mostra risultati su mappa" %}</a>)</p>
+{% endif %}
+
+
+{% for r in risorse %}
+	<div class="banda{{ r.banda }}">
+		{{ r.dispnumber }}. {{ r.name }} a {{ r.distance }} m<br />
+		<a href="{% hist %}/risorse/percorso/{{ r.dispnumber }}{% endhist %}">{{ r.address }} ({{ r.place }})</a><br />
+			Tel. {{ r.phone }}
+	</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,401 @@
+* {
+	font-family: 'Droid Sans', sans-serif;
+}
+body {
+	margin: 0em;
+	background-color:white;
+	background-attachment: fixed;
+	background-position: 0px 50px;
+}
+p {
+  margin: 0.5em 0em 0.5em 0em;
+}
+h1,h2,h3,h4,h5,h6,.date {
+	font-size: 1em;
+	font-weight: bold;
+  margin: 0.6em 0em 0.5em 0em;
+}
+h2 {
+	color: #ffffff;
+	background-color: #888888;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	opacity: .7;
+}
+h1 {
+	background-color: #f84f00;
+	color: white;
+	padding-left: 5px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+h1 a {
+	color: #ffffff;
+}
+a img {
+	border: 0;
+	text-decoration: none;
+}
+h3 {
+	color: #f84f00;
+}
+a {
+	color: #f84f00;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px dotted;	
+}
+a.noa {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    border-bottom: none;
+}
+input, textarea {
+	color: #333333;
+	background-color: #eeeeee;
+}
+
+select, select option {
+	color: #333333;
+}
+.right-head {
+	width: 100%;
+	text-align: right;
+	font-size: small;	
+}
+.b {
+	font-weight: bold;
+	/* font-color: #f84f00;*/
+}
+.i {
+	font-style:italic;
+}
+.c {
+	text-align:center;
+}
+.disabled {
+	color: #999999;
+}
+.small {
+	font-size: small;	
+}
+
+/* Blocco stili header */
+#header {
+	padding: 5px;
+	padding-bottom: 0px;
+	height: 50px;
+}
+#rsm-dx {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height: 50px;
+	z-index: -2;
+}
+#rsm-sx {
+	position:absolute;
+	top:5px;
+	left:5px;
+	height:50px;
+	width:153px;
+}
+
+#orario {
+		position: absolute;
+		right: 15px;
+		top: 31px;
+		color: #333333;
+		font-weight: bold;
+		font-size: small;
+		font-stretch: condensed;
+}
+#beta {
+		position: absolute;
+		right: 34px;
+		top: 2px;
+		padding: 0px 2px 0px 2px;
+		border-top: #f84f00 solid 1px;
+		border-bottom: #f84f00 solid 1px;
+		color: #f84f00;
+		background-color: #eeeeee;
+		font-weight: bold;
+		font-size: small;
+}
+#beta a {
+	color: #f84f00;
+}
+#brightness {
+	position: absolute;
+	right: 12px;
+	top: 3px;
+	display: block;
+}
+.navtop {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	padding-top: 7px;
+	padding-left: 5px;
+	height: 24px;
+	width: 100%;
+}
+
+
+
+/* blocco stili contenuto centrale */
+#main {
+	margin: 0em;
+	padding-left: 0.5em;
+	padding-bottom: 0.5em;
+	padding-right: 0.5em;
+	padding-top: 0em;
+	border-bottom:white solid 0.3em;
+	background-color: white;
+}
+
+#main a {
+		text-decoration: none;
+		line-height: 1.4 em;
+}
+
+#title {
+		line-height: 1em;
+		margin-top: 5px;
+		margin-bottom: 15px;
+}
+#title #indietro a {
+		/*color: #f84f00;*/
+		color: #333333;
+		margin-left: 3px;
+}
+#title a {
+		margin-left: 8px;
+		text-decoration: none;
+		vertical-align: text-bottom;
+}
+#aggiorna {
+		position: absolute;
+		right: 15px;
+}
+#title #aggiorna a{
+		text-decoration: none;
+}
+#title table tr td {
+		height: 1.5em;
+}
+/*#content {
+		
+}*/
+
+/* blocco stili footer */
+#footer {
+		border-top: 3px solid #f84f00;
+}
+
+#footer #info {
+		padding-top: 6px;
+		padding-bottom: 6px;
+		color: #333333;
+		font-size: small;
+		font-stretch: condensed;
+		height: 24px;
+}
+#footer #info * {
+		vertical-align: middle;
+}
+#footer #navbottom {
+	margin: 0.1em 0.2em 0.2em 0.5em;
+}
+/*#footer #navbottom a {
+}*/
+.icon {
+	vertical-align: middle;
+}
+.middle {
+	vertical-align: middle;
+}
+.top {
+	vertical-align: top;
+}
+.menulink {
+	vertical-align: middle;
+	border-bottom: 1px dotted;
+	color: #f84f00;
+}
+.menuitem {
+	padding: 2px 0px 2px 0px;
+}
+.dot {
+	vertical-align: middle;
+}
+.emph {
+	color: #f84f00;
+	background-color:#dddddd;
+}
+.banda0, .banda1, .banda2 {
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	border-bottom: #f84f00 dashed 0.1em;
+	padding: 0.3em;
+}
+
+.banda1 {
+	border-left: #f84f00 solid 0.3em;
+	background-color: #dddddd;
+}
+.banda2, .banda0 {
+	border-left: #999999 solid 0.3em;
+	background-color: #ffdfd1
+}
+.banda0 {
+	border-top: #f84f00 dashed 0.1em;
+}
+.nota {
+	margin-top: 3em;
+	font-size: 0.8em;
+}
+.ak {
+  background-color: #999999;
+  color: #333333;
+  border-left: #999999 solid 0.2em;
+  border-right: #999999 solid 0.2em;
+  border-top: #999999 solid 0.1em;
+  border-bottom: #999999 solid 0.1em;
+  width: 3em;
+}
+.nak {
+  background-color: transparent;
+  color: transparent;
+  border-color: transparent;
+  border-left: solid 0.2em;
+  border-right: solid 0.2em;
+  border-top: solid 0.1em;
+  border-bottom: solid 0.1em;
+}
+.vskip {
+	margin-top: 0.8em;
+}
+.hid, .hid1 {
+	color: #333333;
+}
+.hid0, .hid2 {
+	color: #E8E8E8;
+}
+.notifiche {
+	background-color: #ffffff;
+	color: #333333;
+	margin-top: 0.8em;
+	margin-bottom: 0.6em;
+	padding: 0.2em;
+	text-align:left;
+	border-style: solid;
+	border-color: #f84f00;
+	border-width: 1px 0px 1px 5px;
+}
+.notifiche a {
+	color: #f84f00;
+	text-decoration: none;
+}
+.infobox {
+	background-color: #E8E8E8;
+	color: #333333;
+	font-size: 0.8em;
+	padding: 0.4em;
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+	border-left: #f84f00 solid 2px;	
+}
+
+.infobox .b {
+	color: #f84f00;
+}
+
+.hlform {
+	background-color: #D2B0B6;
+}
+.nound {
+	border-bottom: none;
+}
+.indented {
+	margin-left: 10px;
+}
+.selected {
+	background-color: #E8E8E8;
+	border-left: #f84f00 solid 2px;
+}
+.selected a {
+	color: #f84f00;
+}
+.linea.selezionata {
+	background-color: #444444;
+}
+a.selezionata {
+	pointer-events: none;
+	cursor: default;
+	border: none;
+}
+.category {
+	font-weight: bold;
+	color: #f84f00;
+	margin-top: 12px;
+}
+.percorso .indicazioni td {
+	padding-bottom: 10px;
+}
+.percorso .indicazioni .fc {
+	text-align: center;
+}
+.percorso .indicazioni .icon {
+	background-color: #999999;
+	border-left: #f84f00 solid 5px;
+	color: #f84f00;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.percorso .indicazioni .nodo .icon {
+	background-color: #ffc7ad;
+}
+
+.percorso .indicazioni .tratto .icon {
+	background-color: #999999;
+}
+
+.linea {
+	background-color: #f84f00;
+	color: white;
+	font-weight: bold;
+	min-width: 4ch;
+	display: inline-block;
+  text-align: center;
+  border-radius: 0.2em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+}
+
+.abilita {
+	color:black;
+}
+.disabilita {
+	color:black
+}
+a.abilita:hover{
+	color:#999999;
+	
+	}
+a.disabilita:hover{
+	color:#f84f00;
+	}
+.inactive:hover {
+    background-color: white;
+}
+.active {
+    border-bottom: 3px solid white;
+    background-color: #999999;
+}

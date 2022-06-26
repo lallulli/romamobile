@@ -1,0 +1,85 @@
+{% load i18n %}
+{% load history %}
+Roma mobile <no-reply@romamobile.it>
+
+{% blocktrans with sa=infopoint.start.address sp=infopoint.start.place ta=infopoint.stop.address tp=infopoint.stop.place %}
+	Percorso da {{sa}} ({{sp}}) a {{ta}} ({{tp}})
+
+	Percorso da {{sa}} ({{sp}}) a {{ta}} ({{tp}})
+{% endblocktrans %}
+
+
+{% trans "Durata spostamento" %}: {{ stat.tempo_totale_format }}
+
+{% trans "Distanza percorsa" %}: {{ stat.distanza_totale_format }}
+
+{% trans "Di cui a piedi" %}: {{ stat.distanza_piedi_format }}
+	
+{% for i in indicazioni_icona %}
+
+	{% if i.nodo %}
+	^[{{ i.nodo.t }}] {% if i.nodo.tipo == 'F' %}{% trans "Fermata " %}{% endif %}{{i.nodo.nome }}$
+	{% else %}
+		^        $
+		{% if i.tratto.id and i.tratto.info_tratto_exp%}
+		{% endif %}
+		{% if i.tratto.mezzo == 'Z' %}
+			{% trans "Teletrasporto" %}
+		{% elif i.tratto.mezzo == 'Z' %}
+			{% trans "Cambia linea" %}
+		{% else %}
+			{% if i.tratto.mezzo != 'P' and i.tratto.mezzo != 'C' and i.tratto.mezzo != 'CP' and i.tratto.mezzo != 'A' and i.tratto.mezzo != 'CS' %}
+				{% if i.tratto.mezzo == 'B' %}
+					^{% trans "Linea" %} $
+				{% endif %}
+				{% if i.tratto.url %}
+					{{ i.tratto.linea }}
+					^ {% trans "direz." %} {{ i.tratto.dest }}$
+				{% else %}
+					{{ i.tratto.linea }}
+					^ {% trans "direz." %} {{ i.tratto.dest }}$
+				{% endif %}
+			{% endif %}
+			{% if i.tratto.mezzo == 'P' %}
+				{% trans "A piedi" %}
+			{% endif %}
+			{% if i.tratto.mezzo == 'C' %}
+				{% trans "In bicicletta" %}
+			{% endif %}
+			{% if i.tratto.mezzo == 'A' %}
+				{% trans "In automobile" %}
+			{% endif %}
+			{% if i.tratto.mezzo == 'CS' %}
+				{% trans "Car sharing" %}
+			{% endif %}
+			{% if i.tratto.mezzo == 'CP' %}
+				{% trans "Car pooling" %}
+			{% endif %}
+			{% if i.tratto.tempo_attesa %}
+
+				^        $
+				{% if i.tratto.tipo_attesa == 'O' %}
+					{% trans "Partenza ore" %}
+				{% elif i.tratto.tipo_attesa == 'S' %}
+					{% trans "Attesa circa" %}
+				{% elif i.tratto.tipo_attesa == 'P' %}
+					{% if i.tratto.numero == 0 %}
+						{% trans "In arrivo fra" %}
+					{% else %}
+						{% trans "In arrivo dopo" %}
+					{% endif %}
+				{% elif i.tratto.tipo_attesa == 'E' %}
+					{% trans "Attesa" %}
+				{% elif i.tratto.tipo_attesa == 'Z' %}
+					{% trans "Apertura ZTL ore" %}
+				{% endif %}
+				^ {{ i.tratto.tempo_attesa }}$
+			{% endif %}
+
+			^        {{ i.tratto.info_tratto }}$
+		{% endif %}
+	{% endif %}
+{% endfor %}
+
+
+http://beta.romamobile.it/percorso/js?{{ params }}

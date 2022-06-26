@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+
+{% block content %}
+
+<h2>{% trans "Richiesta di un passaggio" %}</h2>
+{% if richiesta.stato == '-' %}
+	<p>
+		Confermi la richiesta di un passaggio in car pooling?
+	</p>
+{% endif %}
+<p>
+	<span class="b">Da:</span> {{ richiesta.da_indirizzo }} ({{ richiesta.da_orario|date:"d/m H:i" }})<br />
+	<span class="b">A:</span> {{ richiesta.a_indirizzo }} ({{ richiesta.a_orario|date:"d/m H:i" }})<br />
+	<span class="b">Contributo suggerito:</span> {{ richiesta.costo|floatformat:2 }} &euro;<br />
+	<span class="b">Feedback offerente:</span> {{ richiesta.offerta.utente_car_pooling.feedback_complessivo_arrotondato }} / 5.0<br />
+	{% if richiesta.scambio_dati %}
+			<span class="b">Offerente:</span> {{ richiesta.offerta.user.first_name }} {{ richiesta.offerta.user.last_name }}<br />
+			<span class="b">Telefono:</span> {{ richiesta.offerta.telefoni }}<br />	
+	{% endif %}
+</p>
+
+{% if richiesta.stato == '-' %}
+	<p>
+		<a href="{% addparam "conferma=1" %}">Conferma richiesta</a> -
+		<a href="{{ history_1 }}">Annulla</a>
+	</p>
+{% endif %}
+{% if richiesta.stato == 'RI' and richiesta.futura %}
+	<p>
+		Il passaggio &egrave; stato richiesto. In attesa della risposta dell'offerente.
+	</p> 
+	<p>
+		<a href="{% nohist %}/carpooling/annulla_richiesta/{{ richiesta.pk }}{% endnohist %}">Annulla richiesta</a>
+	</p>
+{% endif %}	
+
+{% if richiesta.stato == 'CO' %}
+	{% if richiesta.futura %}
+		<p>
+			<a href="{% nohist %}/carpooling/annulla_richiesta/{{ richiesta.pk }}{% endnohist %}">Annulla richiesta</a>
+		</p>
+	{% else %}
+		<p>
+			<span class="b">Lascia il tuo feedback:</span>
+			{% if richiesta.feedback_offerente %}
+				{{ richiesta.feedback_offerente }}
+			{% else %}
+				<a href="{% nohist %}/carpooling/feedback_offerente/{{ richiesta.pk }}/1{% endnohist %}">1</a> -
+				<a href="{% nohist %}/carpooling/feedback_offerente/{{ richiesta.pk }}/2{% endnohist %}">2</a> -
+				<a href="{% nohist %}/carpooling/feedback_offerente/{{ richiesta.pk }}/3{% endnohist %}">3</a> -
+				<a href="{% nohist %}/carpooling/feedback_offerente/{{ richiesta.pk }}/4{% endnohist %}">4</a> -
+				<a href="{% nohist %}/carpooling/feedback_offerente/{{ richiesta.pk }}/5{% endnohist %}">5</a>
+			{% endif %}			
+		</p>
+	{% endif %}
+{% endif %}
+
+{% if richiesta.stato == 'AO' %}
+	<p>
+		Il passaggio &egrave; stato rifiutato dall'offerente.
+	</p>
+	<p>
+		<a href="{{ history_1 }}">Torna indietro</a>
+	</p>		
+{% endif %}
+{% if richiesta.stato == 'AR' %}
+	<p>
+		Hai annullato la richiesta.
+	</p>
+	<p>
+		<a href="{{ history_1 }}">Torna indietro</a>
+	</p>		
+{% endif %}	
+
+
+{% endblock %}

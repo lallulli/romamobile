@@ -1,0 +1,6 @@
+.idea/*
+paline/rete/*
+paline/gtfs/static/*
+paline/gtfs/static_new/*
+paline/gtfs/static_old/*
+atacmobile.log

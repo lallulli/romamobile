@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block InternalStyle %}
+<style type="text/css">.indented {
+	margin-left: 10px;
+}
+.selected {
+	background-color: #E8E8E8;
+	border-left: #999999 solid 2px;
+}
+.category {
+	font-weight: bold;
+	color: #822433;
+	margin-top: 12px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div>
+	<h2>{{ news.titolo }}</h2>
+	<p>
+		{{ news.contenuto }}
+	</p>
+	<p class="vskip">
+		{% if precedente %}
+			&laquo; <a href="{% hist %}/news/dettaglio/{{ categoria.id_categoria }}/{{ precedente.id_news }}{% endhist %}">Precedente</a><br/>
+		{% else %}
+			&laquo; Precedente<br />
+		{% endif %}
+		{% if successiva %}
+			&raquo; <a href="{% hist %}/news/dettaglio/{{ categoria.id_categoria }}/{{ successiva.id_news }}{% endhist %}">Successiva</a>
+		{% else %}
+			&laquo; Successiva<br />
+		{% endif %}
+	</p>
+</div>
+<h2 class="vskip">{% trans "Tutte le notizie:" %}</h2>
+<p>
+{% for c in categorie %}
+	{% if c.id_categoria != categoria.id_categoria %}
+		<img class="dot" src="/news/s/img/right_bullet.gif" height="7" width="13" alt="*"><a href="{% hist %}/news/categoria/{{ c.id_categoria }}{% endhist %}">{{ c.nome }} ({{ c.news_set.count }})</a><br />
+	{% endif %}
+{% endfor %}
+</p>
+{% endblock %}

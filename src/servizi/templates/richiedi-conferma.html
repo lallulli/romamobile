@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% load i18n %}{% load history %}
+
+{% block content %}
+	<h2>{% trans "Conferma azione" %}</h2>
+	<p>{{ richiesta }}</p>
+	<p>
+		<a href="{% addparam "confermato=1" %}">{{ conferma }}</a> - 
+		<a href="{{ history_1 }}">{{ annulla }}</a>
+	</p>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block title %}
+		<h1>Roma mobile - 500 Internal Server Error</h1>
+{% endblock %}
+
+{% block content %}
+	<p>
+		<img src="/xhtml/s/img/500.jpg" height="300px" width="400px" style="max-width: 100%; height: auto;">
+	</p>
+	<p>
+		{% trans "Per problemi tecnici il servizio momentaneamente non &egrave; disponibile." %}<br />
+		{% trans "Ci scusiamo per il disagio e vi invitiamo a riprovare in seguito." %}
+	</p>
+{% endblock %}
+
+{% block didyouknow %}(D){% endblock %}

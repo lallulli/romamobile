@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+	<h2>Abilitazione utente</h2>
+	
+	<p>
+		Per abilitare un utente al servizio Car Pooling, l'utente deve essere gi&agrave; registrato ai servizi di Muoversi a Roma, e quindi
+		in possesso di uno username. Inserisci lo username dell'utente che desideri abilitare al servizio.
+	</p>
+	
+	{% if error %}
+		Non esiste alcun utente con lo username inserito.
+	{% endif %}
+	
+	<p>
+		<form id="username" method="get" {{ formaction }}>
+		{{ form.username }}
+	  <input type="submit" name="Submit" value="{% trans "Abilita" %}" />
+	  {% formhist %}
+	 </form>
+	</p>
+
+{% endblock %}

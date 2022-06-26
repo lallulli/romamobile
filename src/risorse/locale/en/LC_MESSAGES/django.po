@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-11 19:02+0200\n"
+"PO-Revision-Date: 2013-12-17 12:23+0100\n"
+"Last-Translator: Muoversi a Roma <infomobilita@agenziamobilita.roma.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: views.py:106
+msgid "indirizzo (manca)"
+msgstr "address (empty)"
+
+#: views.py:109
+msgid "indirizzo (molti trovati)"
+msgstr "address (choose one)"
+
+#: views.py:122
+msgid "indirizzo (errato)"
+msgstr "address (wrong)"
+
+#: templates/risorse-dettaglio.html:15
+#, python-format
+msgid "Rivendite vicine a %(a)s (%(p)s)"
+msgstr "Ticket offices located near the following address: %(a)s (%(p)s)"
+
+#: templates/risorse-dettaglio.html:37
+msgid "Mostra risultati su mappa"
+msgstr "Show results on map"
+
+#: templates/risorse.html:8
+msgid "Correggi le seguenti informazioni:"
+msgstr "Please correct the following data:"
+
+#: templates/risorse.html:15
+msgid "Rivendite vicine al seguente indirizzo (con civico):"
+msgstr "Ticket offices located near the following address:"
+
+#: templates/risorse.html:18
+msgid "Cerca"
+msgstr "Search"
+
+#~ msgid "comune (molti trovati)"
+#~ msgstr "city (choose one)"
+
+#~ msgid "Comune o <span class='i'>localit&agrave;</span>:"
+#~ msgstr "City"
+
+#~ msgid "Mezzo privato"
+#~ msgstr "Private transport"
+
+#~ msgid "Tutti i mezzi pubblici"
+#~ msgstr "Public transport"
+
+#~ msgid "Escludi metro, ferrovie e mezzo privato"
+#~ msgstr "Without underground, railways and car"
+
+#~ msgid "Trasporto pubblico e bike sharing"
+#~ msgstr "Public transport and bike sharing"
+
+#~ msgid "Mezzo privato e trasporto pubblico"
+#~ msgstr "Private and public transport"
+
+#, fuzzy
+#~ msgid "Il piÃ¹ veloce"
+#~ msgstr "The fastest"
+
+#~ msgid "Con pochi trasbordi"
+#~ msgstr "With the fewest changes"
+
+#~ msgid "Con pochi tratti a piedi"
+#~ msgstr "With the least walking between stops"
+
+#~ msgid "partenza"
+#~ msgstr "starting"
+
+#~ msgid "arrivo"
+#~ msgstr "destination"
+
+#, fuzzy
+#~ msgid "In Arrivo"
+#~ msgstr "destination"
+
+#~ msgid "Inserisci indirizzo di partenza con civico:"
+#~ msgstr "Starting address with street number:"
+
+#~ msgid "Inserisci indirizzo di arrivo con civico:"
+#~ msgstr "Destination address with street number:"
+
+#~ msgid "Calcola"
+#~ msgstr "Get directions"
+
+#~ msgid "Mezzi di trasporto:"
+#~ msgstr "Means of transport:"
+
+#~ msgid "Opzioni di calcolo:"
+#~ msgstr "Route type:"
+
+#~ msgid "Data e ora (GG-MM-AA HH:MM):"
+#~ msgstr "Date and time (DD-MM-YY HH:MM (24hr)):"

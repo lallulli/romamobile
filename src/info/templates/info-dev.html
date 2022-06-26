@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+	<h2>Roma mobile for developers</h2>
+	<h3>Public API</h3>
+	<p>
+		Roma mobile data and services (including the real-time journey planner) can be accessed through a
+		<a href="https://bitbucket.org/lallulli/muoversi-a-roma/wiki/Home">public API</a>
+		(documented in Italian)</a>.
+	</p>
+	<p>
+		Any developer can <a href="mailto:info@skeed.it">request a free API key</a>. A free API key grants 1000 daily <i>ticks</i>. Ticks
+		can be used to call API methods, which consume as follows:
+	</p>
+	<ul>
+		<li>A successful call to the journey planner consumes 15 ticks.</li>
+		<li>Any other method call consumes 1 tick.</li>
+	</ul>
+	<p>Ticks are reset to the maximum value every day at 00:00, Central European Time.</p>
+	<p>
+		<a href="mailto:info@skeed.it">Don't hesitate to contact us</a> for any request.
+		We can develop custom methods for specific needs.
+	</p>
+
+	<h3>Source code and community</h3>
+	<p>
+		The core of Roma mobile is open source. You are welcome to fork our source code, propose patches,
+		submit bugs and feature requests, and become part of our community by visiting our <a href="https://bitbucket.org/lallulli/muoversi-a-roma">Bitbucket repository</a>.
+	</p>
+
+	<h3>Licensing information</h3>
+	<p>
+		Data provided through our API is licensed under the terms and conditions of the
+		<a href="https://creativecommons.org/licenses/by/3.0/it/">CC BY 3.0 IT</a> license.
+		The source of our data is the <a href="https://romamobilita.it/it/azienda/open-data/api-real-time">open data service
+		of the mobility agency of Rome</a>.
+	</p>
+	<p>
+		The source code of Roma mobile is licensed under the terms and conditions of the
+		<a href="https://www.gnu.org/licenses/gpl-2.0.html">GNU General Pubic License,
+		version 2</a>.
+	</p>
+
+{% endblock %}

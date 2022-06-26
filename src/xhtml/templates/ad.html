@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+	<h2>{{ ad.slug }} - Anteprima</h2>
+	<p>
+		Questa pagina mostra l'anteprima e le statistiche della campagna pubblicitaria.
+	</p>
+	<p class="vskip">
+		<b>Abilitato:</b>
+		{% if ad.enabled %}
+			Sì (<a href="/xhtml/ad_off/{{ ad.slug }}/{{ ad.key }}">sospendi</a>)
+		{% else %}
+			No (<a href="/xhtml/ad_on/{{ ad.slug }}/{{ ad.key }}">riprendi</a>)
+		{% endif %}<br />
+		<b>Stato:</b> {{ status }}<br />
+		<b>Numero di impressioni:</b> {{ ad.n_views }}<br />
+		<b>Limite di impressioni:</b> {{ ad.max_views }}<br />
+		<b>Numero di click:</b> {{ ad.count }}<br />
+	</p>
+{% endblock %}
+

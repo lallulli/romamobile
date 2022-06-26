@@ -1,0 +1,60 @@
+{% load i18n %}
+
+<b>{{ palina.nome }}</b> ({{palina.id_palina}})</br>
+{% if capolinea > 0 %}
+	{% if orari_partenza|length > 0 %}
+		<b>{% trans "Partenze dal capolinea" %}</b></br>
+		{% for op in orari_partenza %}
+			{% if op.minuti %}
+				<b>{{ op.ora }}</b>: {% for m in op.minuti %} {{ m }}{% endfor %}<br />
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% else %}
+	{% if veicoli|length > 0 %}
+		{% if palina_singola %}
+			<b>{% trans "Prossimi arrivi" %}</b></br>
+		{% else %}	
+			<b>{% trans "Prossimi arrivi linea " %}{{linea}}</b></br>
+		{% endif %}
+		{% for a in veicoli %}
+			<b>{{ a.linea }}</b>:
+			{% if a.disabilitata %}
+				{% trans "Non disponibile" %}
+			{% else %}
+				{% if a.non_monitorata %}
+					{% trans "Non monitorata" %}
+				{% else %}
+					{% if a.nessun_autobus %}
+						{% trans "Nessun autobus" %}
+					{% else %}
+						{{ a.annuncio }}
+					{% endif %}
+				{% endif %}
+			{% endif %}
+			<br/>
+		{% endfor %}
+	{% endif %}
+	{% if veicoli_altrelinee|length > 0 %}
+	<b>{% trans "Prossimi arrivi altre linee"%}</b></br>
+		{% for a in veicoli_altrelinee %}
+			<b>{{ a.linea }}</b>:
+			{% if a.disabilitata %}
+				{% trans "Non disponibile" %}
+			{% else %}
+				{% if a.non_monitorata %}
+					{% trans "Non monitorata" %}
+				{% else %}
+					{% if a.nessun_autobus %}
+						{% trans "Nessun autobus" %}
+					{% else %}
+						{{ a.annuncio }}
+					{% endif %}
+				{% endif %}
+			{% endif %}
+			<br/>
+		{% endfor %}
+	{% endif %}
+	<b>{% trans "Coincidenze" %}:</b><br/>
+	{{coincidenze}}
+{% endif %}

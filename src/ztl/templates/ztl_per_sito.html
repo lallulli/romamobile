@@ -1,0 +1,74 @@
+{% load i18n %}
+{% load history %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Orari ZTL</title>
+		<link href="http://muoversiaroma.it/muoversiaroma/Styles/Site.css" rel="stylesheet" type="text/css" />
+		<link href="http://muoversiaroma.it/muoversiaroma/Styles/Pages.css" rel="stylesheet" type="text/css" />
+		<style>
+			.dot {
+				vertical-align: middle;
+			}
+			.i {
+				font-style:italic;
+			}
+		</style>
+	</head>
+	<body>
+
+		{% block content %}
+
+			<h2 class="ztl">{% trans "Orari di oggi" %}{% if modificato %}*{% endif %}</h2>
+
+			{% for o in orari %}
+
+				<h3 class="ztl">{{ o.toponimo }}</h3>
+				{% if o.fasce|length > 0 %}
+					{% for f in o.fasce %}
+							{% if f.stato == "attiva" %}
+									<p class="ztl"><img class="dot ztl" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+									{% if f.inizio_ieri %}
+											{% blocktrans with ora_inizio=f.ora_inizio ora_fine=f.ora_fine %}Dalle {{ora_inizio}} di ieri alle {{ora_fine}} di oggi{% endblocktrans %}
+									{% else %}
+										{% if f.fine_domani %}
+											{% blocktrans with ora_fine=f.ora_fine %}Attiva fino alle ore {{ora_fine}} di domani{% endblocktrans %}
+										{% else %}
+											{% blocktrans with ora_fine=f.ora_fine %}Attiva fino alle ore {{ora_fine}}{% endblocktrans %}
+										{% endif %}
+									{% endif %}
+									{% if o.modificato %}*{% endif %}</p>
+							{% endif %}
+							{%  if f.stato == "passata" %}
+								<p class="ztl"><img class="dot ztl" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+									<span class="i ztl">{% trans "Non attiva" %}</span>
+								</p>
+							{% endif %}
+							{% if f.stato == "futura" %}
+								<p class="ztl"><img class="dot ztl" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+								{% if f.fine_domani %}
+									{% blocktrans with ora_inizio=f.ora_inizio ora_fine=f.ora_fine %}Dalle {{ ora_inizio  }} alle {{ ora_fine }} di domani{% endblocktrans %}
+								{% else %}
+									{% blocktrans with ora_inizio=f.ora_inizio ora_fine=f.ora_fine %}Dalle {{ ora_inizio  }} alle {{ ora_fine }}{% endblocktrans %}
+								{% endif %}
+								{% if o.modificato %}*{% endif %}
+								</p>
+							{% endif %}
+
+					{% endfor %}
+				{% else %}
+				<p class="ztl">
+					<img class="dot ztl" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" /><span class="i">{% trans "Non attiva" %}{% if o.modificato %}(*){% endif %}</span>
+				</p>
+				{% endif %}
+
+
+			{% endfor %}
+			{% if modificato %}
+				<p class="ztl">(*) {% trans "Modifiche straordinarie" %}</p>
+			{% endif %}
+		{% endblock %}
+
+	</body>

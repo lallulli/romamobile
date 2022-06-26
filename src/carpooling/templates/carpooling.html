@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<h2>Benvenuto al servizio Roma Car Pooling</h2>
+
+<p>
+	Ciao, {{ user.first_name }} (<a class="small" href="{% hist %}/carpooling/telefono{% endhist %}">Modifica dati e preferenze</a>)
+</p>
+	{% if not abilitato %}
+		<p>Siamo spiacenti ma non risulti abilitato al servizio. Per richiedere l'abilitazione contatta il Mobility Manager di riferimento.</p>
+	{% else %}
+		<p>
+		{% if carpooling_manager %}
+			
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+		<a href="{% hist %}/carpooling/gestione_utenti{% endhist %}">Gestione Utenti</a><br />
+			
+		{% endif %}
+	
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+		<a href="{% hist %}/carpooling/offri_passaggio{% endhist %}">Offri un passaggio</a><br />
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+		<a href="{% hist %}/carpooling/cerca_passaggio{% endhist %}">Cerca un passaggio</a>
+		</p>
+		{% if passaggi_richiesti %}
+			<h2 class="vskip">Richieste in attesa</h2>
+			<p>
+				{% for p in passaggi_richiesti %}
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/dettaglio_offerta/{{ p.pk }}{% endhist %}">{{ p.sintesi_futuro }}</a><br />	
+				{% endfor %}
+			</p>
+		{% endif %}
+
+		{% if richieste_feedback_pendente or offerte_feedback_pendente %}
+			<h2 class="vskip">Feedback da lasciare</h2>
+			<p>
+				{% for p in richieste_feedback_pendente %}
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/dettaglio_richiesta/{{ p.pk }}{% endhist %}">{{ p.sintesi_futuro }}</a><br />	
+				{% endfor %}
+				{% for p in offerte_feedback_pendente %}
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/dettaglio_offerta/{{ p.offerta.pk }}{% endhist %}">{{ p.offerta.sintesi_futuro }}</a><br />	
+				{% endfor %}		
+			</p>
+		{% endif %}
+
+
+		{% if passaggi_futuri %}
+			<h2 class="vskip">Passaggi offerti</h2>
+			{% for p in passaggi_futuri %}
+
+				<h3 class="vskip">{{ p.sintesi_futuro }}</h3>
+
+				<p>
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/dettaglio_offerta/{{ p.pk }}{% endhist %}">Dettagli</a><br />			
+				
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/annulla/{{ p.pk }}{% endhist %}">Annulla offerta</a><br />
+				
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/ripeti/{{ p.pk }}{% endhist %}">Ripeti offerta</a><br />
+				</p>
+			
+			{% endfor %}
+		{% endif %}
+
+		{% if richieste_future %}
+			<h2 class="vskip">Passaggi richiesti</h2>
+
+			{% for p in richieste_future %}
+
+				<h3 class="vskip">{{ p.sintesi_futuro }}</h3>
+
+				<p>
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/dettaglio_richiesta/{{ p.pk }}{% endhist %}">Dettagli</a><br />			
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/annulla_richiesta/{{ p.pk }}{% endhist %}">Annulla richiesta</a><br />
+				</p>
+
+			{% endfor %}
+
+		{% endif %}
+
+		{% if passaggi_passati %}
+			<h2 class="vskip">Passaggi offerti in passato</h2>
+			{% for p in passaggi_passati %}
+
+				<h3 class="vskip">{{ p.sintesi }}{% if p.annullato %} (Annullata){% endif %}</h3>
+
+				<p>
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/dettaglio_offerta/{{ p.pk }}{% endhist %}">Dettagli</a><br />			
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/ripeti/{{ p.pk }}{% endhist %}">Ripeti offerta</a><br />
+				</p>
+			
+			{% endfor %}
+		{% endif %}
+
+		{% if richieste_passate %}
+			<h2 class="vskip">Passaggi richiesti in passato</h2>
+
+			{% for p in richieste_passate %}
+
+				<h3 class="vskip">{{ p.sintesi }}{% if p.stato == 'AO' or p.stato == 'AR' %} (Annullato){% endif %}</h3>
+			
+				<p>
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*">
+					<a href="{% hist %}/carpooling/dettaglio_richiesta/{{ p.pk }}{% endhist %}">Dettagli</a><br />			
+				</p>
+
+			{% endfor %}
+
+		{% endif %}
+	
+	{% endif %}
+
+{% endblock %}

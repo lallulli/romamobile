@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+{% block content %}
+<link href="/percorso/s/css/widget_style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript">
+	function copia(area) {
+		var appoggio=eval("document."+area)
+		appoggio.focus()
+		appoggio.select()
+		intervallo=appoggio.createTextRange()
+		intervallo.execCommand("Copy")	
+	}
+</script>
+	<h2>Codice</h2>
+		<form name="copia_widget">
+			<textarea name="codice" rows="5" cols="60" style="background: #D3FFB6; font-weight: bold"> {{iframe}}</textarea> <br>
+			<input onclick="copia('copia_widget.codice')" type="button" class="button2" value="Seleziona il codice" name="selez">
+		</form><br/>
+	<h2>Anteprima</h2>
+	<p> <iframe src="http://127.0.0.1:8000/percorso/trovaci?{{indirizzo}}" scrolling="no" style="width:400px; height:50px; border-radius: 20px; -webkit-border-radius:20px; -moz-border-radius:20px" frameborder="1" ></iframe></p>
+{% endblock %}

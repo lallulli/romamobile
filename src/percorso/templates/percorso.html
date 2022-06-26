@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<form id="path" method="get" {{ formaction }}>
+{% if errors %}
+	<p><span class="b">{% trans "Correggi le seguenti informazioni:" %}</span></p>
+	<p>
+		{% for e in errors %}
+			<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />{{ e }}<br />
+		{% endfor %}
+	</p>
+{% endif %}
+<h2 class="vskip">{% trans "Dove" %}</h2>
+<p>
+	<table>
+		<tr>
+			<td>{% trans "Da:" %}</td>
+			<td>{{ form.start_address }}</td>
+		</tr>
+		<tr>
+			<td>{% trans "A:" %}</td>
+			<td>{{ form.stop_address }}</td>
+		</tr>
+	</table>
+</p>
+<p class="vskip">
+	<input type="submit" name="Submit" value="{% trans "Cerca" %}" />
+	<input type="submit" name="Inverti" value="{% trans "Ritorno" %}" />
+</p>
+
+{% if False %}
+<h3>{% trans "Luoghi preferiti" %}</h3>
+{% if request.user.is_authenticated %}
+	{% for l in luoghi_preferiti %}
+		<img class="icon" src="/percorso/s/img/icon.gif" height="16" width="16" alt="*" /> {{ l.nome }}
+		<input type="submit" name="bt-s{{ l.pk }}" value="{%trans "Da qui" %}" />
+		<input type="submit" name="bt-t{{ l.pk }}" value="{%trans "A qui" %}" />
+		{% if not request.user|in_group:"readonly" %}<input type="submit" name="bt-e{{ l.pk }}" value="{% trans "Elimina" %}" />{% endif %}
+		<br />
+	{% endfor %}
+	{% if luoghi_preferiti.count == 0 %}
+		{% trans "Ancora non hai impostato alcun luogo come preferito." %}
+	{% endif %}
+{% else %}
+	{% trans "<a href='http://login.muoversiaroma.it/Login.aspx?IdSito=1'>Registrati o accedi</a> per impostare i tuoi luoghi preferiti." %}
+{% endif %}
+{% endif %}
+
+<h2 class="vskip">{%trans "Come" %}</h2>
+<p>
+	{{ form.mezzo }}
+</p>
+
+<h2 class="vskip">{% trans "Quando" %}</h2>
+<p>
+	{{ form.quando }}
+</p>
+<p>
+	{{ form.wd }} {% trans "alle" %} {{ form.hour }}:{{ form.minute }}
+</p>
+
+<p class="vskip"><input type="submit" name="Submit" value="{% trans "Cerca" %}" /></p>
+{% formhist %}
+
+</form>
+{% endblock %}
+
+{% block didyouknow %}
+	<h2>{% trans "Lo sapevi?" %}</h2>
+	<p>
+		{% blocktrans %}
+			Questo servizio calcola il percorso ottimale con i mezzi
+			Atac, Roma TPL e le ferrovie regionali Trenitalia.
+			Usa i dati in tempo reale per tener conto dello stato
+			del traffico e della posizione degli autobus.
+		{% endblocktrans %}
+	</p>
+{% endblock %}

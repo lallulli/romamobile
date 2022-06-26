@@ -1,0 +1,32 @@
+<table>
+	<tr>
+		<th>
+			Linea
+		</th>
+		<th>
+			Tipo
+		</th>
+		<th>
+			Gestore
+		</th>
+		<th>
+			Percorsi
+		</th>
+	</tr>
+	{% for l in linee %}
+		<tr>
+			<td><h2>{{ l.id }}</h2></td>
+			<td>{{ l.linea.getTipoDec }}</td>
+			<td>{{ l.linea.gestore.descrizione }}</td>
+			<td>
+				<ul>
+					{% for p in l.percorsi %}
+						<li>
+							<a href="http://muovi.roma.it/percorso/js?hl={{ lingua.codice }}&amp;id_percorso={{ p.id_percorso }}">{{ l.id }} {{ p.decodeCarteggio }} Direz. {{ p.arrivo.nome_ricapitalizzato }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+	{% endfor %}
+</table>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+{% for c in categorie %}
+	{% if c.id_categoria == categoria_selezionata %}
+		<div class="selected">
+			<p class="category">
+				<img class="dot" src="/news/s/img/down_bullet.gif" height="7" width="13" alt="*">{{ c.nome }}
+			</p>
+			{% for n in c.news_by_date %}
+				<p class="indented">
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*"><a href="{% hist %}/news/dettaglio/{{ c.id_categoria }}/{{ n.id_news }}{% endhist %}">{{ n.titolo.strip }}</a>
+				</p>
+			{% endfor %}
+		</div>
+	{% else %}
+		<p class="category">
+			<img class="dot" src="/news/s/img/right_bullet.gif" height="7" width="13" alt="*"><a href="{% hist %}/news/categoria/{{ c.id_categoria }}{% endhist %}">{{ c.nome }} ({{ c.news_set.count }})</a>
+		</p>
+	{% endif %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-17 13:10+0200\n"
+"PO-Revision-Date: 2021-08-17 13:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+
+#: templates/metro.html:8
+msgid ""
+"Atac non fornisce la posizione in tempo reale dei treni delle metropolitane. "
+"Sono disponibili gli orari di partenza dal capolinea."
+msgstr ""
+"Atac does not provide real-time position of trains. Trip departures are "
+"available."
+
+#: templates/metro.html:11
+msgid "Mappa"
+msgstr "Map"
+
+#: templates/metro.html:13
+msgid ""
+"Puoi scaricare la mappa della rete delle metropolitane e ferrovie urbane "
+"(dal sito Atac)"
+msgstr "You can download the subway and urban railways map (from Atac website)"
+
+#: templates/metro.html:16
+msgid "Scarica la mappa in PDF (624 KB)"
+msgstr "Download the map in PDF format (624 KB)"
+
+#: templates/metro.html:19
+msgid "Metropolitane"
+msgstr "Subway"
+
+#: templates/metro.html:31
+msgid "Ferrovie concesse"
+msgstr "Urban railways"
+
+#: templates/metro.html:46
+msgid "Legenda"
+msgstr "Key"
+
+#: templates/metro.html:48
+msgid "Perturbazione del servizio"
+msgstr "Service perturbation"
+
+#: templates/metro.html:49
+msgid "Problemi al servizio"
+msgstr "Service problems"
+
+#: templates/metro.html:50
+msgid "Interruzione del servizio"
+msgstr "Service disruption"
+
+#: templates/metro.html:55
+msgid "Mostra legenda"
+msgstr "Show key"
+
+#~ msgid "Posti liberi (per non abbonati)"
+#~ msgstr "Available parking places"
+
+#, python-format
+#~ msgid "%(pd)s su %(pt)s"
+#~ msgstr "%(pd)s of %(pt)s"
+
+#~ msgid "dati non disponibili"
+#~ msgstr "data not available"

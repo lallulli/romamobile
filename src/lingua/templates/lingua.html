@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+	<p>		
+		{% for l in lingue %}
+			<img class="dot" height="12" width="16" src="/lingua/s/img/{{ l.codice }}.png" alt="*" />
+			<a href="{% hist %}/lingua/set/{{ l.codice }}{% endhist %}">{{ l.descrizione }}</a><br />
+		{% endfor %}
+	</p>
+{% endblock %}

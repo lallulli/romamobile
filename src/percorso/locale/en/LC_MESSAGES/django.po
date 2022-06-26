@@ -1,0 +1,1343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Roma mobile\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-11 19:01+0200\n"
+"PO-Revision-Date: 2020-03-06 16:10+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+
+#: views.py:363
+msgid ""
+"Il servizio temporaneamente non &egrave; disponibile, riprova pi&ugrave; "
+"tardi."
+msgstr "Service is temporarily unavailable, please try again later."
+
+#: views.py:570
+msgid "distanza massima in bici (errata)"
+msgstr "max cycling distance (wrong)"
+
+#: views.py:675
+msgid "partenza"
+msgstr "starting"
+
+#: views.py:675
+msgid "arrivo"
+msgstr "destination"
+
+#: views.py:685
+#, python-format
+msgid "fermata di %s (non esiste)"
+msgstr "%s bus stop (does not exist)"
+
+#: views.py:699
+#, python-format
+msgid "indirizzo di %s (manca)"
+msgstr "%s address (empty)"
+
+#: views.py:704
+#, python-format
+msgid "indirizzo di %s (molti trovati)"
+msgstr "%s address (choose one)"
+
+#: views.py:708
+#, python-format
+msgid "indirizzo di %s (errato)"
+msgstr "%s address (wrong)"
+
+#: views.py:722 templates/percorso-dinamico.html:37
+#: templates/percorso-dinamico.html:53
+msgid "Mezzo privato"
+msgstr "Private transport"
+
+#: views.py:723
+msgid "Mezzi pubblici"
+msgstr "Public transport"
+
+#: views.py:725 js/cerca_percorso.py:536 templates/percorso-dinamico.html:43
+#: templates/percorso-dinamico.html:51
+msgid "Bike and ride"
+msgstr "Bike and ride"
+
+#: views.py:732 views.py:762
+msgid "Adesso (dati in tempo reale)"
+msgstr "Now (real time data)"
+
+#: views.py:733 views.py:763
+msgid "Fra 5 minuti (dati in tempo reale)"
+msgstr "In 5 minutes (real time data)"
+
+#: views.py:734
+msgid "Scegli orario di partenza:"
+msgstr "Select departure time:"
+
+#: views.py:735
+msgid "Scegli orario di arrivo:"
+msgstr "Select arrival time:"
+
+#: views.py:754 js/cerca_percorso.py:642
+msgid "Bassa (camminatore lento)"
+msgstr "Low (slow walker)"
+
+#: views.py:755 js/cerca_percorso.py:647
+msgid "Media"
+msgstr "Medium"
+
+#: views.py:756 js/cerca_percorso.py:653
+msgid "Alta (camminatore veloce)"
+msgstr "High (fast walker)"
+
+#: views.py:764
+msgid "Scegli orario partenza:"
+msgstr "Select departure time:"
+
+#: views.py:765
+msgid "Scegli orario arrivo:"
+msgstr "Select arrival time:"
+
+#: views.py:915
+msgid "Confermi di voler eliminare l'indirizzo?"
+msgstr "Delete address: are you sure?"
+
+#: views.py:956
+msgid "Luogo aggiunto ai preferiti"
+msgstr "Place added to favorites"
+
+#: js/cerca_linea.py:114
+#, python-format
+msgid "a %s"
+msgstr ""
+
+#: js/cerca_linea.py:134
+msgid "Altre linee:&nbsp;"
+msgstr ""
+
+#: js/cerca_linea.py:188
+msgid "<b>Direzioni:</b> "
+msgstr "<b>Directions:</b> "
+
+#: js/cerca_linea.py:218
+msgid "Non disp."
+msgstr "Not available"
+
+#: js/cerca_linea.py:220
+msgid "Non monitor."
+msgstr "Not monitored"
+
+#: js/cerca_linea.py:222
+msgid "Nessun bus"
+msgstr "No buses"
+
+#: js/cerca_linea.py:257
+msgid "Dettagli fermata"
+msgstr ""
+
+#: js/cerca_linea.py:262
+msgid "Parti da questa fermata"
+msgstr "Depart from this stop"
+
+#: js/cerca_linea.py:267
+msgid "Arriva a questa fermata"
+msgstr ""
+
+#: js/cerca_linea.py:272
+msgid "Cerca luoghi vicini"
+msgstr "Find places nearby"
+
+#: js/cerca_linea.py:326
+#, python-format
+msgid "<b>%s:</b> %s"
+msgstr ""
+
+#: js/cerca_linea.py:332
+msgid "Nella giornata selezionata il percorso non &egrave; attivo."
+msgstr "On this day, route is not active"
+
+#: js/cerca_linea.py:347
+msgid "<b>Prossime partenze</b>: "
+msgstr ""
+
+#: js/cerca_linea.py:349
+msgid "Tutte le partenze"
+msgstr ""
+
+#: js/cerca_linea.py:383
+msgid "Fermata, linea o indirizzo"
+msgstr "Bus stop, line or address"
+
+#: js/cerca_linea.py:492
+msgid "Fermate vicine"
+msgstr "Bus stops nearby"
+
+#: js/cerca_linea.py:553 js/cerca_linea.py:1163
+msgid "Fermate trovate"
+msgstr "Found bus stops"
+
+#: js/cerca_linea.py:639
+msgid "Linee della fermata"
+msgstr "Bus stop lines"
+
+#: js/cerca_linea.py:652
+msgid "Tutti gli arrivi"
+msgstr "All arrivals"
+
+#: js/cerca_linea.py:665 js/cerca_linea.py:890 js/cerca_linea.py:1152
+msgid "Risultati"
+msgstr "Found items"
+
+#: js/cerca_linea.py:692
+msgid "Non disponibile"
+msgstr "Not available"
+
+#: js/cerca_linea.py:694
+msgid "Non monitorata"
+msgstr "Not monitored"
+
+#: js/cerca_linea.py:696
+msgid "Nessun autobus"
+msgstr "No buses"
+
+#: js/cerca_linea.py:802
+#, python-format
+msgid "%(id_linea)s %(carteggio_dec)s direz. %(arrivo)s"
+msgstr ""
+
+#: js/cerca_linea.py:832
+msgid "Partenze da capolinea"
+msgstr "Departures from terminus"
+
+#: js/cerca_linea.py:843
+msgid "Fermate"
+msgstr "Bus stops"
+
+#: js/cerca_linea.py:849
+msgid "<b>Veicolo: </b>Seleziona un bus"
+msgstr ""
+
+#: js/cerca_linea.py:865
+msgid "Altri percorsi della linea"
+msgstr ""
+
+#: js/cerca_linea.py:877
+msgid "Gestore"
+msgstr "Operator"
+
+#: js/cerca_linea.py:928
+#, python-format
+msgid "La linea %s &egrave; gestita da %s."
+msgstr "Line %s is operated by %s."
+
+#: js/cerca_linea.py:1245
+msgid "Linee trovate"
+msgstr "Found lines"
+
+#: js/cerca_linea.py:1258
+msgid ""
+"Alcune fermate sono state nascoste perch&eacute; non vi transitano altre "
+"linee bus.&nbsp"
+msgstr ""
+
+#: js/cerca_linea.py:1259
+msgid "Mostra tutte le fermate"
+msgstr "Show all stops"
+
+#: js/cerca_linea.py:1292
+msgid "Imposta notifica"
+msgstr ""
+
+#: js/cerca_linea.py:1298
+msgid "Notifica quando un veicolo sar&agrave; in arrivo tra circa&nbsp;"
+msgstr ""
+
+#: js/cerca_linea.py:1314
+msgid "&nbsp;minuti"
+msgstr "&nbsp;minutes"
+
+#: js/cerca_linea.py:1322
+msgid "Linee:"
+msgstr "Lines:"
+
+#: js/cerca_linea.py:1333 js/util.py:2416 js/util.py:2468 js/util.py:2506
+msgid "Notifica"
+msgstr ""
+
+#: js/cerca_linea.py:1334 js/cerca_percorso.py:1993 js/util.py:684
+msgid "Annulla"
+msgstr ""
+
+#: js/cerca_linea.py:1358
+#, python-format
+msgid "Linea %s in arrivo tra circa %d minuti"
+msgstr ""
+
+#: js/cerca_linea.py:1359
+msgid "Veicolo in arrivo"
+msgstr "Vehicle arriving"
+
+#: js/cerca_linea.py:1391
+#, python-format
+msgid "Notifica fermata %s"
+msgstr ""
+
+#: js/cerca_linea.py:1396
+msgid ""
+"Non chiudere l'app. Puoi porla in background e bloccare lo schermo, se lo "
+"desideri."
+msgstr ""
+
+#: js/cerca_linea.py:1397
+msgid "Notifica impostata"
+msgstr ""
+
+#: js/cerca_luogo.py:92
+msgid "Indirizzo"
+msgstr "Address"
+
+#: js/cerca_luogo.py:131 js/cerca_percorso.py:490 js/cerca_percorso.py:817
+#: templates/percorso-dinamico.html:294 templates/percorso.html:29
+#: templates/percorso.html.py:64
+msgid "Cerca"
+msgstr "Find"
+
+#: js/cerca_luogo.py:158
+msgid "Cerca luogo lungo un percorso"
+msgstr "Find a place along a route"
+
+#: js/cerca_luogo.py:205
+msgid "Luoghi vicini"
+msgstr "Places nearby"
+
+#: js/cerca_percorso.py:170
+msgid "<b>Esclusioni:</b>&nbsp;"
+msgstr ""
+
+#: js/cerca_percorso.py:183 js/cerca_percorso.py:361
+msgid "Opzioni di viaggio"
+msgstr "Journey options"
+
+#: js/cerca_percorso.py:188 js/cerca_percorso.py:366
+msgid "Cerca ritorno"
+msgstr "Way back"
+
+#: js/cerca_percorso.py:193 js/cerca_percorso.py:371
+msgid "Ricalcola da posizione attuale"
+msgstr ""
+
+#: js/cerca_percorso.py:198 js/cerca_percorso.py:376
+msgid "Invia per email"
+msgstr ""
+
+#: js/cerca_percorso.py:203 js/cerca_percorso.py:381
+msgid "Link al percorso"
+msgstr "Link to journey"
+
+#: js/cerca_percorso.py:259 js/cerca_percorso.py:1813
+msgid "Fermata&nbsp;"
+msgstr "Bus stop&nbsp;"
+
+#: js/cerca_percorso.py:268
+msgid "Tempi di attesa della fermata"
+msgstr "Bus stop waiting times"
+
+#: js/cerca_percorso.py:334
+msgid "Escludi questa linea"
+msgstr ""
+
+#: js/cerca_percorso.py:356
+msgid "Sintesi del percorso"
+msgstr ""
+
+#: js/cerca_percorso.py:405 templates/percorso.html:15
+msgid "Dove"
+msgstr "Where"
+
+#: js/cerca_percorso.py:416
+msgid "Da: "
+msgstr "From:"
+
+#: js/cerca_percorso.py:451
+msgid "A: "
+msgstr "To:"
+
+#: js/cerca_percorso.py:501 js/cerca_percorso.py:828 templates/percorso.html:30
+msgid "Ritorno"
+msgstr "Way back"
+
+#: js/cerca_percorso.py:509
+msgid "Come: Trasporto pubblico"
+msgstr "How: Public transport"
+
+#: js/cerca_percorso.py:528 js/cerca_percorso.py:945
+msgid "Trasporto pubblico"
+msgstr "Public transport"
+
+#: js/cerca_percorso.py:553 js/cerca_percorso.py:945
+msgid "Trasporto privato"
+msgstr "Private transport"
+
+#: js/cerca_percorso.py:581 templates/percorso-dinamico.html:58
+#: templates/percorso-dinamico.html:251
+msgid "Opzioni avanzate"
+msgstr "Advanced options"
+
+#: js/cerca_percorso.py:588
+msgid "Opzioni"
+msgstr "Advanced options"
+
+#: js/cerca_percorso.py:614
+msgid "Permessi di accesso ZTL"
+msgstr "ZTL permits"
+
+#: js/cerca_percorso.py:637
+msgid "Propensione spostamenti a piedi"
+msgstr "Propensity for walking and biking"
+
+#: js/cerca_percorso.py:658
+msgid "Mezzi pubblici da utilizzare"
+msgstr "Public means of transport"
+
+#: js/cerca_percorso.py:663 templates/percorso-dinamico.html:261
+msgid "Autobus e tram"
+msgstr "Bus and tram"
+
+#: js/cerca_percorso.py:669 templates/percorso-dinamico.html:262
+msgid "Metropolitana"
+msgstr "Underground"
+
+#: js/cerca_percorso.py:675 templates/percorso-dinamico.html:263
+msgid "Ferrovie urbane"
+msgstr "Urban railways"
+
+#: js/cerca_percorso.py:681 templates/percorso-dinamico.html:170
+#: templates/percorso-dinamico.html:265
+msgid "Teletrasporto"
+msgstr "Teleportation"
+
+#: js/cerca_percorso.py:695 templates/percorso-dinamico.html:272
+msgid "Porta la bici sui mezzi pubblici"
+msgstr "Bring bike on board"
+
+#: js/cerca_percorso.py:704
+msgid "Max distanza in bici:&nbsp;"
+msgstr "Max biking distance:&nbsp;"
+
+#: js/cerca_percorso.py:716
+msgid "&nbsp;km"
+msgstr "&nbsp;km"
+
+#: js/cerca_percorso.py:730
+msgid "Parcheggi Park and Ride"
+msgstr "Parking lots"
+
+#: js/cerca_percorso.py:735 templates/percorso-dinamico.html:281
+msgid "Parcheggi di scambio"
+msgstr "Car parks"
+
+#: js/cerca_percorso.py:741 templates/percorso-dinamico.html:282
+msgid "Autorimesse private"
+msgstr "Garages"
+
+#: js/cerca_percorso.py:755 templates/percorso-dinamico.html:286
+#: templates/percorso.html:56
+msgid "Quando"
+msgstr "When"
+
+#: js/cerca_percorso.py:761
+msgid "Adesso"
+msgstr ""
+
+#: js/cerca_percorso.py:767
+msgid "Fra 5 minuti"
+msgstr "In 5 minutes"
+
+#: js/cerca_percorso.py:776
+msgid "Parti alle:&nbsp;"
+msgstr "Departure at:&nbsp;"
+
+#: js/cerca_percorso.py:782
+msgid "Arriva alle:&nbsp;"
+msgstr ""
+
+#: js/cerca_percorso.py:801
+msgid "&nbsp;&nbsp;Ore:&nbsp;"
+msgstr "&nbsp;&nbsp;Hour:&nbsp;"
+
+#: js/cerca_percorso.py:847
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\tQuesto servizio calcola il miglior percorso con i mezzi\n"
+"\t\t\t\t\t\t\tAtac, Roma TPL e le ferrovie regionali Trenitalia.\n"
+"\t\t\t\t\t\t\tUsa i dati in tempo reale per tener conto dello stato\n"
+"\t\t\t\t\t\t\tdel traffico e della posizione degli autobus.\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\tRoma mobile deriva da Muoversi a Roma (muovi.roma.it),\n"
+"\t\t\t\t\t\t\toriginariamente sviluppato dall'Agenzia per la "
+"Mobilit&agrave;\n"
+"\t\t\t\t\t\t\tdi Roma, e <a href=\"https://bitbucket.org/lallulli/muoversi-a-"
+"roma\" target=\"_blank\">pubblicato con licenza open source.</a>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t&copy; %d Roma mobile</a>\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t"
+msgstr ""
+
+#: js/cerca_percorso.py:874
+msgid "Seleziona tutte"
+msgstr "Select all"
+
+#: js/cerca_percorso.py:945
+msgid "Park and Ride"
+msgstr "Park and ride"
+
+#: js/cerca_percorso.py:945
+msgid "Bike and Ride"
+msgstr "Bike and ride"
+
+#: js/cerca_percorso.py:945
+msgid "Car Sharing"
+msgstr "Car sharing"
+
+#: js/cerca_percorso.py:945
+msgid "Car Pooling"
+msgstr "Car pooling"
+
+#: js/cerca_percorso.py:980
+#, python-format
+msgid "Come: %s"
+msgstr "How: %s"
+
+#: js/cerca_percorso.py:1075 templates/percorso-dinamico.html:172
+msgid "Cambia linea"
+msgstr "Interchange"
+
+#: js/cerca_percorso.py:1079 templates/percorso-dinamico.html:185
+msgid "A piedi"
+msgstr "Walk"
+
+#: js/cerca_percorso.py:1081
+msgid "In bici"
+msgstr "By bike"
+
+#: js/cerca_percorso.py:1083 templates/percorso-dinamico.html:193
+msgid "Car pooling"
+msgstr "Car pooling"
+
+#: js/cerca_percorso.py:1086 templates/percorso-dinamico.html:189
+msgid "In automobile"
+msgstr "By car"
+
+#: js/cerca_percorso.py:1088 templates/percorso-dinamico.html:45
+#: templates/percorso-dinamico.html:52 templates/percorso-dinamico.html:191
+msgid "Car sharing"
+msgstr "Car sharing"
+
+#: js/cerca_percorso.py:1092
+msgid "Apertura ZTL ore&nbsp;"
+msgstr "LTZ opens at"
+
+#: js/cerca_percorso.py:1098
+msgid "Linea&nbsp;"
+msgstr "Line&nbsp;"
+
+#: js/cerca_percorso.py:1103
+msgid "&nbsp;direz. "
+msgstr "&nbsp;dest."
+
+#: js/cerca_percorso.py:1112
+msgid "Partenza ore&nbsp;"
+msgstr "Departure time&nbsp;"
+
+#: js/cerca_percorso.py:1114
+msgid "Attesa circa&nbsp;"
+msgstr "Approx. waiting time&nbsp;"
+
+#: js/cerca_percorso.py:1116
+msgid "In arrivo fra&nbsp;"
+msgstr "Arriving in&nbsp;"
+
+#: js/cerca_percorso.py:1118
+msgid "In arrivo dopo&nbsp;"
+msgstr "Arriving after&nbsp;"
+
+#: js/cerca_percorso.py:1256
+msgid "Cerca percorso da qui"
+msgstr ""
+
+#: js/cerca_percorso.py:1257
+msgid "Cerca percorso fino a qui"
+msgstr ""
+
+#: js/cerca_percorso.py:1326 js/cerca_percorso.py:1697
+msgid "Percorso trovato"
+msgstr "Route"
+
+#: js/cerca_percorso.py:1557 js/cerca_percorso.py:1577
+#, python-format
+msgid "Percorso %d"
+msgstr "Route %d"
+
+#: js/cerca_percorso.py:1642
+msgid "Riepilogo"
+msgstr "Overview"
+
+#: js/cerca_percorso.py:1672 templates/percorso-dinamico.html:237
+msgid "Esclusioni"
+msgstr "Exclude"
+
+#: js/cerca_percorso.py:1684 templates/percorso-dinamico.html:99
+msgid "Indicazioni"
+msgstr "Directions"
+
+#: js/cerca_percorso.py:1707
+#, python-format
+msgid "<b>Durata spostamento:</b> %s"
+msgstr "<b>Travel time:</b> %s"
+
+#: js/cerca_percorso.py:1708
+#, python-format
+msgid "<b>Distanza percorsa:</b> %s<br />"
+msgstr "<b>Total distance:</b> %s<br />"
+
+#: js/cerca_percorso.py:1709
+#, python-format
+msgid "<b>Di cui a piedi:</b> %s"
+msgstr "<b>Walking distance:</b> %s"
+
+#: js/cerca_percorso.py:1897
+msgid "Link al percorso completo:"
+msgstr "Link to complete journey:"
+
+#: js/cerca_percorso.py:1903
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\tQuesto link mostrer&agrave; le indicazioni e la mappa del "
+"percorso\n"
+"\t\t\t\t\t\tda %s a %s.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: js/cerca_percorso.py:1918
+#, python-format
+msgid "Link al cerca percorso fino a %s:"
+msgstr "Link to find a journey to %s:"
+
+#: js/cerca_percorso.py:1924
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\tQuesto link chieder&agrave; un punto di partenza, a partire dal "
+"quale\n"
+"\t\t\t\t\t\tcercher&agrave; il percorso fino a %s.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: js/cerca_percorso.py:1938 js/cerca_percorso.py:2123
+#: js/cerca_percorso.py:2172 js/util.py:1962 js/util.py:2207
+msgid "Chiudi"
+msgstr ""
+
+#: js/cerca_percorso.py:1974
+msgid "Indirizzo email del destinatario:"
+msgstr "Recipient email address:"
+
+#: js/cerca_percorso.py:1988
+msgid "Invia"
+msgstr "Send"
+
+#: js/cerca_percorso.py:2035
+msgid "Trovato un passaggio in car pooling"
+msgstr ""
+
+#: js/cerca_percorso.py:2041
+msgid ""
+"Trovata un'offerta di passaggio in car pooling compatibile con il tuo "
+"spostamento."
+msgstr ""
+
+#: js/cerca_percorso.py:2050 templates/percorso-dinamico.html:194
+msgid "Chiedi un passaggio"
+msgstr "Request a lift"
+
+#: js/cerca_percorso.py:2055
+msgid "Cerca un altro passaggio"
+msgstr "Find another handing"
+
+#: js/cerca_percorso.py:2105
+msgid "Richiesta effettuata"
+msgstr ""
+
+#: js/cerca_percorso.py:2111
+msgid ""
+"\n"
+"\t\t\t\t\t\tLa tua richiesta di passaggio &egrave; stata inviata. Riceverai "
+"una notifica con ulteriori dettagli\n"
+"\t\t\t\t\t\tquando l'offerente avr&agrave; accettato o rifiutato la "
+"richiesta.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: js/cerca_percorso.py:2148
+msgid "Nessun passaggio trovato"
+msgstr "No handing found"
+
+#: js/cerca_percorso.py:2154
+msgid ""
+"\n"
+"\t\t\t\t\t\tNessun'offerta di passaggio soddisfa la tua richiesta. Ti "
+"proponiamo un percorso con i soli mezzi\n"
+"\t\t\t\t\t\tpubblici. In alternativa prova a modificare l'orario della "
+"ricerca, oppure\n"
+"\t\t\t\t\t\toffri tu stesso un passaggio in car pooling!\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: js/cerca_percorso.py:2167 js/cerca_percorso.py:2221
+msgid "Offri un passaggio"
+msgstr "Request a handing"
+
+#: js/cerca_percorso.py:2201
+msgid "Condividi il tuo viaggio"
+msgstr ""
+
+#: js/cerca_percorso.py:2207
+msgid ""
+"\n"
+"\t\t\t\t\t\tFai car pooling, offri un passaggio! Se vuoi condividere il tuo "
+"viaggio, Roma mobile lo proporr&agrave;\n"
+"\t\t\t\t\t\tad altri utenti che cercano un percorso, proprio come se la tua "
+"auto diventasse un autobus.\n"
+"\t\t\t\t\t\tPotrai anche accordarti con le persone a cui offri un passaggio "
+"per ricevere un contributo\n"
+"\t\t\t\t\t\talle spese di viaggio, suggerito da Roma mobile.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: js/cerca_percorso.py:2226
+msgid "No, grazie"
+msgstr ""
+
+#: js/main.py:103
+msgid "Roma mobile"
+msgstr ""
+
+#: js/main.py:108
+#, python-format
+msgid ""
+"\n"
+"\t\t\t<p><b>Roma mobile %(version)s</b><br />\n"
+"\t\t\t&copy; %(year)d Roma mobile</p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tRoma mobile &egrave; un progetto open source derivato da Muoversi a "
+"Roma.\n"
+"\t\t\t\tMuoversi a Roma &egrave; stato sviluppato da Roma Servizi per la "
+"Mobilit&agrave;,\n"
+"\t\t\t\tAgenzia per la Mobilit&agrave;\n"
+"\t\t\t\tdi Roma Capitale. I dati che alimentano il servizio sono open data "
+"di\n"
+"\t\t\t\tRoma Servizi per la Mobilit&agrave;.\n"
+"\t\t\t</p>\n"
+"\t\t"
+msgstr ""
+
+#: js/main.py:219
+msgid ""
+"\n"
+"\t\t\tTocca per usare la posizione corrente. Altrimenti cerca una linea, una "
+"fermata\n"
+"\t\t\t(per nome o codice), oppure un indirizzo.\n"
+"\t\t"
+msgstr ""
+
+#: js/main.py:222
+msgid "Capito, grazie."
+msgstr ""
+
+#: js/main.py:237
+msgid "Linea, fermata o indirizzo"
+msgstr "Bus stop, line or address"
+
+#: js/main.py:238
+msgid "Imposta posizione corrente"
+msgstr ""
+
+#: js/main.py:409
+msgid "Versione app non supportata"
+msgstr ""
+
+#: js/main.py:415
+msgid ""
+"\n"
+"\t\t\t\t\t\tLa versione della tua app &egrave; troppo vecchia. Per "
+"continuare,\n"
+"\t\t\t\t\t\tdevi effettuare un aggiornamento.\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: js/main.py:427
+msgid "Aggiorna"
+msgstr ""
+
+#: js/main.py:502
+msgid "Conferma"
+msgstr "Confirm"
+
+#: js/main.py:502
+msgid "Vuoi cancellare il preferito?"
+msgstr ""
+
+#: js/main.py:503
+msgid "S&igrave;"
+msgstr ""
+
+#: js/main.py:503
+msgid "No"
+msgstr ""
+
+#: js/main.py:530
+msgid "toolbar/percorso.png"
+msgstr ""
+
+#: js/main.py:535
+msgid "toolbar/linea.png"
+msgstr ""
+
+#: js/main.py:543 js/main.py:677
+msgid "toolbar/preferiti.png"
+msgstr ""
+
+#: js/main.py:572
+msgid "Language"
+msgstr ""
+
+#: js/main.py:582
+msgid "Informazioni su Roma mobile"
+msgstr ""
+
+#: js/main.py:626 js/main.py:919
+msgid "toolbar/mappa.png"
+msgstr ""
+
+#: js/main.py:671
+msgid "toolbar/preferiti_not.png"
+msgstr ""
+
+#: js/main.py:724
+msgid "E' disponibile un aggiornamento"
+msgstr ""
+
+#: js/main.py:730
+msgid "Bentornato!"
+msgstr ""
+
+#: js/main.py:869
+msgid "Impossibile determinare la posizione"
+msgstr ""
+
+#: js/main.py:880
+#, python-format
+msgid "Posizione attuale <punto:(%f,%f)>"
+msgstr "Current position <punto:(%f,%f)>"
+
+#: js/main.py:1001
+msgid "Italiano"
+msgstr ""
+
+#: js/main.py:1006
+msgid "English"
+msgstr ""
+
+#: js/main.py:1093
+msgid "Ora presenti sulla mappa"
+msgstr "Layers on map"
+
+#: js/main.py:1293
+msgid "sulla nostra pagina Facebook"
+msgstr ""
+
+#: js/main.py:1297
+msgid "sulla nostra Community Google+"
+msgstr ""
+
+#: js/main.py:1306
+msgid "Aiutaci con il tuo feedback"
+msgstr ""
+
+#: js/main.py:1312
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t<p>L'app ti &egrave; utile? Supporta lo sviluppo con la tua "
+"valutazione.\n"
+"\t\t\t\t\t\tPer inviare proposte e suggerimenti sull'app, scrivici %s. "
+"Grazie!</p>\n"
+"\t\t\t\t\t"
+msgstr ""
+
+#: js/main.py:1325
+msgid "Vota"
+msgstr ""
+
+#: js/main.py:1330
+msgid "Non ora"
+msgstr "Not now"
+
+#: js/main.py:1335
+msgid "Scrivici"
+msgstr ""
+
+#: js/main.py:1340 js/util.py:363
+msgid "Non mostrare pi&ugrave;"
+msgstr "Got it"
+
+#: js/map.py:330
+msgid " a "
+msgstr ""
+
+#: js/map.py:408
+msgid "Cerca un percorso, una linea o una fermata per mostrarla sulla mappa."
+msgstr ""
+
+#: js/map.py:541
+msgid "<br/>Caricamento..."
+msgstr ""
+
+#: js/news.py:89
+msgid "News"
+msgstr ""
+
+#: js/util.py:105
+msgid "Impossibile scaricare i dati, riprova"
+msgstr ""
+
+#: js/util.py:322 js/util.py:362 js/util.py:682
+msgid "OK"
+msgstr ""
+
+#: js/util.py:660
+msgid "Ore"
+msgstr ""
+
+#: js/util.py:672
+msgid "Min"
+msgstr ""
+
+#: js/util.py:1958
+msgid "Preferiti non disponibili"
+msgstr "Not available"
+
+#: js/util.py:1959
+msgid "Temporaneamente i preferiti non sono disponibili, ma torneranno presto!"
+msgstr ""
+
+#: js/util.py:2322
+msgid "Percorso<br />da qui"
+msgstr ""
+
+#: js/util.py:2334
+msgid "Fermate<br />vicine"
+msgstr "Bus stops nearby"
+
+#: js/util.py:2346
+msgid "Percorso<br />fino a qui"
+msgstr ""
+
+#: js/util.py:2358
+msgid "Luoghi<br />vicini"
+msgstr "Places nearby"
+
+#: templates/percorso-dinamico.html:9 templates/percorso.html:8
+msgid "Correggi le seguenti informazioni:"
+msgstr "Please correct the following data:"
+
+#: templates/percorso-dinamico.html:18
+#, python-format
+msgid ""
+"\n"
+"\t<h2>Percorso trovato</h2>\n"
+"\t<p>\n"
+"\t\t<span class=\"b\">Partenza:</span> %(sa)s (%(sp)s) (<a href=\"/percorso/"
+"preferiti/aggiungi/s\">Imposta come preferito</a>)<br />\n"
+"\t\t<span class=\"b\">Arrivo:</span> %(ta)s (%(tp)s) (<a href=\"/percorso/"
+"preferiti/aggiungi/t\">Imposta come preferito</a>)<br />\n"
+"\t</p>\n"
+"\t"
+msgstr ""
+"\n"
+"\t<h2>Found route</h2>\n"
+"\t<p>\n"
+"\t\t<span class=\"b\">From:</span> %(sa)s (%(sp)s) (<a href=\"/percorso/"
+"preferiti/aggiungi/s\">Add to favorites</a>)<br />\n"
+"\t\t<span class=\"b\">To:</span> %(ta)s (%(tp)s) (<a href=\"/percorso/"
+"preferiti/aggiungi/t\">Add to favorites</a>)<br />\n"
+"\t</p>\n"
+"\t"
+
+#: templates/percorso-dinamico.html:27
+#, python-format
+msgid ""
+"\n"
+"\t<h2>Da %(sa)s (%(sp)s) a %(ta)s (%(tp)s)</h2>\n"
+"\t"
+msgstr ""
+"\n"
+"\t<h2>From %(sa)s (%(sp)s) to %(ta)s (%(tp)s)</h2>\n"
+"\t"
+
+#: templates/percorso-dinamico.html:35
+msgid "Come:"
+msgstr "How:"
+
+#: templates/percorso-dinamico.html:39 templates/percorso-dinamico.html:50
+msgid "Mezzo pubblico"
+msgstr "Public transport"
+
+#: templates/percorso-dinamico.html:41 templates/percorso-dinamico.html:54
+msgid "Park and ride"
+msgstr "Park and ride"
+
+#: templates/percorso-dinamico.html:84
+msgid "Mappa interattiva"
+msgstr "Interactive map"
+
+#: templates/percorso-dinamico.html:92
+msgid "Mappa"
+msgstr "Map"
+
+#: templates/percorso-dinamico.html:97
+msgid "Indicazioni in tempo reale"
+msgstr "Real time directions"
+
+#: templates/percorso-dinamico.html:115
+msgid "Durata spostamento"
+msgstr "Travel time"
+
+#: templates/percorso-dinamico.html:116
+msgid "Distanza percorsa"
+msgstr "Total distance"
+
+#: templates/percorso-dinamico.html:117
+msgid "Di cui a piedi"
+msgstr "Walking distance"
+
+#: templates/percorso-dinamico.html:133
+msgid "Fermata"
+msgstr "Bus stop"
+
+#: templates/percorso-dinamico.html:141 templates/percorso-dinamico.html:182
+#: templates/percorso-dinamico.html:195
+msgid "Escludi"
+msgstr "Exclude"
+
+#: templates/percorso-dinamico.html:147
+msgid "Sono qui"
+msgstr "I'm here"
+
+#: templates/percorso-dinamico.html:151
+msgid "Parti in bici"
+msgstr "By bike"
+
+#: templates/percorso-dinamico.html:153
+msgid "Parti a piedi"
+msgstr "On foot"
+
+#: templates/percorso-dinamico.html:177 templates/percorso-dinamico.html:180
+msgid "direz."
+msgstr "dest."
+
+#: templates/percorso-dinamico.html:187
+msgid "In bicicletta"
+msgstr "By bike"
+
+#: templates/percorso-dinamico.html:200
+msgid "Partenza ore"
+msgstr "Departure time"
+
+#: templates/percorso-dinamico.html:202
+msgid "Attesa circa"
+msgstr "Approx. waiting time"
+
+#: templates/percorso-dinamico.html:205
+msgid "In arrivo fra"
+msgstr "Arriving in"
+
+#: templates/percorso-dinamico.html:207
+msgid "In arrivo dopo"
+msgstr "Arriving after"
+
+#: templates/percorso-dinamico.html:210
+msgid "Attesa"
+msgstr "Waiting time"
+
+#: templates/percorso-dinamico.html:212
+msgid "Apertura ZTL ore"
+msgstr "LTZ opens at"
+
+#: templates/percorso-dinamico.html:241
+msgid "Includi"
+msgstr "Include"
+
+#: templates/percorso-dinamico.html:247
+msgid "Offri un passaggio lungo questo percorso"
+msgstr "Offer a lift on this route"
+
+#: templates/percorso-dinamico.html:254
+msgid "Propensione spostamenti a piedi e in bici:"
+msgstr "Propensity for walking and biking:"
+
+#: templates/percorso-dinamico.html:259
+msgid "Mezzi pubblici da utilizzare:"
+msgstr "Public means of transport:"
+
+#: templates/percorso-dinamico.html:270
+msgid "Bike and ride:"
+msgstr "Bike and ride:"
+
+#: templates/percorso-dinamico.html:273
+#, python-format
+msgid ""
+"\n"
+"\t\t\tMassima percorrenza in bici: %(mdb)s km\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"\t\t\tMax biking distance: %(mdb)s km\n"
+"\t\t\t"
+
+#: templates/percorso-dinamico.html:279
+msgid "Park and ride:"
+msgstr "Park and ride:"
+
+#: templates/percorso-dinamico.html:291 templates/percorso.html:61
+msgid "alle"
+msgstr "at"
+
+#: templates/percorso.html:19
+msgid "Da:"
+msgstr "From:"
+
+#: templates/percorso.html:23
+msgid "A:"
+msgstr "To:"
+
+#: templates/percorso.html:34
+msgid "Luoghi preferiti"
+msgstr "Favorite places"
+
+#: templates/percorso.html:38
+msgid "Da qui"
+msgstr "From here"
+
+#: templates/percorso.html:39
+msgid "A qui"
+msgstr "To here"
+
+#: templates/percorso.html:40
+msgid "Elimina"
+msgstr "Delete"
+
+#: templates/percorso.html:44
+msgid "Ancora non hai impostato alcun luogo come preferito."
+msgstr "You have not set any favorite places yet."
+
+#: templates/percorso.html:47
+msgid ""
+"<a href='http://login.muoversiaroma.it/Login.aspx?IdSito=1'>Registrati o "
+"accedi</a> per impostare i tuoi luoghi preferiti."
+msgstr ""
+"<a href='http://login.muoversiaroma.it/Login.aspx?IdSito=1'>Register or "
+"login</a> to set your favorite places."
+
+#: templates/percorso.html:51
+msgid "Come"
+msgstr "How"
+
+#: templates/percorso.html:71
+msgid "Lo sapevi?"
+msgstr "Did you know?"
+
+#: templates/percorso.html:73
+msgid ""
+"\n"
+"\t\t\tQuesto servizio calcola il percorso ottimale con i mezzi\n"
+"\t\t\tAtac, Roma TPL e le ferrovie regionali Trenitalia.\n"
+"\t\t\tUsa i dati in tempo reale per tener conto dello stato\n"
+"\t\t\tdel traffico e della posizione degli autobus.\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\t\tThis journey planner uses real time data from GPS bus "
+"trackers, in order to determine traffic status and waiting times at bus "
+"stops. Thus, it is able to find the quickest route on board of Atac and Roma "
+"TPL buses, the underground and urban railways.\t\t\t\t\t\t"
+
+#~ msgid "Mappa base"
+#~ msgstr "Basic map"
+
+#~ msgid "Linea"
+#~ msgstr "Line"
+
+#~ msgid "Accedi"
+#~ msgstr "Log in"
+
+#~ msgid "&nbsp;Direz. %s"
+#~ msgstr "&nbsp;Dest. %s"
+
+#~ msgid " (p. %s)"
+#~ msgstr "(dep. %s)"
+
+#~ msgid " (partenza %s)"
+#~ msgstr "(dep. %s)"
+
+#~ msgid "Cerca un luogo lungo il percorso"
+#~ msgstr "Find a place along the route"
+
+#~ msgid "Esci"
+#~ msgstr "Exit"
+
+#~ msgid "Pannelli VMS"
+#~ msgstr "Variable Message Signs"
+
+#~ msgid ""
+#~ "Siamo spiacenti, non sono disponibili gli orari di partenza dal capolinea "
+#~ "per il percorso selezionato."
+#~ msgstr "We apologize, timetable is not available for selected route."
+
+#~ msgid ""
+#~ "Seleziona una fermata, oppure un veicolo per conoscerne gli orari di "
+#~ "arrivo."
+#~ msgstr "Select a bus stop, or a vehicle, to get arrivals."
+
+#~ msgid "Luoghi trovati"
+#~ msgstr "Places found"
+
+#~ msgid "Luogo"
+#~ msgstr "Place"
+
+#~ msgid "Nel giorno selezionato:"
+#~ msgstr "On selected day:"
+
+#~ msgid ""
+#~ "\n"
+#~ "\t<h2>Percorso trovato</h2>\n"
+#~ "\t<p>\n"
+#~ "\t\t<span class=\"b\">Partenza:</span> %(sa)s (%(sp)s) (<a href="
+#~ "\"%(nohist)s/percorso/preferiti/aggiungi/s%(endnohist)s\">Imposta come "
+#~ "preferito</a>)<br />\n"
+#~ "\t\t<span class=\"b\">Arrivo:</span> %(ta)s (%(tp)s) (<a href="
+#~ "\"%(nohist)s/percorso/preferiti/aggiungi/t%(endnohist)s\">Imposta come "
+#~ "preferito</a>)<br />\n"
+#~ "\t</p>\n"
+#~ "\t"
+#~ msgstr ""
+#~ "\n"
+#~ "\t<h2>Found route</h2>\n"
+#~ "\t<p>\n"
+#~ "\t\t<span class=\"b\">From:</span> %(sa)s (%(sp)s) (<a href=\"%(nohist)s/"
+#~ "percorso/preferiti/aggiungi/s%(endnohist)s\">Add to favorites</a>)<br />\n"
+#~ "\t\t<span class=\"b\">To:</span> %(ta)s (%(tp)s) (<a href=\"%(nohist)s/"
+#~ "percorso/preferiti/aggiungi/t%(endnohist)s\">Add to favorites</a>)<br />\n"
+#~ "\t</p>\n"
+#~ "\t"
+
+#~ msgid "Prossimo %(linea)s:"
+#~ msgstr "Next %(linea)s:"
+
+#~ msgid "Capolinea (partenza %(partenza)s)"
+#~ msgstr "Bus terminus (dep. %(partenza)s)"
+
+#~ msgid "In Arrivo"
+#~ msgstr "Arriving"
+
+#~ msgid "%(df)s Fermate (%(ta)s')"
+#~ msgstr "%(df)s Bus stops (%(ta)s')"
+
+#~ msgid "%(df)s Fermate (*)"
+#~ msgstr "%(df)s Bus stops (*)"
+
+#~ msgid "Linee escluse"
+#~ msgstr "Excluded lines"
+
+#~ msgid "Ferrovie concesse Atac"
+#~ msgstr "Atac railways"
+
+#~ msgid "Ferrovie regionali Trenitalia"
+#~ msgstr "Regional Trenitalia railways"
+
+#~ msgid "Visualizza mappa"
+#~ msgstr "Show map"
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid ""
+#~ "\n"
+#~ "\t\tLe indicazioni dei tratti a piedi e in bicicletta sono calcolate "
+#~ "usando\n"
+#~ "\t\tuna versione del grafo <a href=\"http://www.openstreetmap.org\">\n"
+#~ "\t\tOpenStreetMap</a> concessa con licenza \n"
+#~ "\t\t<a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA "
+#~ "2.0</a>.\n"
+#~ "\t\t&copy; OpenStreetMap contributors.\n"
+#~ "\t"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tWalking and biking directions are computed using a version of the <a "
+#~ "href=\"http://www.openstreetmap.org\">\n"
+#~ "\t\tOpenStreetMap</a> graph licensed under \n"
+#~ "\t\t<a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA "
+#~ "2.0</a>. &copy; OpenStreetMap contributors.\n"
+#~ "\t"
+
+#~ msgid "Scambia da/a"
+#~ msgstr "Swap from/to"
+
+#~ msgid "comune di %s (molti trovati)"
+#~ msgstr "%s city (choose one)"
+
+#~ msgid "data e ora (errate)"
+#~ msgstr "date and time (wrong)"
+
+#~ msgid "Inserisci indirizzo di partenza con civico:"
+#~ msgstr "Starting address with street number:"
+
+#~ msgid "Comune o <span class='i'>localit&agrave;</span>:"
+#~ msgstr "City"
+
+#~ msgid "Inserisci indirizzo di arrivo con civico:"
+#~ msgstr "Destination address with street number:"
+
+#~ msgid "Data e ora (GG-MM-AA HH:MM):"
+#~ msgstr "Date and time (DD-MM-YY HH:MM (24hr)):"
+
+#~ msgid "Calcola"
+#~ msgstr "Get directions"
+
+#~ msgid "Pi&ugrave; dettagli"
+#~ msgstr "More detail"
+
+#~ msgid "Escludi metro, ferrovie e mezzo privato"
+#~ msgstr "Without underground, railways and car"
+
+#~ msgid "Il più veloce"
+#~ msgstr "The fastest"
+
+#~ msgid "Con pochi trasbordi"
+#~ msgstr "With the fewest changes"
+
+#~ msgid "Palina"
+#~ msgstr "Bus stop"

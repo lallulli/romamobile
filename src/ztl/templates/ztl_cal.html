@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block InternalStyle %}
+<style type="text/css">
+.hlform {
+	background-color: #D2B0B6;
+}
+.nound {
+	text-decoration:none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<h2 class="vskip">Orari programmati {{ztl.descrizione}}</h2>
+
+{% for o in cal %}
+
+	<h3>{{o.giorno_settimana|capfirst}}</h3>
+
+	{% if o.modificato %}
+		<span class="b">{% trans "Orario ordinario" %}</span>
+	{% endif %}
+	{% if o.fasce|length > 0 %}
+		{% for f in o.fasce %}
+			<p>
+				<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" /><span>
+					{% if f.inizio_ieri %}
+						{% blocktrans with ora_inizio=f.ora_inizio nome_giorno_prec=o.giorno_prec %}Dalle {{ ora_inizio  }} di {{ nome_giorno_prec }}{% endblocktrans %}
+					{% else %}
+						{% blocktrans with ora_inizio=f.ora_inizio %}Dalle {{ ora_inizio  }}{% endblocktrans %}
+					{% endif %}
+					{% if f.fine_domani %}
+						{% blocktrans with ora_fine=f.ora_fine nome_giorno_succ=o.giorno_succ %}alle {{ ora_fine }} di {{nome_giorno_succ}}{% endblocktrans %}
+					{% else %}
+						{% blocktrans with ora_fine=f.ora_fine %}alle {{ ora_fine }}{% endblocktrans %}
+					{% endif %}
+				</span></span></p>
+			</p>
+		{% endfor %}
+	{% else %}
+		<p>
+			<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" /><span>
+				{% trans "Non attiva" %}
+			</span></span></p>
+		</p>
+	{% endif %}
+	{% if o.modificato %}
+		<span class="b">{% trans "Modifica straordinaria" %} {{ nome_giorno }}</span>
+		{% for f in o.fasce_mod %}
+			<p>
+				<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" /><span>
+				{% if not f.attiva %}
+					{% blocktrans %}Non attiva{% endblocktrans %}
+				{% else %}
+					{% if f.inizio_ieri %}
+						{% blocktrans with ora_inizio=f.ora_inizio nome_giorno_prec=o.giorno_prec %}Dalle {{ ora_inizio  }} di {{ nome_giorno_prec }}{% endblocktrans %}
+					{% else %}
+						{% blocktrans with ora_inizio=f.ora_inizio %}Dalle {{ ora_inizio  }}{% endblocktrans %}
+					{% endif %}
+					{% if f.fine_domani %}
+						{% blocktrans with ora_fine=f.ora_fine nome_giorno_succ=o.giorno_succ %}alle {{ ora_fine }} di {{nome_giorno_succ}}{% endblocktrans %}
+					{% else %}
+						{% blocktrans with ora_fine=f.ora_fine %}alle {{ ora_fine }}{% endblocktrans %}
+					{% endif %}
+				{% endif %}
+			</span></span></p>
+		</p>
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+
+<p class="vskip">&raquo; <a href="{% hist %}/ztl/varchi/dettaglio/{{ztl.codice}}/{% endhist %}">{% trans "Varchi di accesso" %}</a></p>
+
+<h2 class="vskip">{% trans "Altre ZTL:" %}</h2>
+<p>
+	
+{% for z in altre_ztl %}
+&raquo; <a href="{% hist %}/ztl/ztl/{{z.codice}}/{% endhist %}">{{ z.descrizione }}</a><br />
+{% endfor %}
+</p>
+
+{% endblock %}

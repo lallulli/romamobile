@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block title %}
+		<h1>Roma mobile - 404 Not Found</h1>
+{% endblock %}
+
+{% block content %}
+	<p>
+		<img src="/xhtml/s/img/404.jpg" height="300px" width="592px" style="max-width: 100%; height: auto;">
+	</p>
+	<p>
+		{% trans "La pagina che hai richiesto non esiste." %}<br />
+		{% trans "Se ti sei perso, usa il <a href='/percorso'>cerca percorso</a> per ritrovare la strada!" %}
+	</p>
+{% endblock %}
+
+{% block didyouknow %}(D){% endblock %}

@@ -1,0 +1,259 @@
+{% load i18n %}{% load history %}{% load i18n %}<?xml version="1.0" encoding="utf-8"?>
+{% if  amFlavor == 'default' %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+{% else %}
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+{% endif %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		{% if autorefresh %}
+		<meta http-equiv="refresh" content="{{ autorefresh }}" />
+		{% endif %}
+		<meta name="description" content="Tempi di attesa bus e calcola percorso Atac, Roma TPL e Trenitalia, con dati in tempo reale. Viaggia con i mezzi pubblici, basta un biglietto Metrebus!" />
+		<meta name="keywords" content="muoversi, roma, mobilità, trasporto pubblico, informazione, infomobilità, mobile, atacmobile, tempi di attesa, trovalinea, calcolo del percorso, mappa" />
+		<title>{% if servizio %}{{ servizio.descrizione }}{% if sottotitolo %} - {{ sottotitolo }}{% endif %} | {% endif %}Roma mobile{% if not servizio %} | Muoversi a Roma con Atac: cerca linea e percorso{% endif %}</title>
+		<link href="/xhtml/s/css/screen.css" rel="stylesheet" type="text/css" />
+		{% if request.session.theme == 'dark' %}
+			<link href="/xhtml/s/css/dark.css" rel="stylesheet" type="text/css" />
+		{% endif %}
+		<link rel="icon" type="image/png" href="/xhtml/s/img/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700&display=swap" rel="stylesheet">
+		{% block InternalStyle %}
+		{% endblock %}{% block fullscript %}{% endblock %}
+		{% if False and platform == 'iOS' %}
+			<link rel="stylesheet" href="/xhtml/s/sb/sb.css" type="text/css" media="screen">
+			<meta name="google-play-app" content="app-id=it.skeed.romamobile">
+			<meta name="apple-itunes-app" content="app-id=820255342">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+			<script src="/xhtml/s/sb/sb.js"></script>
+			<script type="text/javascript">
+				$(function () { $.smartbanner({
+					title: '{% trans "Roma mobile" %}',
+					author: 'Roma mobile',
+					price: '{% trans "App ufficiale" %}',
+					inAppStore: '{% trans "Gratis" %}',
+					inGooglePlay: '{% trans "Gratis" %}',
+					icon: '/xhtml/s/img/app.png',
+					button: '{% trans "VEDI" %}',
+					daysReminder: 0
+				})})
+			</script>
+		{% endif %}
+		{% if not mar_style_transition and platform == 'Android' %}
+			<link rel="stylesheet" href="/xhtml/s/sb/sb.css" type="text/css" media="screen">
+			<meta name="google-play-app" content="app-id=it.skeed.romamobile">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+			<script src="/xhtml/s/sb/sb.js"></script>
+			<script type="text/javascript">
+				$(function () { $.smartbanner({
+					title: '{% trans "Roma mobile" %}',
+					author: 'App originale',
+					price: '{% trans "Gratis" %}',
+					inAppStore: '{% trans "Gratis" %}',
+					// inGooglePlay: '{% trans "Gratis" %}',
+					icon: '/xhtml/s/img/app.png',
+					button: '{% trans "VEDI" %}',
+					daysReminder: 0
+				})})
+			</script>
+		{% endif %}
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+        window.cookieconsent_options = {"message":"Utilizziamo i cookie per migliorare il nostro sito e la vostra esperienza di navigazione. Continuando a navigare sul nostro sito accettate la nostra politica sui cookie.","dismiss":"OK","learnMore":"Maggiori informazioni","link":"/info/info-cookies","theme":"dark-bottom"};
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+
+	</head>
+	{% block custombody %}<body>{% endblock %}
+	<div style="position: absolute; width: 100%;">
+		{% if not request.GET.onlycontent %}
+			<div id="header">
+				<div id="rsm-sx"><a class="nound" id="logo" href="/?nav=0&amp;back=1"><img src="/xhtml/s/img/rm.png" height="50" alt="logo" /></a></div>
+				<div id="rsm-dx"></div>
+				<div id="orario">{{ DateTime }}</div>
+				{% if beta %}<div id="beta">Versione BETA</div>{% endif %}
+				<a class="nound" id="brightness" href="/servizi/tema"><img src="/xhtml/s/img/brightness.png" alt="brightness" width="18" height="18" /></a>
+			</div>
+
+			{% block title %}
+				{% if servizio %}
+					<h1>
+						<span id="indietro"><a class="nound" href="{{ history_1 }}">&laquo;</a></span>
+						<a href="{{ history_service_url }}">{{ servizio.descrizione }}{% if sottotitolo %} - {{ sottotitolo }}{% endif %}</a>
+						<span id="aggiorna"><a href="{{ refresh }}" class="nound"><img src="/xhtml/s/img/reload.png"/></a></span>
+					</h1>
+				{% else %}
+					<h1>Roma mobile</h1>
+				{% endif %}
+			{% endblock %}
+
+
+			<div id="main">
+
+				{% if notifiche %}
+					<div class="notifiche">
+						{% for n in notifiche %}
+							{% if n.icona %}
+								<img class="dot" width="n.icona.width" height="n.icona.height" src="{{ n.icona.src }}" alt="*" />
+							{% else %}
+								<img class="dot" width="13" height="7" src="/news/s/img/right_bullet.gif" alt="*" />
+							{% endif %}
+							{% if n.pk %}
+								<a href="{% hist %}/servizi/notifiche/{{ n.pk }}{% endhist %}">{{ n.messaggio }}</a><br />
+							{% else %}
+								{% if n.link %}
+									<a href="{% hist %}{{ n.link }}{% endhist %}">{{ n.messaggio }}</a><br />
+								{% else %}
+									{{ n.messaggio }}<br />
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				{% endif %}
+		{% endif %}
+
+				{% block content %}
+				Benvenuto in Roma mobile!
+				{% endblock %}
+
+				{% block didyouknow %}
+					{% if rnd_ad %}
+						<h2>{{ rnd_ad.title }}</h2>
+						{% if rnd_ad.icon_position == 'left' %}
+							<table><tr>
+								<td><a href="/redirect/{{ rnd_ad.slug }}" class="nound" ><img align="left" src="/xhtml/s/{{ rnd_ad.icon.name }}" alt="Icon for {{ rnd_ad.slug}}"></a>{{ rnd_ad.increment_views }}</td>
+								<td>{{ rnd_ad.cached_content | safe }}</td>
+							</tr></table>
+						{% elif rnd_ad.icon_position == 'up' %}
+							<p>
+								<a href="/redirect/{{ rnd_ad.slug }}" class="nound" ><img src="/xhtml/s/{{ rnd_ad.icon.name }}" alt="Icon for {{ rnd_ad.slug}}"></a>{{ rnd_ad.increment_views }}<br />
+								{{ rnd_ad.cached_content | safe }}
+							</p>
+						{% else %}
+							<p>
+								{{ rnd_ad.increment_views }}{{ rnd_ad.cached_content | safe }}
+							</p>
+						{% endif %}
+					{% endif %}
+
+					{% if rnd_ad.is_ad %}<h2>{% trans "Lo sapevi?" %}</h2>{% endif %}
+					{% blocktrans %}
+						<p>
+							Il <a href="https://code.skeed.it/romamobile">progetto Roma mobile</a>, open source,
+							è l'evoluzione della versione classica di Muoversi a Roma (muovi.roma.it).
+							I dati sulla posizione degli autobus sono open data di
+							<a href="https://romamobilita.it/it/tecnologie/open-data">Roma
+							servizi per la mobilit&agrave;</a>, agenzia della mobilit&agrave; di
+							<a href="http://www.comune.roma.it">Roma Capitale</a>.
+						</p>
+						<p>
+								Roma mobile non &egrave; un servizio di Atac, Roma TPL, Trenitalia o di Roma servizi per la mobilit&agrave;.
+						</p>
+					{% endblocktrans %}
+				{% endblock %}
+
+				{% comment %}
+					<h2>{% trans "Lo sapevi?" %}</h2>
+					<p>
+						{% if rnd_didyouknow == 0 %}
+							{% blocktrans %}
+								I dati e i servizi di Roma mobile, compresi quelli in tempo reale, sono
+								<a href="/info/dev">accessibili mediante API</a>.
+							{% endblocktrans %}
+						{% elif rnd_didyouknow ==  1 %}
+							<a href="/redirect/brave" class="nound"><img src="/xhtml/s/img/brave.png" alt="Brave" /></a><br />
+							Scarica <a href="/redirect/brave">Brave</a> sul tuo telefono. Brave è un browser leggero e veloce che elimina la pubblicità, rispetta la privacy e supporta romamobile.it! &Egrave; un fork open source di Chromium: le tue pagine appariranno esattamente come in Google Chrome, ma senza pubblicità.
+
+						{% elif rnd_didyouknow ==  2 %}
+							{% blocktrans %}
+								Il <a href="/percorso">cerca percorso di Roma mobile</a> funziona
+								con i dati in tempo reale. Conosce la posizione degli autobus e lo stato del traffico,
+								e calcola, momento per momento, il percorso pi&ugrave; conveniente
+								con i mezzi Atac, Roma TPL, la metropolitana e le ferrovie regionali.
+							{% endblocktrans %}
+
+						{% elif rnd_didyouknow ==  3 %}
+							{% blocktrans %}
+								<table><tr>
+									<td><a href="/redirect/corsi"><img align="left" src="https://www.python.org/static/community_logos/python-powered-h-50x65.png" alt="Python logo"></a></td>
+									<td>Roma mobile è scritto in Python. Impara a programmare divertendoti, con i nostri <a href="/redirect/corsi">corsi Python</a>!</td>
+								</tr></table>
+							{% endblocktrans %}
+
+						{% elif rnd_didyouknow ==  4 %}
+							<table><tr>
+								{% if False %}
+									{% blocktrans %}
+										<td><a href="/redirect/cdg"><img width="28px" height="24px" align="left" src="/xhtml/s/img/snowflake.png" alt="Fiocco di neve"></a></td>
+										<td><a href="/redirect/cdg">Campo di Giove</a> è uno splendido paesino di montagna in Abruzzo, dove puoi sciare immerso nella natura del Parco Nazionale della Majella!</td>
+									{% endblocktrans %}
+								{% else %}
+									{% blocktrans %}
+										<td><a class="nound" href="/redirect/cdg">&#127794;</a></td>
+										<td><a href="/redirect/cdg">Campo di Giove</a> è uno splendido paesino di montagna in Abruzzo, immerso nella natura del Parco Nazionale della Majella!</td>
+									{% endblocktrans %}
+								{% endif %}
+							</tr></table>
+
+						{% elif rnd_didyouknow == 99999 %}
+							<!-- Unused snippets -->
+							{% blocktrans %}
+								Roma mobile &egrave; open source.
+								<a href="https://bitbucket.org/lallulli/muoversi-a-roma">Scarica il codice sorgente</a>
+								e contribuisci anche tu allo sviluppo del sito mobile, del cerca percorso, cerca linea e cerca luogo.
+							{% endblocktrans %}
+
+						{% endif %}
+					</p>
+				{% endcomment %}
+
+		{% if not request.GET.onlycontent %}
+			</div>
+			<div id="footer">
+				<div id="navbottom">
+				{% block NavigationBottom %}
+					{% if servizio %}
+						&laquo; <a href="{{ refresh }}">{% trans "Aggiorna" %}</a><br />
+						&laquo; <a href="{{ history_1 }}">{% trans "Indietro" %}</a><br />
+						&laquo; <a href="{{ history_service_url }}">{{ history_service_name }}</a><br />
+						&laquo; <a href="/?nav=0&amp;back=1">{% trans "Menu" %}</a><br />
+					{% endif %}
+				{% endblock %}
+				</div>
+				<div id="info">
+					<table style="width: 100%; border: none; padding: 0px; margin: 0px; border-collapse: collapse;">
+						<tr>
+							<td style="padding-left: 5px; vertical-align: middle">
+								<p>
+									<a alt="App Android" href="https://play.google.com/store/apps/details?id=it.skeed.romamobile"><img src="/xhtml/s/img/android-app.png"/></a>
+								</p>
+								<p>
+									<a href="https://www.facebook.com/romamobileapp" class="nound"><img src="/xhtml/s/img/ico-fb.png" alt="Facebook"/></a>
+									<a href="https://twitter.com/roma_mobile" class="nound"><img src="/xhtml/s/img/ico-tw.png" alt="Twitter"/></a>
+								</p>
+							</td>
+							<td style="padding-right: 5px; text-align: right; vertical-align:top;">
+									{{ DebugString }}
+									{{ Nota }}
+									&copy; {{ now|date:"Y" }} Roma mobile
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		{% endif %}
+		</div>
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-88036379-1', 'auto');
+	  ga('send', 'pageview');
+		</script>
+	</body>
+</html>

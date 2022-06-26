@@ -1,0 +1,21 @@
+<html>
+	<head>
+	<!--<script src="/percorso/js/prepopulate.js"></script>-->
+	<link href="/percorso/s/css/widget_style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="header">
+			<div id="rsm-sx"><img src="/xhtml/s/img/muoversiaroma.png" width="153" height="50" alt="logo" /></div>
+			<div id="rsm-dx"></div>
+			<div id="widget">
+				<form  name="input" action="http://muovi.roma.it/percorso/js/" method="get" target="_blank">
+					<input type="text" class="textarea" name="cr_da" id="da" style="color:#ccc;" value="Sono qui" onclick="this.value='';this.onclick='';this.style.color='#000';" />
+					<input type="text" class="textarea" name="cr_a" id="a" style="color:#ccc;" value="Sto andando qui (facoltativo)" onclick="this.value='';this.onclick='';this.style.color='#000';" />
+					<input type="hidden" name="cr_lista_tipi" value="{{ id_tipo_ris }}">
+					<input type="hidden" name="cr" value="1">
+					<input type="submit" class="button-cl" value="Cerca&#10;{{ tipo }}" onclick="el=document.getElementById('a');if(el.value == 'Sto andando qui (facoltativo)') {el.value=''}">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

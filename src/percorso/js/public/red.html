@@ -1,0 +1,41 @@
+<html manifest="red.appcache">
+	<head>
+		<meta charset="ISO-8859-1">
+		<meta name="pygwt:module" content="main">
+		<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" sizes="196x196" href="icon.png">
+		<link rel='stylesheet' href='index-red.css'>
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+		<title>Roma mobile</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<script type="text/javascript">
+			var flavor_id = 1;
+		</script>
+		<script type="text/javascript" charset="utf-8" src="iab.js"></script>
+		<script language="javascript" src="bootstrap.js"></script>
+		<script src="leaflet/leaflet.js"></script>
+		<div id="Loading-Message">
+			<img id="Loading-Icon" width="196" height="196" src="icon.png">
+			<div id="Loading-Text">
+				<p>
+					Roma Servizi per la Mobilit&agrave; s.r.l.
+				</p>
+			</div>
+		</div>
+		
+		<div><iframe id='__pygwt_historyFrame' style='width:0;height:0;border:0'></iframe></div>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-6461187-4']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>

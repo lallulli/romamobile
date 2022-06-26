@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<h2>{% trans "Impostazioni avanzate notifiche" %}</h2>
+{% if fasce.count == 0 %}
+	<p>
+		{% trans "La notifica richiesta &egrave; sempre attiva. Puoi limitare le fasce orarie in cui vuoi ricevere le notifiche." %}
+	</p>
+{% else %}
+	<h3>{% trans "Fasce orarie in cui ricevi la notifica:" %}</h3>
+	<p>
+	{% for f in fasce %}
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />
+		{% blocktrans with oi=f.ora_inizio_breve of=f.ora_fine_breve g=f.giorni_breve %}
+			Dalle {{ oi }} alle {{ of }} di {{ g }}
+		{% endblocktrans %}
+		(<a href='{% nohist %}/servizi/notifiche/fasce/elimina/{{ f.pk }}{% endnohist %}'>Elimina</a>)
+		<br />		
+	{% endfor %}
+	</p>
+	<h3>{% trans "Aggiungi un'altra fascia oraria" %}</h3>
+{% endif %}
+<form id="fascia" method="get" {{ formaction }}>
+<p>
+	{% trans "Dalle ore" %} {{ form.ora_inizio }}
+	{% trans "alle ore" %} {{ form.ora_fine }}
+	{% formnohist %}
+</p>
+<p>
+	{{ form.giorni }}
+</p>
+<p>
+	<input type="submit" name="submit" value="{% trans "Aggiungi fascia" %}" />
+</p>
+</form>
+{% endblock %}

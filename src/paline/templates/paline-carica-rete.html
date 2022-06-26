@@ -1,0 +1,17 @@
+{% extends "backend-base.html" %}
+
+{% block content %}
+<h2>Carica rete</h2>
+{% if form %}
+	<form id="carica_rete" method="post" enctype="multipart/form-data" {{ formaction }}>
+	<table>{{ form }}</table>
+	<input type="submit" name="Submit" value="Carica" />
+	{% csrf_token %}
+	</form>
+{% else %}
+	<p>
+		Caricamento della rete programmato, riceverai una email di conferma una volta completato. A presto!
+	</p>
+{% endif %}
+<p><a href="/backend/logout">Logout</a></p>
+{% endblock %}

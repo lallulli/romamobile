@@ -1,0 +1,13 @@
+Car pooling <carpooling@agenziamobilita.roma.it>
+Car pooling: richiesta di passaggio rifiutata {{ r.da_orario|date }}
+Ciao {{ user.first_name }},
+
+La tua richiesta di passaggio è stata rifiutata.
+> Da: {{ r.da_indirizzo }} ({{ r.da_orario|date:"H:i" }})
+> A: {{ r.a_indirizzo }} ({{ r.a_orario|date:"H:i" }})
+
+Per ulteriori dettagli visita la pagina:
+http://muovi.roma.it/carpooling/dettaglio_richiesta/{{ r.pk }}?nav=1
+
+A presto,
+Il team Roma Car Pooling

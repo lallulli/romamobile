@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<form id="risorse" method="get" {{ formaction }}>
+{% if errors %}
+	<p><span class="b">{% trans "Correggi le seguenti informazioni:" %}</span></p>
+	<p>
+		{% for e in errors %}
+			<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" />{{ e }}<br />
+		{% endfor %}
+	</p>
+{% endif %}
+<p>{% trans "Rivendite vicine al seguente indirizzo (con civico):" %}<br />
+{{ form.address }}
+</p>
+<p class="vskip"><input type="submit" name="Submit" value="{% trans "Cerca" %}" /></p>
+{% formhist %}
+</form>
+{% endblock %}

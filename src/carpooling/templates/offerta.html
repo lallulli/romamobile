@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+
+{% block content %}
+<h2>{% trans "Offerta di un passaggio" %}</h2>
+<p>
+	<span class="b">Partenza:</span> {{ offerta.fascia_partenza }}<br />
+	<span class="b">Da:</span> {{ offerta.indirizzo_partenza }}<br />
+	<span class="b">A:</span> {{ offerta.indirizzo_arrivo }}<br />
+	<span class="b">Durata:</span> {{ offerta.durata_minuti }} minuti<br />
+</p>
+{% if not offerta.annullato %}
+	{% if offerta.futura %}
+		<p>
+			<a href="{% nohist %}/carpooling/annulla/{{ offerta.pk }}{% endnohist %}">Annulla offerta</a>
+		</p>
+	{% endif %}
+{% else %}
+	<p>L'offerta &egrave; stata annullata.</p>	
+{% endif %}
+
+
+{% if pendenti %}
+<h2 class="vskip">{% trans "Richieste in attesa" %}</h2>
+	{% for r in pendenti %}
+		<p>
+			<span class="b">Da:</span> {{ r.da_indirizzo }} ({{ r.da_orario|date:"H:i" }})<br />
+			<span class="b">A:</span> {{ r.a_indirizzo }} ({{ r.a_orario|date:"H:i" }})<br />
+			<span class="b">Contributo suggerito:</span> {{ r.costo|floatformat:2 }} &euro;<br />
+			<span class="b">Feedback richiedente:</span> {{ r.utente_car_pooling.feedback_complessivo_arrotondato }} / 5.0<br />
+		</p>
+		<p>
+			<a href="{% nohist %}/carpooling/accetta/{{ r.pk }}{% endnohist %}">Accetta</a> -
+			<a href="{% nohist %}/carpooling/rifiuta/{{ r.pk }}{% endnohist %}">Rifiuta</a>
+		</p>	
+	{% endfor %}	
+	
+{% endif %}
+
+
+{% if confermate %}
+	<h2 class="vskip">{% trans "Richieste accettate" %}</h2>
+	{% for r in confermate %}
+		<p>
+			<span class="b">Da:</span> {{ r.da_indirizzo }} ({{ r.da_orario|date:"H:i" }})<br />
+			<span class="b">A:</span> {{ r.a_indirizzo }} ({{ r.a_orario|date:"H:i" }})<br />
+			<span class="b">Contributo suggerito:</span> {{ r.costo|floatformat:2 }} &euro;<br />
+			<span class="b">Feedback richiedente:</span> {{ r.utente_car_pooling.feedback_complessivo_arrotondato }} / 5.0<br />			
+			<span class="b">Richiedente:</span> {{ r.user.first_name }} {{ r.user.last_name }}<br />
+			<span class="b">Telefono:</span> {{ r.telefoni }}
+		</p>
+		<p>
+			{% if offerta.futura %}
+				<a href="{% nohist %}/carpooling/rifiuta/{{ r.pk }}{% endnohist %}">Annulla</a>
+			{% else %}
+				<span class="b">Lascia il tuo feedback:</span>
+				{% if r.feedback_richiedente %}
+					{{ r.feedback_richiedente }}
+				{% else %}
+					<a href="{% nohist %}/carpooling/feedback_richiedente/{{ r.pk }}/1{% endnohist %}">1</a> -
+					<a href="{% nohist %}/carpooling/feedback_richiedente/{{ r.pk }}/2{% endnohist %}">2</a> -
+					<a href="{% nohist %}/carpooling/feedback_richiedente/{{ r.pk }}/3{% endnohist %}">3</a> -
+					<a href="{% nohist %}/carpooling/feedback_richiedente/{{ r.pk }}/4{% endnohist %}">4</a> -
+					<a href="{% nohist %}/carpooling/feedback_richiedente/{{ r.pk }}/5{% endnohist %}">5</a>
+				{% endif %}
+			{% endif %}
+		</p>		
+	{% endfor %}
+{% endif %}
+	
+{% if rifiutate %}
+	<h2 class="vskip">{% trans "Richieste rifiutate" %}</h2>
+	{% for r in rifiutate %}
+		<p>
+			<span class="b">Da:</span> {{ r.da_indirizzo }} ({{ r.da_orario|date:"H:i" }})<br />
+			<span class="b">A:</span> {{ r.a_indirizzo }} ({{ r.a_orario|date:"H:i" }})<br />
+			<span class="b">Feedback richiedente:</span> {{ r.utente_car_pooling.feedback_complessivo_arrotondato }} / 5.0<br />			
+			{% if r.scambio_dati %}
+				<span class="b">Richiedente:</span> {{ r.user.first_name }} {{ r.user.last_name }}<br />
+				<span class="b">Telefono:</span> {{ r.telefoni }}<br />
+			{% endif %}
+			<span class="b">Rifiutata da: </span>{% if r.stato == 'AO' %}Offerente{% else %}Richiedente{% endif %} 
+		</p>
+	{% endfor %}
+{% endif %}
+
+<h2>Contrassegno</h2>
+<p>
+	Stampa il <a href="/carpooling/s/contrassegno.pdf">contrassegno</a> da esporre sul cruscotto per essere facilmente individuabile.
+</p>
+<p>
+	<a href="/carpooling/s/contrassegno.pdf" class="nound"><img src="/carpooling/s/img/cruscotto.png" width="98" height="71" /></a>
+</p>
+
+{% endblock %}
+

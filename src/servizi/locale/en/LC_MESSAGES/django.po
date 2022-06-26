@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-11 19:02+0200\n"
+"PO-Revision-Date: 2017-09-06 08:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#: infopoint.py:146 infopoint.py:149 infopoint.py:323 infopoint.py:326
+#, python-format
+msgid "Punto su mappa <punto:(%0.4f,%0.4f)>"
+msgstr "Point on map <punto:(%0.4f,%0.4f)>"
+
+#: infopoint.py:414 infopoint.py:417
+#, python-format
+msgid "Punto su mappa <punto:(%s,%s)>"
+msgstr "Point on map <punto:(%s,%s)>"
+
+#: infopoint.py:596
+msgid "ita"
+msgstr "eng"
+
+#: utils.py:260
+msgid "Lu"
+msgstr "Mon"
+
+#: utils.py:260
+msgid "Ma"
+msgstr "Tue"
+
+#: utils.py:260
+msgid "Me"
+msgstr "Wed"
+
+#: utils.py:260
+msgid "Gi"
+msgstr "Thu"
+
+#: utils.py:260
+msgid "Ve"
+msgstr "Fri"
+
+#: utils.py:260
+msgid "Sa"
+msgstr "Sat"
+
+#: utils.py:260
+msgid "Do"
+msgstr "Sun"
+
+#: utils.py:262
+msgid "lu"
+msgstr "mo"
+
+#: utils.py:262
+msgid "ma"
+msgstr "tu"
+
+#: utils.py:262
+msgid "me"
+msgstr "we"
+
+#: utils.py:262
+msgid "gi"
+msgstr "th"
+
+#: utils.py:262
+msgid "ve"
+msgstr "fr"
+
+#: utils.py:262
+msgid "sa"
+msgstr "sa"
+
+#: utils.py:262
+msgid "do"
+msgstr "su"
+
+#: utils.py:264
+msgid "Lunedì"
+msgstr "Monday"
+
+#: utils.py:264
+msgid "Martedì"
+msgstr "Tuesday"
+
+#: utils.py:264
+msgid "Mercoledì"
+msgstr "Wednesday"
+
+#: utils.py:264
+msgid "Giovedì"
+msgstr "Thursday"
+
+#: utils.py:264
+msgid "Venerdì"
+msgstr "Friday"
+
+#: utils.py:264
+msgid "Sabato"
+msgstr "Saturday"
+
+#: utils.py:264
+msgid "Domenica"
+msgstr "Sunday"
+
+#: utils.py:266
+msgid "lunedì"
+msgstr "monday"
+
+#: utils.py:266
+msgid "martedì"
+msgstr "tuesday"
+
+#: utils.py:266
+msgid "mercoledì"
+msgstr "wednesday"
+
+#: utils.py:266
+msgid "giovedì"
+msgstr "thursday"
+
+#: utils.py:266
+msgid "venerdì"
+msgstr "friday"
+
+#: utils.py:266
+msgid "sabato"
+msgstr "saturday"
+
+#: utils.py:266
+msgid "domenica"
+msgstr "sunday"
+
+#: utils.py:289
+msgid "H:i"
+msgstr "h:i A"
+
+#: utils.py:490
+msgid "Conferma"
+msgstr "Ok"
+
+#: utils.py:491
+msgid "Annulla"
+msgstr "Cancel"
+
+#: views.py:191
+#, python-format
+msgid "Bentornato, %(nome)s"
+msgstr "Welcome back, %(nome)s"
+
+#: views.py:416
+msgid "Accesso effettuato"
+msgstr "Logged in"
+
+#: views.py:511 views.py:554
+msgid "La notifica non esiste"
+msgstr "Notification does not exist"
+
+#: views.py:544
+msgid "La fascia non esiste"
+msgstr "Time slot does not exist"
+
+#: templates/login_richiesto.html:10
+#, python-format
+msgid ""
+"\n"
+"\t\t\tPer visualizzare la pagina richiesta &egrave; necessario <a href="
+"\"http://login.muoversiaroma.it/GestioneAccount.aspx?IdSito=%(id_sito)s"
+"\">autenticarsi</a>.\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\t\t<a href=\"http://login.muoversiaroma.it/GestioneAccount.aspx?IdSito="
+"%(id_sito)s\">Please login</a>.\n"
+"\t\t"
+
+#: templates/notifiche_fasce.html:6
+msgid "Impostazioni avanzate notifiche"
+msgstr "Advanced notification settings"
+
+#: templates/notifiche_fasce.html:9
+msgid ""
+"La notifica richiesta &egrave; sempre attiva. Puoi limitare le fasce orarie "
+"in cui vuoi ricevere le notifiche."
+msgstr ""
+"Your notification is continuously active now. You can define some time "
+"slots, and limit the validity of your notification to them."
+
+#: templates/notifiche_fasce.html:12
+msgid "Fasce orarie in cui ricevi la notifica:"
+msgstr "Time slots when you receive your notification:"
+
+#: templates/notifiche_fasce.html:16
+#, python-format
+msgid ""
+"\n"
+"\t\t\tDalle %(oi)s alle %(of)s di %(g)s\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\tFrom  %(oi)s to %(of)s of %(g)s\n"
+"\t\t"
+
+#: templates/notifiche_fasce.html:23
+msgid "Aggiungi un'altra fascia oraria"
+msgstr "Add another time slot"
+
+#: templates/notifiche_fasce.html:27
+msgid "Dalle ore"
+msgstr "From"
+
+#: templates/notifiche_fasce.html:28
+msgid "alle ore"
+msgstr "to"
+
+#: templates/notifiche_fasce.html:35
+msgid "Aggiungi fascia"
+msgstr "Add time slot"
+
+#: templates/richiedi-conferma.html:4
+msgid "Conferma azione"
+msgstr "Confirm"
+
+#: templates/servizi_new.html:91
+msgid "Web App"
+msgstr "Web App"
+
+#: templates/servizi_new.html:94
+msgid "Accedi"
+msgstr "Login"
+
+#: templates/servizi_new.html:96
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t<a href=\"http://login.muoversiaroma.it/GestioneAccount.aspx?"
+"IdSito=%(id_sito)s\">%(nome)s</a> (<a href=\"/servizi/logout\">Logout</a>)\n"
+"\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t<a href=\"http://login.muoversiaroma.it/GestioneAccount.aspx?"
+"IdSito=%(id_sito)s\">%(nome)s</a> (<a href=\"/servizi/logout\">Logout</a>)\n"
+"\t\t\t\t"
+
+#: templates/servizi_new.html:107
+msgid "Tempi di attesa bus e calcola percorso"
+msgstr "Bus waiting times and journey planner"
+
+#: templates/servizi_new.html:110
+msgid "Sono qui"
+msgstr "I'm here"
+
+#: templates/servizi_new.html:110
+msgid "indirizzo, fermata o linea"
+msgstr "address, bus stop or line"
+
+#: templates/servizi_new.html:115
+msgid "Vado qui"
+msgstr "I'm going here"
+
+#: templates/servizi_new.html:115
+msgid "facoltativo"
+msgstr "optional"
+
+#: templates/servizi_new.html:120
+msgid "Cerca"
+msgstr "Search"
+
+#: templates/servizi_new.html:121
+msgid "Mappa"
+msgstr "Map"
+
+#: templates/servizi_new.html:126
+msgid "Servizi in tempo reale"
+msgstr "Real-time services"
+
+#~ msgid "Servizi"
+#~ msgstr "Services"
+
+#~ msgid "Cerca (solo testo)"
+#~ msgstr "Search (text)"
+
+#~ msgid "Cerca (testo e mappa)"
+#~ msgstr "Search (text with map)"
+
+#~ msgid "Ritorno"
+#~ msgstr "Way back"
+
+#~ msgid "Ricerche recenti:"
+#~ msgstr "Recently searched:"
+
+#~ msgid "Mobilit&agrave; pubblica o sostenibile"
+#~ msgstr "Public transport"
+
+#~ msgid "Mobilit&agrave; privata"
+#~ msgstr "Private transport"
+
+#~ msgid "Altro"
+#~ msgstr "Other"
+
+#~ msgid "Scarica l'app Chiama Taxi"
+#~ msgstr "Download Chiama Taxi app"
+
+#~ msgid "Percorsi e tempi di attesa bus"
+#~ msgstr "Bus routes and waiting times"
+
+#~ msgid "Opzioni"
+#~ msgstr "Advanced"
+
+#~ msgid "Novit&agrave; su Atac mobile"
+#~ msgstr "Atac mobile news"
+
+#~ msgid "Sfondo chiaro"
+#~ msgstr "Light background"
+
+#~ msgid "Sfondo scuro"
+#~ msgstr "Dark background"
+
+#~ msgid "Accedi o registrati"
+#~ msgstr "Login or register"
+
+#~ msgid "Correggi le seguenti informazioni:"
+#~ msgstr "Please correct:"
+
+#~ msgid ""
+#~ "Il servizio &egrave; disponibile tutti i giorni dalle ore 06.30 alle ore "
+#~ "24.00."
+#~ msgstr "Atac mobile is available from 6.30 AM to 12.00 AM, every day."

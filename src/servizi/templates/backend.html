@@ -1,0 +1,10 @@
+{% extends "backend-base.html" %}
+
+{% block content %}
+	<h2>Sezioni del backend</h2>
+	<ul>		
+		{% for i in menu %}
+			<li><a href="{{ i.url }}">{{ i.caption }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

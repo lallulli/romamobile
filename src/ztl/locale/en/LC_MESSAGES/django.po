@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-11 19:02+0200\n"
+"PO-Revision-Date: 2020-03-06 16:11+0100\n"
+"Last-Translator: Atac mobile <atacmobile@atac.roma.it>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+
+#: views.py:427
+msgid "l"
+msgstr "l"
+
+#: views.py:487 views.py:488 views.py:537 views.py:538 views.py:616
+#: views.py:617 views.py:631 views.py:632 views.py:642 views.py:643
+#: views.py:680 views.py:681 views.py:685 views.py:686 views.py:702
+#: views.py:703
+msgid "H:i"
+msgstr "g:i A"
+
+#: views.py:579
+msgid "l j"
+msgstr ""
+
+#: views.py:700
+msgid "d-m-Y"
+msgstr "Y-m-d"
+
+#: templates/ztl.html:18 templates/ztl_per_sito.html:24
+msgid "Orari di oggi"
+msgstr "Today schedule"
+
+#: templates/ztl.html:28 templates/ztl_per_sito.html:34
+#, python-format
+msgid "Dalle %(ora_inizio)s di ieri alle %(ora_fine)s di oggi"
+msgstr "From yesterday, %(ora_inizio)s to today, %(ora_fine)s"
+
+#: templates/ztl.html:31 templates/ztl_per_sito.html:37
+#, python-format
+msgid "Attiva fino alle ore %(ora_fine)s di domani"
+msgstr "Attive until tomorrow, %(ora_fine)s"
+
+#: templates/ztl.html:33 templates/ztl_per_sito.html:39
+#, python-format
+msgid "Attiva fino alle ore %(ora_fine)s"
+msgstr "Attive until %(ora_fine)s"
+
+#: templates/ztl.html:40 templates/ztl.html.py:57 templates/ztl_cal.html:47
+#: templates/ztl_cal.html.py:57 templates/ztl_giorno.html:46
+#: templates/ztl_giorno.html.py:56 templates/ztl_modifiche.html:44
+#: templates/ztl_per_sito.html:46 templates/ztl_per_sito.html.py:63
+msgid "Non attiva"
+msgstr "Not active"
+
+#: templates/ztl.html:46 templates/ztl_per_sito.html:52
+#, python-format
+msgid "Dalle %(ora_inizio)s alle %(ora_fine)s di domani"
+msgstr "From today, %(ora_inizio)s to tomorrow, %(ora_fine)s"
+
+#: templates/ztl.html:48 templates/ztl_per_sito.html:54
+#, python-format
+msgid "Dalle %(ora_inizio)s alle %(ora_fine)s"
+msgstr "From %(ora_inizio)s to %(ora_fine)s"
+
+#: templates/ztl.html:66 templates/ztl_modifiche.html:18
+#: templates/ztl_per_sito.html:70
+msgid "Modifiche straordinarie"
+msgstr "Temporary alterations:"
+
+#: templates/ztl.html:69 templates/ztl_cal.html:77
+#: templates/ztl_varchi_dettaglio.html:18 templates/ztl_varchi_menu.html:18
+msgid "Varchi di accesso"
+msgstr "Access gates"
+
+#: templates/ztl.html:71
+msgid "Informazioni sulla ZTL"
+msgstr "Further info about LTZ's"
+
+#: templates/ztl.html:74 templates/ztl_modifiche.html:55
+msgid "Orari giornalieri:"
+msgstr "Schedule by weekday:"
+
+#: templates/ztl.html:81 templates/ztl_modifiche.html:62
+msgid "ZTL - orari e varchi:"
+msgstr "Schedule and gates by LTZ:"
+
+#: templates/ztl_cal.html:25 templates/ztl_giorno.html:24
+#, fuzzy
+msgid "Orario ordinario"
+msgstr "Schedule by weekday:"
+
+#: templates/ztl_cal.html:32 templates/ztl_cal.html.py:60
+#: templates/ztl_giorno.html:31 templates/ztl_giorno.html.py:59
+#, python-format
+msgid "Dalle %(ora_inizio)s di %(nome_giorno_prec)s"
+msgstr "From %(nome_giorno_prec)s, %(ora_inizio)s"
+
+#: templates/ztl_cal.html:34 templates/ztl_cal.html.py:62
+#: templates/ztl_giorno.html:33 templates/ztl_giorno.html.py:61
+#: templates/ztl_modifiche.html:32
+#, python-format
+msgid "Dalle %(ora_inizio)s"
+msgstr "From %(ora_inizio)s"
+
+#: templates/ztl_cal.html:37 templates/ztl_cal.html.py:65
+#: templates/ztl_giorno.html:36 templates/ztl_giorno.html.py:64
+#, python-format
+msgid "alle %(ora_fine)s di %(nome_giorno_succ)s"
+msgstr "to %(nome_giorno_succ)s, %(ora_fine)s"
+
+#: templates/ztl_cal.html:39 templates/ztl_cal.html.py:67
+#: templates/ztl_giorno.html:38 templates/ztl_giorno.html.py:66
+#: templates/ztl_modifiche.html:37
+#, python-format
+msgid "alle %(ora_fine)s"
+msgstr "to %(ora_fine)s"
+
+#: templates/ztl_cal.html:52 templates/ztl_giorno.html:51
+msgid "Modifica straordinaria"
+msgstr "Temporary alterations:"
+
+#: templates/ztl_cal.html:79 templates/ztl_varchi_dettaglio.html:38
+msgid "Altre ZTL:"
+msgstr "Other LTZ:"
+
+#: templates/ztl_giorno.html:18
+msgid "Orario ZTL"
+msgstr "LTZ schedule"
+
+#: templates/ztl_giorno.html:76
+msgid "Altri giorni:"
+msgstr "Further weekdays:"
+
+#: templates/ztl_modifiche.html:30
+#, python-format
+msgid "Dalle %(ora_inizio)s di ieri"
+msgstr "From yesterday, %(ora_inizio)s"
+
+#: templates/ztl_modifiche.html:35
+#, python-format
+msgid "alle %(ora_fine)s di domani"
+msgstr "to tomorrow, %(ora_fine)s"
+
+#: templates/ztl_varchi_dettaglio.html:28
+msgid "Legenda"
+msgstr "Key"
+
+#: templates/ztl_varchi_dettaglio.html:30
+msgid "Varco attivo adesso"
+msgstr "Gate is active now"
+
+#: templates/ztl_varchi_dettaglio.html:31
+msgid "Varco non attivo adesso"
+msgstr "Gate is not active now"
+
+#: templates/ztl_varchi_dettaglio.html:35
+msgid "Mostra legenda"
+msgstr "Show key"
+
+#~ msgid "Dalle %(ora_inizio)s di %(giorno_prec)s"
+#~ msgstr "From %(giorno_prec)s, %(ora_inizio)s"
+
+#~ msgid "alle %(ora_fine)s di %(giorno_succ)s"
+#~ msgstr "to %(giorno_succ)s, %(ora_fine)s"
+
+#~ msgid "Dalle %(ora_inizio)s del giorno precedente"
+#~ msgstr "From %(ora_inizio)s of the previous day"
+
+#~ msgid "alle %(ora_fine)s del giorno successivo"
+#~ msgstr "to %(ora_fine)s of the next day"
+
+#~ msgid "Dalle"
+#~ msgstr "From"
+
+#~ msgid "di ieri"
+#~ msgstr "of yesterday"
+
+#~ msgid "alle"
+#~ msgstr "to"
+
+#, fuzzy
+#~ msgid "di ieri alle"
+#~ msgstr "of yesterday"
+
+#, fuzzy
+#~ msgid "di oggi"
+#~ msgstr "Today schedule"
+
+#~ msgid "Attiva fino alle"
+#~ msgstr "Active until"
+
+#, fuzzy
+#~ msgid " di domani"
+#~ msgstr "of tomorrow"
+
+#, fuzzy
+#~ msgid "di "
+#~ msgstr "of yesterday"
+
+#~ msgid "di"
+#~ msgstr "of"
+
+#~ msgid "Atac Risponde"
+#~ msgstr "Ask Atac"
+
+#~ msgid "Numero Unico"
+#~ msgstr "Transport Info Helpline"
+
+#~ msgid "protocollo generale"
+#~ msgstr "Post office protocol"
+
+#~ msgid "servizio bus turistici"
+#~ msgstr "Tourist bus services"
+
+#~ msgid "servizio car sharing"
+#~ msgstr "Car sharing services"
+
+#~ msgid "Tutti i giorni (h 24)"
+#~ msgstr "Every day (24h)"
+
+#~ msgid ""
+#~ "Informazioni e servizi sulla mobilit&agrave; pubblica e privata, permessi "
+#~ "(ZTL, Strisce Blu, Contrassegni Speciali persone con disabilit&agrave;), "
+#~ "Piano Bus Turistici, Bollino Blu autofficine, Car Sharing, segnalazioni "
+#~ "semafori e parcometri"
+#~ msgstr ""
+#~ "Information and services for public and private transport systems, "
+#~ "timetables and routes for public transport systems, travel passes and "
+#~ "tickets, permits (limited traffic areas, blue line areas, special badges "
+#~ "for disabled persons), tourist bus plan, car-repair garage blue tickets, "
+#~ "car sharing, traffic light and parking meter signs."
+
+#~ msgid "Numero Verde Persone con Disabilit&agrave;"
+#~ msgstr ""
+#~ "Information on transport services for disabled travellers (special "
+#~ "badges, access to limited traffic areas)"
+
+#~ msgid "Luned&igrave; - Sabato (08:00 - 20:00)"
+#~ msgstr "Monday to Saturday (8:00 am - 8:00 pm)"
+
+#~ msgid ""
+#~ "Informazioni sulla mobilit&agrave; delle persone con disabilit&agrave; "
+#~ "(Contrassegni Speciali, accesso in ZTL)"
+#~ msgstr ""
+#~ "Information on transport services for disabled travellers (special "
+#~ "badges, access to limited traffic areas)"
+
+#~ msgid "Sportello al Pubblico"
+#~ msgstr "Help Desk"
+
+#~ msgid "Piazzale degli Archivi 40 - primo piano"
+#~ msgstr "Piazzale degli Archivi 40 - first floor"
+
+#~ msgid "Luned&igrave; - Venerd&igrave; (08:30 - 16:30)"
+#~ msgstr "From Monday to Friday (8.30 am - 4.30 pm)"

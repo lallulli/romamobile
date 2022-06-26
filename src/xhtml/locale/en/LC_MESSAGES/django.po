@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-11 19:02+0200\n"
+"PO-Revision-Date: 2021-08-11 19:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+
+#: middleware.py:220
+msgid "Il servizio temporaneamente non è attivo"
+msgstr "Service is temporarily inactive"
+
+#: middleware.py:266
+msgid "d/m/y H:i"
+msgstr "d/m/y H:i"
+
+#: templates/404.html:14
+msgid "La pagina che hai richiesto non esiste."
+msgstr "Page you are looking for does not exist"
+
+#: templates/404.html:15
+msgid ""
+"Se ti sei perso, usa il <a href='/percorso'>cerca percorso</a> per ritrovare "
+"la strada!"
+msgstr ""
+"If you got lost, you can use our <a href='/percorso'>route planner</a> to "
+"find your way!"
+
+#: templates/500.html:14 templates/problemi-tecnici.html:7
+msgid ""
+"Per problemi tecnici il servizio momentaneamente non &egrave; disponibile."
+msgstr "We apologize, service is temporarily unavailable."
+
+#: templates/500.html:15 templates/problemi-tecnici.html:8
+msgid "Ci scusiamo per il disagio e vi invitiamo a riprovare in seguito."
+msgstr "Please try later."
+
+#: templates/base.html:33 templates/base.html.py:51
+msgid "Roma mobile"
+msgstr "Roma mobile"
+
+#: templates/base.html:35
+msgid "App ufficiale"
+msgstr "Official app"
+
+#: templates/base.html:36 templates/base.html.py:37 templates/base.html:53
+#: templates/base.html.py:54 templates/base.html:55
+msgid "Gratis"
+msgstr "Free"
+
+#: templates/base.html:39 templates/base.html.py:57
+msgid "VEDI"
+msgstr "VIEW"
+
+#: templates/base.html:142
+msgid "Lo sapevi?"
+msgstr "Did you know?"
+
+#: templates/base.html:143
+msgid ""
+"\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\tIl <a href=\"https://code.skeed.it/romamobile\">progetto Roma "
+"mobile</a>, open source,\n"
+"\t\t\t\t\t\t\tè l'evoluzione della versione classica di Muoversi a Roma "
+"(muovi.roma.it).\n"
+"\t\t\t\t\t\t\tI dati sulla posizione degli autobus sono open data di\n"
+"\t\t\t\t\t\t\t<a href=\"https://romamobilita.it/it/tecnologie/open-data"
+"\">Roma\n"
+"\t\t\t\t\t\t\tservizi per la mobilit&agrave;</a>, agenzia della "
+"mobilit&agrave; di\n"
+"\t\t\t\t\t\t\t<a href=\"http://www.comune.roma.it\">Roma Capitale</a>.\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\tRoma mobile non &egrave; un servizio di Atac, Roma TPL, "
+"Trenitalia o di Roma servizi per la mobilit&agrave;.\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\tBus position data is an open data from\n"
+"\t\t\t\t\t\t\t<a href=\"http://muovi.roma.it\">Muoversi a Roma</a> (muovi."
+"roma.it),\n"
+"\t\t\t\t\t\t\ta real-time traffic information system from\n"
+"\t\t\t\t\t\t\t<a href=\"http://romamobilita.it/it/azienda/open-data/api-real-"
+"time\">Roma servizi per la mobilit&agrave;</a>,\n"
+"\t\t\t\t\t\t\ttransport autority of <a href=\"http://www.comune.roma.it"
+"\">Rome</a>.\n"
+"\t\t\t\t\t\t\tLicense: \n"
+"\t\t\t\t\t\t\t<a href=\"https://creativecommons.org/licenses/by/3.0/it/\">CC "
+"BY 3.0 IT</a>.\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\tRoma mobile is not a provided by Atac, Roma TPL, Trenitalia "
+"or Roma servizi per la mobilit&agrave;.\n"
+"\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t"
+
+#: templates/base.html:220
+msgid "Aggiorna"
+msgstr "Refresh"
+
+#: templates/base.html:221
+msgid "Indietro"
+msgstr "Back"
+
+#: templates/base.html:223
+msgid "Menu"
+msgstr "Home"
+
+#: templatetags/format_extras.py:34
+msgid "1 minuto"
+msgstr "1 minute"
+
+#: templatetags/format_extras.py:35
+#, python-format
+msgid "%d minuti"
+msgstr "%d minutes"
+
+#: templatetags/format_extras.py:41
+#, python-format
+msgid "meno di %.0f metri"
+msgstr "less than %.0f meters"
+
+#: templatetags/format_extras.py:43
+#, python-format
+msgid "%.1f km"
+msgstr "%.1f km"
+
+#: templatetags/format_extras.py:44
+#, python-format
+msgid "%.0f metri"
+msgstr "%.0f meters"
+
+#~ msgid ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\t\tI dati e i servizi di Roma mobile, compresi quelli in "
+#~ "tempo reale, sono\n"
+#~ "\t\t\t\t\t\t\t\t<a href=\"/info/dev\">accessibili mediante API</a>.\n"
+#~ "\t\t\t\t\t\t\t"
+#~ msgstr ""
+#~ "\n"
+#~ "Roma mobile data and real time services can be used through an <a href=\"/"
+#~ "info/dev\">API</a>."
+
+#~ msgid ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\t\tIl <a href=\"/percorso\">cerca percorso di Roma mobile</"
+#~ "a> funziona\n"
+#~ "\t\t\t\t\t\t\t\tcon i dati in tempo reale. Conosce la posizione degli "
+#~ "autobus e lo stato del traffico,\n"
+#~ "\t\t\t\t\t\t\t\te calcola, momento per momento, il percorso pi&ugrave; "
+#~ "conveniente\n"
+#~ "\t\t\t\t\t\t\t\tcon i mezzi Atac, Roma TPL, la metropolitana e le "
+#~ "ferrovie regionali.\n"
+#~ "\t\t\t\t\t\t\t"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\t<a href=\"/percorso\">Roma mobile journey planner</a> uses\n"
+#~ "\t\t\t\t\t\treal time data from GPS bus trackers, in order to determine "
+#~ "traffic status and waiting times at bus stops. Thus, it is able to find "
+#~ "the quickest route on board of Atac and Roma TPL buses, the underground "
+#~ "and urban railways.\t\t\t\t\t\t"
+
+#~ msgid ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\t\tRoma mobile &egrave; open source.\n"
+#~ "\t\t\t\t\t\t\t\t<a href=\"https://bitbucket.org/lallulli/muoversi-a-roma"
+#~ "\">Scarica il codice sorgente</a>\n"
+#~ "\t\t\t\t\t\t\t\te contribuisci anche tu allo sviluppo del sito mobile, "
+#~ "del cerca percorso, cerca linea e cerca luogo.\n"
+#~ "\t\t\t\t\t\t\t"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\tRoma mobile is open source.\n"
+#~ "\t\t\t\t\t\t\t<a href=\"htthttps://bitbucket.org/lallulli/muoversi-a-roma"
+#~ "\">Download our source code</a>\n"
+#~ "\t\t\t\t\t\t\tand contribute in developing our route planner and bus "
+#~ "finder services.\n"
+#~ "\t\t\t\t\t\t"
+
+#~ msgid "Muoversi a Roma"
+#~ msgstr "Muoversi a Roma"
+
+#~ msgid "App - Nuova Versione!"
+#~ msgstr "App - New version!"
+
+#~ msgid ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\t\tHai un sito web? Puoi <a href=\"http://www."
+#~ "agenziamobilita.roma.it/it/progetti/open-data/strumenti-per-i-webmaster."
+#~ "html\">incorporare\n"
+#~ "\t\t\t\t\t\t\t\tuna versione personalizzata</a> dei servizi di "
+#~ "infomobilit&agrave;\n"
+#~ "\t\t\t\t\t\t\t\tdi Muoversi a Roma: cerca percorso, cerca linea e cerca "
+#~ "luogo.\n"
+#~ "\t\t\t\t\t\t\t"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\tYou can <a href=\"http://www.agenziamobilita.roma.it/it/"
+#~ "progetti/open-data/strumenti-per-i-webmaster.html\">embed\n"
+#~ "\t\t\t\t\t\t\ta custom version</a> of Muoversi a Roma services in your "
+#~ "website.\n"
+#~ "\t\t\t\t\t\t"
+
+#~ msgid ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\t\tMuoversi a Roma &egrave; sviluppato da <a href=\"http://"
+#~ "www.agenziamobilita.roma.it\">Roma\n"
+#~ "\t\t\t\t\t\t\t\tservizi per la mobilit&agrave;</a>, l'Agenzia per la "
+#~ "Mobilit&agrave; di Roma Capitale.\n"
+#~ "\t\t\t\t\t\t\t\tCi trovi anche su <a href=\"http://muovi.roma.it/facebook"
+#~ "\">Facebook</a> e\n"
+#~ "\t\t\t\t\t\t\t\t<a href=\"http://muovi.roma.it/twitter\">Twitter</a>.\n"
+#~ "\t\t\t\t\t\t\t"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\tMuoversi a Roma is developed by <a href=\"http://www."
+#~ "agenziamobilita.roma.it\">Roma\n"
+#~ "\t\t\t\t\t\t\tservizi per la mobilit&agrave;</a>, the Mobility Agency of "
+#~ "Rome.\n"
+#~ "\t\t\t\t\t\t\tFind us on <a href=\"http://muovi.roma.it/facebook"
+#~ "\">Facebook</a> and\n"
+#~ "\t\t\t\t\t\t\t<a href=\"http://muovi.roma.it/twitter\">Twitter</a>.\n"
+#~ "\t\t\t\t\t\t"
+
+#~ msgid "l j F - H:i"
+#~ msgstr "l j F - h:i A"

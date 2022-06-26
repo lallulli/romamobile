@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+
+<h2>{% blocktrans with l=linea.id_linea %}Linea {{ l }}: seleziona un percorso{% endblocktrans %}</h2>
+{% if not linea.monitorata %}
+	
+	<p><span class="b">{% blocktrans with l=linea.id_linea %}Siamo spiacenti, la linea {{ l }} non &egrave; monitorata.{% endblocktrans %}</span><br />
+	{% trans "In ogni caso ecco i percorsi:" %}</p>
+	
+{% endif %}
+{% if not abilitata %}
+	
+	<p><span class="b">{% blocktrans with l=linea.id_linea %}Siamo spiacenti, il servizio temporaneamente non &egrave; disponibile per la linea {{ l }}.{% endblocktrans %}</span>
+	{% if news %}
+		(<a href="{% hist %}/news/dettaglio/{{ news.prima_categoria.id_categoria }}/{{ news.id_news }}{% endhist %}">Motivazione</a>)
+	{% endif %}	
+	<br />
+	{% trans "In ogni caso ecco i percorsi:" %}</p>
+	
+{% endif %}
+<p>
+	{% for p in percorsi %}
+		<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" /><a href='{% hist %}/paline/percorso/{{ p.id_percorso }}{% endhist %}'>{% if p.decodeCarteggio %}{{ p.decodeCarteggio }} {% endif %}{% blocktrans with dest=p.arrivo.nome_ricapitalizzato %}Direz. {{ dest }}{% endblocktrans %}</a><br />
+	{% endfor %}
+</p>
+<p>
+	{% blocktrans with l=linea.id_linea g=linea.gestore.nome %}La linea {{ l }} &egrave; gestita da {{ g }}.{% endblocktrans %}
+</p>
+
+{% endblock %}
+

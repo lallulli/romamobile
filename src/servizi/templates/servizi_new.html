@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block NavigationTop %}
+{% endblock %}
+
+{% block InternalStyle %}
+	{% if mar_style_transition %}
+		<style>
+			@keyframes mar_transition {
+			0% {
+					background-color: #13985F;
+					color: #ffffff;
+			}
+			64% {
+					background-color: #13985F;
+					color: #ffffff;
+			}
+			100% {
+					background-color: #FFFFFF;
+					color: #000000;
+			}
+		}
+		@keyframes mar_transition_h1 {
+			0% {
+				color: white;
+				background-color: #861128;
+			}
+			64% {
+				color: white;
+				background-color: #861128;
+			}
+			100% {
+				background-color: #f84f00;
+				color: white;
+			}
+		}
+		@keyframes mar_transition_h2 {
+			0% {
+				color: #8e001c;
+				background-color: white;
+				filter: alpha(opacity=70);
+				opacity: .7;
+			}
+			64% {
+				color: #8e001c;
+				background-color: white;
+				filter: alpha(opacity=70);
+				opacity: .7;
+			}
+			100% {
+				color: #ffffff;
+				background-color: #888888;
+				filter: alpha(opacity=70);
+				opacity: .7;
+			}
+		}
+		@keyframes mar_transition_a {
+			0% {
+				color: #FFFFFF;
+			}
+			64% {
+				color: #FFFFFF;
+			}
+			100% {
+				color: #f84f00;;
+			}
+		}
+
+
+		body, #main {
+			animation: 10s ease-out 0s 1 mar_transition;
+		}
+		h1 {
+			animation: 10s ease-out 0s 1 mar_transition_h1;
+		}
+		h2 {
+			animation: 10s ease-out 0s 1 mar_transition_h2;
+		}
+		.menulink, a {
+			animation: 10s ease-out 0s 1 mar_transition_a;
+		}
+		</style>
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<div class="right-head">
+		{% if not request.user|in_group:"readonly" %}
+			<a href="/webapp">{% trans "Web App" %}</a> - <a href="/redirect/forum">Forum</a>
+			{% if False %} |
+				{% if not request.user.is_authenticated %}
+					<a href="http://login.muoversiaroma.it/Login.aspx?IdSito={{ id_sito }}">{% trans "Accedi" %}</a>
+				{% else %}
+					{% blocktrans with nome=request.user.first_name %}
+						<a href="http://login.muoversiaroma.it/GestioneAccount.aspx?IdSito={{ id_sito }}">{{ nome }}</a> (<a href="/servizi/logout">Logout</a>)
+					{% endblocktrans %}
+				{% endif %}
+				{% if request.lingua.codice == 'it' %}
+				| <a href="{% hist %}/novita{% endhist %}">Ultime novit&agrave;</a>
+				{% endif %}
+			{% endif %}
+		{% endif %}
+	</div>
+	
+	<h2 class="vskip">{% trans "Tempi di attesa bus e calcola percorso" %}</h2>
+	<form id="cerca" method="get" {{ formaction }}>
+		<p>
+			<span class="b">{% trans "Sono qui" %}</span> ({% trans "indirizzo, fermata o linea" %}):<br />
+			{{ form.start_address }}<br />
+			{% if False %}{{ form.start_fav }}{% endif %}
+		<p>
+		<p>
+			<span class="b">{% trans "Vado qui" %}</span> ({% trans "facoltativo" %}):<br />
+			{{ form.stop_address }}<br />
+			{% if False %}{{ form.stop_fav }}{% endif %}
+		</p>
+		<p class="vskip">
+			<input type="submit" name="Submit" value="{% trans "Cerca" %}" />
+			<input type="submit" name="SubmitMap" value="{% trans "Mappa" %}" />
+		</p>
+		{% formhist %}
+	</form>
+	
+	<h2 class="vskip">{% trans "Servizi in tempo reale" %}</h2>
+	{% for i in servizi_pubblico %}
+		{% if not i.get_nascosto %}
+			<div class="menuitem">
+			{% if i.get_attivo %}
+				<a class="nound" href="{% hist %}/{{ i.nome }}/{% endhist %}">
+				<img class="icon" height="24" width="24" src="{{ i.nome }}/s/img/icon.png" alt="*" />
+				<span class="menulink">{{ i.descrizione }}</span></a>
+			{% else %}
+				<img class="icon" height="24" width="24" src="{{ i.nome }}/s/img/icon.png" alt="*" />
+				<span class="i middle">{{ i.descrizione }}</span>
+			{% endif %}
+			</div>				
+		{% endif %}
+	{% endfor %}
+	{% for i in servizi_privato %}
+		{% if not i.get_nascosto %}
+			<div class="menuitem">
+			{% if i.get_attivo %}
+				<a class="nound" href="{% hist %}/{{ i.nome }}/{% endhist %}">
+				<img class="icon" height="24" width="24" src="{{ i.nome }}/s/img/icon.png" alt="*" />
+				<span class="menulink">{{ i.descrizione }}</span></a>
+			{% else %}
+				<img class="icon" height="24" width="24" src="{{ i.nome }}/s/img/icon.png" alt="*" />
+				<span class="i middle">{{ i.descrizione }}</span>
+			{% endif %}
+			</div>				
+		{% endif %}
+	{% endfor %}
+	{% for i in servizi_altro %}
+		{% if not i.get_nascosto %}
+			<div class="menuitem">
+			{% if i.get_attivo %}
+				<a class="nound" href="{% hist %}/{{ i.nome }}/{% endhist %}">
+				<img class="icon" height="24" width="24" src="{{ i.nome }}/s/img/icon.png" alt="*" />
+				<span class="menulink">{{ i.descrizione }}</span></a>
+			{% else %}
+				<img class="icon" height="24" width="24" src="{{ i.nome }}/s/img/icon.png" alt="*" />
+				<span class="i middle">{{ i.descrizione }}</span>
+			{% endif %}
+			</div>				
+		{% endif %}
+	{% endfor %}
+
+{% endblock %}
+
+{% block NavigationBottom %}
+{% endblock %}

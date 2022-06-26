@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block NavigationTop %}
+{% endblock %}
+
+{% block content %}
+	<p>
+		{% blocktrans with id_sito=id_sito %}
+			Per visualizzare la pagina richiesta &egrave; necessario <a href="http://login.muoversiaroma.it/GestioneAccount.aspx?IdSito={{ id_sito }}">autenticarsi</a>.
+		{% endblocktrans %}
+	</p>
+{% endblock %}

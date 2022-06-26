@@ -1,0 +1,24 @@
+# nodi
+1,NodoPalinaAttesa
+2,NodoFermata
+6,NodoLuogo
+8,NodoInterscambio
+11,NodoTomTom
+14,NodoCarPooling
+17,NodoGeocoder
+
+# archi
+3,ArcoAttesaX
+4,ArcoDiscesaX
+5,ArcoPercorrenzaX
+12,ArcoTomTom
+13,ArcoCarPooling
+15,ArcoCarPoolingSalita
+16,ArcoGeocoder
+17,ArcoCarPoolingDiscesa
+20,ArcoAttesaMetroInterscambio
+21,ArcoAttesaInterscambio
+22,ArcoDiscesaInterscambio
+97,ArcoAttesaTeletrasporto
+98,ArcoDiscesaTeletrasporto
+99,ArcoPercorrenzaTeletrasporto

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block InternalStyle %}
+<style type="text/css">
+.hlform {
+	background-color: #D2B0B6;
+}
+.nound {
+	text-decoration:none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<h2 class="vskip">{% trans "Modifiche straordinarie" %}</h2>
+
+{% for m in mods %}
+
+	<h3>{{m.data}} - {{ m.toponimo }}</h3>
+
+		{% for f in m.fasce %}
+				
+			{% if f.attiva %}
+				<p>
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" /><span>
+						{% if f.inizio_ieri %}
+							{% blocktrans with ora_inizio=f.ora_inizio %}Dalle {{ ora_inizio  }} di ieri{% endblocktrans %}
+						{% else %}
+							{% blocktrans with ora_inizio=f.ora_inizio %}Dalle {{ ora_inizio  }}{% endblocktrans %}
+						{% endif %}
+						{% if f.fine_domani %}
+							{% blocktrans with ora_fine=f.ora_fine %}alle {{ ora_fine }} di domani{% endblocktrans %}
+						{% else %}
+							{% blocktrans with ora_fine=f.ora_fine %}alle {{ ora_fine }}{% endblocktrans %}
+						{% endif %}								
+						{% if o.modificato %}(*){% endif %}
+						</span>
+				</p>
+			{% else %}
+				<p>
+					<img class="dot" src="/xhtml/s/img/red_bullet.gif" height="5" width="13" alt="*" /><span>{% trans "Non attiva" %}</span>
+				</p>
+			{% endif %}
+		{% endfor %}
+
+	
+{% endfor %}
+
+<p class="vskip">
+
+
+<h2 class="vskip">{% trans "Orari giornalieri:" %}</h2>
+<p>
+{% for g in gs %}
+&raquo; <a href="{% hist %}/ztl/giorno/{{g.codice}}/{% endhist %}">{{ g.nome|capfirst }}</a><br />
+{% endfor %}
+</p>
+
+<h2 class="vskip">{% trans "ZTL - orari e varchi:" %}</h2>
+<p>
+{% for z in ztl %}
+&raquo; <a href="{% hist %}/ztl/ztl/{{z.codice}}/{% endhist %}">{{ z.descrizione }}</a><br />
+{% endfor %}
+</p>
+
+{% endblock %}

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="569.13007"
+   width="569.13007"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   sodipodi:version="0.32"
+   viewBox="0 0 569.13006 569.13009"
+   sodipodi:docname="september.svg"
+   id="svg4580">
+  <defs
+     id="defs4582">
+    <filter
+       inkscape:collect="always"
+       id="filter5692">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="6.8999998"
+         id="feGaussianBlur5694" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       x1="218.57001"
+       y1="604.53003"
+       gradientTransform="matrix(1.4821111,0,0,1.4821111,69.605773,-291.7628)"
+       x2="218.57001"
+       gradientUnits="userSpaceOnUse"
+       y2="762.35999"
+       id="linearGradient5724">
+      <stop
+         offset="0"
+         style="stop-color:#dcdcdc"
+         id="stop5578" />
+      <stop
+         offset="1"
+         style="stop-color:#ffffff"
+         id="stop5580" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       x1="216.42999"
+       y1="426.66"
+       gradientTransform="matrix(1.4821111,0,0,1.4821111,69.605773,-291.7628)"
+       x2="216.42999"
+       gradientUnits="userSpaceOnUse"
+       y2="359.35001"
+       id="linearGradient5726">
+      <stop
+         offset="0"
+         style="stop-color:#000000"
+         id="stop5568" />
+      <stop
+         offset=".25"
+         style="stop-color:#d00000"
+         id="stop5574" />
+      <stop
+         offset="1"
+         style="stop-color:#ffffff"
+         id="stop5570" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(30.39682,0,0,30.39682,-6879.3904,-15134.453)"
+       inkscape:collect="always"
+       x1="239.47"
+       y1="517.53998"
+       x2="239.47"
+       gradientUnits="userSpaceOnUse"
+       y2="523.15002"
+       id="linearGradient5728">
+      <stop
+         offset="0"
+         style="stop-color:#000000"
+         id="stop5698" />
+      <stop
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0"
+         id="stop5700" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0"
+     inkscape:document-units="px"
+     inkscape:pageopacity="0.0"
+     inkscape:window-width="1920"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:cy="281.14701"
+     inkscape:cx="275.93289"
+     inkscape:current-layer="layer1"
+     borderopacity="1.0"
+     showgrid="false"
+     borderlayer="true"
+     objecttolerance="10"
+     inkscape:zoom="1.196189"
+     inkscape:window-height="1011"
+     gridtolerance="10000"
+     pagecolor="#ffffff"
+     guidetolerance="10"
+     inkscape:pageshadow="2"
+     bordercolor="#666666"
+     id="base" />
+  <g
+     transform="translate(-72.012572,-196.03268)"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     id="layer1">
+    <rect
+       x="230.72"
+       y="508.78"
+       width="197.14"
+       height="197.14"
+       ry="19.530001"
+       rx="19.530001"
+       transform="matrix(2.4057778,0,0,2.4057778,-435.62098,-980.55144)"
+       style="fill:#696969;filter:url(#filter5692)"
+       id="rect5642" />
+    <rect
+       id="rect4588"
+       style="fill:url(#linearGradient5724);stroke-width:1.9529"
+       rx="46.982765"
+       ry="46.982765"
+       height="474.28021"
+       width="474.28021"
+       y="243.44597"
+       x="119.43661" />
+    <path
+       id="rect4590"
+       style="fill:url(#linearGradient5726);stroke-width:1.9529"
+       d="m 166.40374,243.44598 c -26.03209,0 -46.96713,20.99363 -46.96713,47.0062 v 25.01659 h 474.28022 v -25.01659 c 0,-26.01257 -20.99363,-47.0062 -47.02573,-47.0062 z" />
+    <path
+       id="flowRoot5600"
+       style="fill:url(#linearGradient5728);stroke-width:30.3968"
+       d="m 273.75824,622.71025 v -48.93888 c 10.94286,5.16746 21.27778,8.81508 31.30873,11.55079 10.03095,2.43174 19.75793,3.64762 29.48491,3.64762 20.66984,0 36.47619,-5.7754 47.72301,-17.02222 11.55079,-11.24682 18.23809,-28.26904 20.36587,-50.45872 -8.20714,6.07936 -16.71825,10.33492 -25.8373,13.3746 -9.11904,3.03968 -19.14999,4.55952 -29.78888,4.55952 -27.35714,0 -49.24285,-7.90317 -65.9611,-24.01349 -16.71825,-15.80634 -24.92539,-36.47618 -24.92539,-62.61745 0,-28.57301 9.11905,-51.37062 27.96507,-68.69681 18.54206,-17.02222 43.46746,-25.8373 74.47221,-25.8373 34.65238,0 61.70555,11.85476 80.55158,35.26032 19.14999,23.40555 28.57301,56.23411 28.57301,99.09363 0,44.07539 -11.24683,78.42379 -33.43651,103.65315 -22.18967,24.9254 -52.58649,37.69206 -91.19046,37.69206 -12.46269,0 -24.31745,-0.9119 -35.86824,-2.73571 -11.24683,-1.82381 -22.49365,-4.55953 -33.43651,-8.51111 z M 358.2614,494.73964 c 12.15873,0 20.97381,-3.95159 27.05317,-11.5508 6.07937,-7.90317 9.11905,-19.45396 9.11905,-34.95634 0,-15.50238 -3.03968,-27.05317 -9.11905,-34.95634 -6.07936,-7.90318 -14.89444,-11.85476 -27.05317,-11.85476 -11.85476,0 -20.9738,3.95158 -27.05317,11.85476 -6.07936,7.90317 -9.11904,19.45396 -9.11904,34.95634 0,15.50238 3.03968,27.05317 9.11904,34.95634 6.07937,7.59921 15.19841,11.5508 27.05317,11.5508 z" />
+    <text
+       id="text52"
+       y="303.00208"
+       x="172.81433"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:63.1051px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999999"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.999999"
+         y="303.00208"
+         x="172.81433"
+         id="tspan50"
+         sodipodi:role="line">Settembre</tspan></text>
+  </g>
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Calendar Icon (Large)</dc:title>
+        <dc:date>2007-09-17T14:29:55</dc:date>
+        <dc:description />
+        <dc:source>https://openclipart.org/detail/5571/calendar-icon-(large)-by-jilagan</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>jilagan</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>calendar</rdf:li>
+            <rdf:li>day</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>time</rdf:li>
+            <rdf:li>week</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

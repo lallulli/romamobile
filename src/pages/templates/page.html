@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<div>
+	<h2>{{ page.title }}</h2>
+	{% if page.markdown %}
+		{{ page.cached_content | safe }}
+	{% else %}
+		{{ page.content | safe}}
+	{% endif %}
+{% endblock %}

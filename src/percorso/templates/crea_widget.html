@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load history %}
+
+{% block content %}
+<form id="path" method="get" {{ formaction }}>
+	<p>inserisci l'indirizzo del tuo locale <br/>{{form.indirizzo}}<br/>
+	<input type="submit" name="Submit" class="button" value="Trovaci"> </p>
+	<!--</div>-->
+{% endblock %}
