@@ -31,6 +31,7 @@ import cPickle as pickle
 import hashlib
 from django.core.cache import cache
 from contextlib import contextmanager
+import markdown
 import random
 
 
@@ -742,6 +743,26 @@ class DisabilitatoreRichiestaNotifica(DisabililtatoreConFasce):
 class FasciaRichiestaNotifica(FasciaValidita):
 	con_fasce = models.ForeignKey(RichiestaNotifica, related_name='fasce')
 
+
+class Messaggio(models.Model):
+	codice_lingua = models.CharField(max_length=6, default='it')
+	content = models.TextField(default='')
+	markdown = models.BooleanField(default=True, blank=True)
+	enabled = models.BooleanField(default=True, blank=True, db_index=True)
+	from_date = models.DateTimeField(blank=True, null=True, db_index=True)
+	to_date = models.DateTimeField(blank=True, null=True, db_index=True)
+	cached_content = models.TextField(default='', blank=True, editable=False)
+
+	def save(self, *args, **kwargs):
+		if self.markdown:
+			s = markdown.markdown(self.content, extensions=['extra']).strip('<p>').strip('</p>')
+			self.cached_content = s
+		else:
+			self.cached_content = self.content
+		super(Messaggio, self).save(*args, **kwargs)
+
+	def __unicode__(self):
+		return self.content
 
 # App
 

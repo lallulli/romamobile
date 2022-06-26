@@ -296,25 +296,41 @@ def servizi_new(request):
 		ctx['servizi_privato'] = [s for s in ServizioLingua.objects.filter(lingua=request.lingua, servizio__servizio__nome__in=servizi_privato).order_by('servizio__ordine') if s.servizio.servizio.utente_abilitato(request.user)]
 		ctx['servizi_altro'] = [s for s in ServizioLingua.objects.filter(lingua=request.lingua, servizio__servizio__nome__in=servizi_altro).order_by('servizio__ordine') if s.servizio.servizio.utente_abilitato(request.user)]
 
-		# News in prima pagina
-		ns = news.News.objects.filter(primo_piano=True, codice_lingua=request.lingua.codice)
-		us = []
-		for n in ns:
-			us.append({
-				'link': '/news/dettaglio/%d/%d' % (n.prima_categoria().id_categoria,  n.id_news),
-				'messaggio': n.titolo,
-			})
-
-		# Altri messaggi (custom)
-		# if request.lingua.codice == 'en':
-		# 	us.append({
-		# 		'link': '/info/strike-en',
-		# 		'messaggio': u'Regular public transport service on Thursday 28',
-		# 	})
-
-		request.ctx['notifiche'].extend(us)
-
 		cache.set('servizi-menu-%s' % request.lingua, ctx, 60)
+
+	us = []
+
+	# News in prima pagina
+	# ns = news.News.objects.filter(primo_piano=True, codice_lingua=request.lingua.codice)
+	# for n in ns:
+	# 	us.append({
+	# 		'link': '/news/dettaglio/%d/%d' % (n.prima_categoria().id_categoria,  n.id_news),
+	# 		'messaggio': n.titolo,
+	# 	})
+
+	now = datetime.datetime.now()
+
+	ms = Messaggio.objects.filter(
+		Q(from_date=None) | Q(from_date__lte=now),
+		Q(to_date=None) | Q(to_date__gte=now),
+		enabled=True,
+		codice_lingua=request.lingua.codice,
+	)
+
+	for m in ms:
+		us.append({
+			'messaggio': mark_safe(m.cached_content),
+		})
+
+	# # Altri messaggi (custom)
+	# if request.lingua.codice == 'it':
+	# 	us.append({
+	# 		'link': '/info/strike-en',
+	# 		'messaggio': u'Regular public transport service on Thursday 28',
+	# 	})
+
+	request.ctx['notifiche'].extend(us)
+
 
 	# Percorsi salvati
 	try:
