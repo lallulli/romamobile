@@ -96,6 +96,8 @@ DATABASE_APPS_MAPPING = {
 	'lingua': 'servizi',
 	'log_servizi': 'default',
 	'mercury': 'default',
+	'meteo': 'default',
+	'metro': 'default',
 	'news': 'default',
 	'paline': 'default',
 	'parcheggi': 'default',
@@ -250,6 +252,7 @@ WS_APPS = [
 XHTML_APPS = [
 	'carpooling',
 	'lingua',
+	'meteo',
 	'metro',
 	'news',
 	'paline',
