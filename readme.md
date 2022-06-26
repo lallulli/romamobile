@@ -16,12 +16,13 @@ The main input of Roma mobile consists of several GTFS feeds:
 
 Roma mobile has been forked from the open source project _Muoversi a Roma_ (formely _Atac mobile_), which used to be developed by [Roma servizi per la mobilità](https://romamobilita.it).
 
-
 ## Running a development server
 
 __Requirements:__ Docker and Docker Compose V2.
 
-__Warning:__ currently the dockerized environment for Roma mobile is only suitable for development purpose. 
+__Warning 1:__ currently the dockerized environment for Roma mobile is only suitable for development purpose.
+
+__Warning 2:__ currently the dockerized environment does not build the javascript app 
 
 Start and init your database:
 
