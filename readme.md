@@ -39,12 +39,6 @@ You will be prompted to create a superuser account. Create one if you wish to ac
 docker compose run giano python manage.py loaddata servizi mercury paline carteggi aree
 ```
 
-Download the graph of the streets of Rome, based on OpenStreetMap:
-
-```
-TODO
-```
-
 Load public transport network; this command will take several minutes 
 
 ```bash
@@ -57,4 +51,4 @@ All done! We are now ready to start the full application stack:
 docker compose up -d
 ```
 
-You can visit the home page at [http://localhost:8000](http://localhost:8000).  After some seconds, you will be able to use services (bus waiting times, route planner).
+You can visit the home page at [http://localhost:8000](http://localhost:8000).  After a minute, you will be able to use services (bus waiting times, route planner).
