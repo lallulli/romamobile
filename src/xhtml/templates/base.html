@@ -22,43 +22,45 @@
 		<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700&display=swap" rel="stylesheet">
 		{% block InternalStyle %}
 		{% endblock %}{% block fullscript %}{% endblock %}
-		{% if False and platform == 'iOS' %}
-			<link rel="stylesheet" href="/xhtml/s/sb/sb.css" type="text/css" media="screen">
-			<meta name="google-play-app" content="app-id=it.skeed.romamobile">
-			<meta name="apple-itunes-app" content="app-id=820255342">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-			<script src="/xhtml/s/sb/sb.js"></script>
-			<script type="text/javascript">
-				$(function () { $.smartbanner({
-					title: '{% trans "Roma mobile" %}',
-					author: 'Roma mobile',
-					price: '{% trans "App ufficiale" %}',
-					inAppStore: '{% trans "Gratis" %}',
-					inGooglePlay: '{% trans "Gratis" %}',
-					icon: '/xhtml/s/img/app.png',
-					button: '{% trans "VEDI" %}',
-					daysReminder: 0
-				})})
-			</script>
+		{% comment %}
+			{% if False and platform == 'iOS' %}
+				<link rel="stylesheet" href="/xhtml/s/sb/sb.css" type="text/css" media="screen">
+				<meta name="google-play-app" content="app-id=it.skeed.romamobile">
+				<meta name="apple-itunes-app" content="app-id=820255342">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+				<script src="/xhtml/s/sb/sb.js"></script>
+				<script type="text/javascript">
+					$(function () { $.smartbanner({
+						title: '{% trans "Roma mobile" %}',
+						author: 'Roma mobile',
+						price: '{% trans "App ufficiale" %}',
+						inAppStore: '{% trans "Gratis" %}',
+						inGooglePlay: '{% trans "Gratis" %}',
+						icon: '/xhtml/s/img/app.png',
+						button: '{% trans "VEDI" %}',
+						daysReminder: 0
+					})})
+				</script>
+			{% endif %}
+			{% if not mar_style_transition and platform == 'Android' %}
+				<link rel="stylesheet" href="/xhtml/s/sb/sb.css" type="text/css" media="screen">
+				<meta name="google-play-app" content="app-id=it.skeed.romamobile">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+				<script src="/xhtml/s/sb/sb.js"></script>
+				<script type="text/javascript">
+					$(function () { $.smartbanner({
+						title: '{% trans "Roma mobile" %}',
+						author: 'App originale',
+						price: '{% trans "Gratis" %}',
+						inAppStore: '{% trans "Gratis" %}',
+						// inGooglePlay: '{% trans "Gratis" %}',
+						icon: '/xhtml/s/img/app.png',
+						button: '{% trans "VEDI" %}',
+						daysReminder: 0
+					})})
+				</script>
 		{% endif %}
-		{% if not mar_style_transition and platform == 'Android' %}
-			<link rel="stylesheet" href="/xhtml/s/sb/sb.css" type="text/css" media="screen">
-			<meta name="google-play-app" content="app-id=it.skeed.romamobile">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-			<script src="/xhtml/s/sb/sb.js"></script>
-			<script type="text/javascript">
-				$(function () { $.smartbanner({
-					title: '{% trans "Roma mobile" %}',
-					author: 'App originale',
-					price: '{% trans "Gratis" %}',
-					inAppStore: '{% trans "Gratis" %}',
-					// inGooglePlay: '{% trans "Gratis" %}',
-					icon: '/xhtml/s/img/app.png',
-					button: '{% trans "VEDI" %}',
-					daysReminder: 0
-				})})
-			</script>
-		{% endif %}
+		{%  endcomment %}
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
         window.cookieconsent_options = {"message":"Utilizziamo i cookie per migliorare il nostro sito e la vostra esperienza di navigazione. Continuando a navigare sul nostro sito accettate la nostra politica sui cookie.","dismiss":"OK","learnMore":"Maggiori informazioni","link":"/info/info-cookies","theme":"dark-bottom"};
