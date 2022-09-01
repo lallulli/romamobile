@@ -255,6 +255,7 @@ XHTML_APPS = [
 	'meteo',
 	'metro',
 	'news',
+	'pages',
 	'paline',
 	'parcheggi',
 	'percorso',
