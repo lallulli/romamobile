@@ -39,7 +39,14 @@ MAX_BACKING = 1000
 class FVPath(object):
 	def __init__(self):
 		object.__init__(self)
+		# Map vehicle id's to list of raw vehicle data
+		# It is a list of tuples (timestamp, distance)
 		self.raw = {}
+		# List of speed samples, where each sample has the following form:
+		# (time, central_distance, speed, vehicle_id, delta_t)
+		# central_distance: distance (from final destination) of middle point of segment where speed is computed
+		# speed: in m/s
+		# delta_t: temporal width where speed is computed
 		self.speed = []
 		
 	def add(self, id, time, place):
@@ -76,7 +83,7 @@ class FVPath(object):
 				if old is not None:
 					dt = float((new[0] - old[0]).seconds)
 					dd = old[1] - new[1]
-					if dt > 0 and dd >= 0:
+					if new[0] >= old[0] and dd >= 0:
 						speed = dd / dt
 						if speed < SPEED_LIMIT:
 							self.speed.append((new[0], (new[1] + old[1]) / 2.0, speed, id, dt))
