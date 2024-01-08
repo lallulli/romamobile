@@ -74,6 +74,7 @@ pattern_list = [
 	),
 	url(r'^xhtml/ga$', google_analytics),
 	url(r'^ws/xml/lingue/', include('lingua.wsurls')), # Workaround temporaneo
+	url(r'^telegram_channel/', include('telegram_channel.urls')),
 ] + [
 	url(r'^%s/s/(?P<path>.*)$' % x, 'django.views.static.serve',
 		{'document_root': os.path.join(os.path.dirname(__file__), '%s/static' % x).replace('\\','/')}) for x in settings.LOCAL_APPS

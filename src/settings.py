@@ -105,6 +105,7 @@ DATABASE_APPS_MAPPING = {
 	'redirect': 'default',
 	'risorse': 'default',
 	'servizi': 'default',
+	'telegram_channel': 'default',
 	'xhtml': 'default',
 	'ztl': 'default',
 }
@@ -272,6 +273,7 @@ AUX_APPS = [
 	'gis',
 	'mercury',
 	'servizi',
+	'telegram_channel',
 ]
 
 LOCAL_APPS = list(set(AUX_APPS + WS_APPS + XHTML_APPS))
