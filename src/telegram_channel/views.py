@@ -18,11 +18,14 @@
 #    Roma mobile. If not, see http://www.gnu.org/licenses/.
 #
 
-
-from .models import Channel, process_message
 import json
 
+from django.views.decorators.csrf import csrf_exempt
 
+from .models import Channel, process_message
+
+
+@csrf_exempt
 def webhook(request, channel_name):
     c = Channel.objects.get(channel_name=channel_name)
     assert request.META.get('HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN') == c.bot_webhook_token

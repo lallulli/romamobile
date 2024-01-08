@@ -27,7 +27,6 @@ import requests
 from django.utils.html import linebreaks
 
 
-
 class Channel(models.Model):
     channel_name = models.CharField(max_length=127, unique=True)
     bot_name = models.CharField(max_length=127, unique=True)
