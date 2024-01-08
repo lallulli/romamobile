@@ -20,6 +20,7 @@
 
 import json
 
+from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from .models import Channel, process_message
@@ -40,3 +41,4 @@ def webhook(request, channel_name):
 
     c.last_update_id = max(c.last_update_id, u['update_id'])
     c.save()
+    return HttpResponse('OK')
