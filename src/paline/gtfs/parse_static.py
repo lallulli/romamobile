@@ -151,10 +151,13 @@ class Trip(object):
 		self.departure_mm = utils.MinMaxValueData()
 
 	def sort_stop_times(self):
+		if self.departure_mm.value is None:
+			return False
 		a = list(self.stop_times.items())
 		a.sort()
 		self.stop_time_seq = [x[1] for x in a]
 		self.departure = self.departure_mm.data['dep_time']
+		return True
 
 	def __unicode__(self):
 		return "Trip {}".format(self.id)
@@ -563,8 +566,13 @@ def build_network_structure(path, from_date=None):
 		r.finalize_shapes_and_stops(net)
 
 	print("Sorting stop times")
-	for t in net.trips.values():
-		t.sort_stop_times()
+	delete_tids = []
+	for tid, t in net.trips.items():
+		if not t.sort_stop_times():
+			delete_tids.append(tid)
+
+	for tid in delete_tids:
+		del net.trips[tid]
 
 	# print("Sorting stops")
 	# for r in net.routes.values():
