@@ -119,7 +119,7 @@ CACHES = {
 	}
 }
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_ENGINE = 'xhtml.cookie_then_store_session'
 
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 
