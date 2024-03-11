@@ -297,6 +297,8 @@ def messaggio(request, msg):
 	return TemplateResponse(request, 'messaggio.html', {'msg': msg})
 
 def modifica_url_con_storia(request, url, offset=1):
+	if 'history' not in request.session:
+		return url
 	url = url.split('#')
 	pre = url[0]
 	post = "#" + url[1] if len(url) > 1 else ''
