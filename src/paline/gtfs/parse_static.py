@@ -456,24 +456,26 @@ def build_network_structure(path, from_date=None):
 
 	# 1. Load services
 	print("Loading services")
-	with open(os.path.join(path, 'calendar.txt')) as f:
-		r = csv.DictReader(f, delimiter=',', lineterminator='\n')
-		for row in r:
-			sid = row['service_id']
-			net.services[sid] = Service(
-				sid,
-				datetime.strptime(row['start_date'], "%Y%m%d"),
-				datetime.strptime(row['end_date'], "%Y%m%d"),
-				[
-					row['monday'] == '1',
-					row['tuesday'] == '1',
-					row['wednesday'] == '1',
-					row['thursday'] == '1',
-					row['friday'] == '1',
-					row['saturday'] == '1',
-					row['sunday'] == '1',
-				],
-			)
+	calendar_file = os.path.join(path, 'calendar.txt')
+	if os.path.exists(calendar_file):
+		with open(calendar_file) as f:
+			r = csv.DictReader(f, delimiter=',', lineterminator='\n')
+			for row in r:
+				sid = row['service_id']
+				net.services[sid] = Service(
+					sid,
+					datetime.strptime(row['start_date'], "%Y%m%d"),
+					datetime.strptime(row['end_date'], "%Y%m%d"),
+					[
+						row['monday'] == '1',
+						row['tuesday'] == '1',
+						row['wednesday'] == '1',
+						row['thursday'] == '1',
+						row['friday'] == '1',
+						row['saturday'] == '1',
+						row['sunday'] == '1',
+					],
+				)
 
 	print("Loading service exceptions")
 	no_days = [False] * 7
