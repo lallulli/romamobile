@@ -867,7 +867,8 @@ def format_indicazioni_icona_tratto_bus(tratto, ft, opz, posizione):
 		mezzo = 'M'
 		icona = 'metro'
 		tipo = 'S'
-		linea_short = tratto.descrizione_percorso.split(' ')[1]
+		if tratto.descrizione_percorso is not None and tratto.descrizione_percorso != '':
+			linea_short = tratto.descrizione_percorso
 	elif isinstance(tratto, TrattoBus):
 		mezzo = 'B'
 		icona = 'bus'

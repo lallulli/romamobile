@@ -496,7 +496,11 @@ def build_network_structure(path, from_date=None):
 			rid = row['route_id']
 			name = row['route_short_name']
 			operator = net.operators[row['agency_id']]
-			net.lines[rid] = Line(rid, name, row['route_type'], operator, row['route_long_name'])
+			try:
+				desc = DescrizioneLinea.objects.get(id_linea=rid).descrizione
+			except:
+				desc = row['route_long_name']
+			net.lines[rid] = Line(rid, name, row['route_type'], operator, desc)
 
 	print("Loading trips")
 	with open(os.path.join(path, 'trips.txt')) as f:

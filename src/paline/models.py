@@ -428,7 +428,6 @@ class Palina(VersionatoPaline, Disabilitabile):
 
 		return ret
 
-	
 	def getVeicoliFiltraPerLinea(self, id_linea, caching=False):
 		vs = self.getVeicoli(caching=caching)
 
@@ -465,6 +464,14 @@ class Palina(VersionatoPaline, Disabilitabile):
 
 class DisabilitazionePercorso(Disabilitazione):
 	id_percorso = models.CharField(max_length=30, db_index=True)
+
+
+class DescrizioneLinea(models.Model):
+	id_linea = models.CharField(max_length=30, db_index=True)
+	descrizione = models.CharField(max_length=150)
+
+	def __str__(self):
+		return u"%s: %s" % (self.id_linea, self.descrizione)
 
 
 class NomePalina(VersionatoPaline):

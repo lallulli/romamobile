@@ -31,4 +31,4 @@ admin.site.register(LineaSospesa)
 admin.site.register(FermataSospesa)
 admin.site.register(ArcoRimosso)
 admin.site.register(LogAvm)
-
+admin.site.register(DescrizioneLinea)
