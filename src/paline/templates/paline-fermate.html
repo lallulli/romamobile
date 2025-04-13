@@ -183,11 +183,7 @@
 			<tr class="top">
 			<td>
 				<a {% if percorso == p %}span class="selezionata" {% endif %}href='{% hist %}/paline/percorso/{{ p.id_percorso }}{% endhist %}'><span class="linea{% if percorso == p %} selezionata{% endif %}">
-					{% if p.descrizione %}
-						{{ p.descrizione }}
-					{% else %}
-						{{ p.linea.id_linea }}
-					{% endif %}
+					{{ p.linea.id_linea }}
 				</span>
 				</a>
 			</td><td><a class="noa{% if percorso == p %} selezionata{% endif %}" href='{% hist %}/paline/percorso/{{ p.id_percorso }}{% endhist %}'>
