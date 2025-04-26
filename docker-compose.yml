@@ -20,7 +20,8 @@ services:
       - postgis
       - giano
     command: sh -c 'python manage.py wait_for_database &&
-              python manage.py runserver 0.0.0.0:8000'
+      cp -R /js/output /app/percorso/js/output &&
+      python manage.py runserver 0.0.0.0:8000'
     volumes:
       - "./src:/app"
       - "./src/paline/rete:/app/paline/rete/"

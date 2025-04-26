@@ -22,9 +22,7 @@ Roma mobile has been forked from the open source project _Muoversi a Roma_ (form
 
 __Requirements:__ Docker and Docker Compose V2.
 
-__Warning 1:__ currently the dockerized environment for Roma mobile is only suitable for development purpose.
-
-__Warning 2:__ currently the dockerized environment does not build the javascript app 
+__Warning:__ currently the dockerized environment for Roma mobile is only suitable for development purpose.
 
 Start and init your database:
 
