@@ -53,6 +53,7 @@ MERCURY_GIANO_PERCORSI = 'giano_percorsi'
 MERCURY_CL = 'cl'
 MERCURY_CPD = 'cpd'
 MERCURY_CARICA_RETE = 'carica_rete'
+MERCURY_DOCKER_PORT = 7834
 LOCAL_IP = secrets['giano']['local_ip']
 MERCURY_FILE_STORE_PATH = '/data/rete/store'
 

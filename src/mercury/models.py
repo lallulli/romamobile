@@ -392,19 +392,30 @@ class Watchdog(Thread):
 
 
 class Mercury(Thread):
-	def __init__(self, type, listener=None, nworkers=3, daemon=None, watchdog_daemon=None, persistent_connection=False):
+	def __init__(
+		self,
+		type,
+		listener=None,
+		nworkers=3,
+		daemon=None,
+		watchdog_daemon=None,
+		persistent_connection=False,
+		port=None,
+	):
 		Thread.__init__(self)
 		self.queue = Queue()
 		self.workers = [MercuryWorker(self) for i in range(nworkers)]
 		if not isinstance(type, PeerType):
 			type = PeerType.objects.get(name=type)
-		port = 0
-		if type.min_port is not None and type.max_port is not None:
-			ports = set(range(type.min_port, type.max_port + 1))
-			used_ports = set([p.port for p in Peer.objects.filter(type=type)])
-			avail_ports = ports - used_ports
-			r = random.Random()
-			port = r.choice(list(avail_ports))
+		if port is None:
+			if type.min_port is not None and type.max_port is not None:
+				ports = set(range(type.min_port, type.max_port + 1))
+				used_ports = set([p.port for p in Peer.objects.filter(type=type)])
+				avail_ports = ports - used_ports
+				r = random.Random()
+				port = r.choice(list(avail_ports))
+			else:
+				port = 0
 		self.type = type
 		self.listener = listener
 		if listener is not None:

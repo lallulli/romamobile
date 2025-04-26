@@ -64,7 +64,8 @@ class Command(BaseCommand):
 
 		print "Cerco demone " + name
 		giano = PeerType.objects.get(name=name)
-		giano_daemon = Daemon.get_process_daemon(name, 'in_docker' in commands)
+		in_docker = 'in_docker' in commands
+		giano_daemon = Daemon.get_process_daemon(name, in_docker)
 		print("Demone trovato")
 
 		Trovalinea = TrovalineaFactory(
@@ -78,8 +79,18 @@ class Command(BaseCommand):
 			daemon=giano_daemon,
 			tempo_reale_percorsi='tr_percorsi' in args,
 		)
-
-		m = Mercury(giano, Trovalinea, daemon=giano_daemon, watchdog_daemon=giano_daemon)
+		if in_docker:
+			Peer.objects.all().delete()
+			port = settings.MERCURY_DOCKER_PORT
+		else:
+			port = None
+		m = Mercury(
+			giano,
+			Trovalinea,
+			daemon=giano_daemon,
+			watchdog_daemon=giano_daemon,
+			port=port,
+		)
 		if not 'tr' in args:
 			try:
 				print "Richiedo serializzazione"
