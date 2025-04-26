@@ -1,5 +1,3 @@
-version: "3.7"
-
 services:
   postgis:
     image: postgis/postgis:14-3.2-alpine
@@ -26,6 +24,7 @@ services:
     volumes:
       - "./src:/app"
       - "./src/paline/rete:/app/paline/rete/"
+      - "./src/static:/static"
     ports:
       - "8000:8000"
     secrets:
