@@ -1,6 +1,7 @@
 services:
   postgis:
     image: postgis/postgis:14-3.2-alpine
+    restart: always
     volumes:
       - db_data:/var/lib/postgresql/data
     environment:
@@ -15,6 +16,7 @@ services:
 
   web:
     image: romamobile
+    restart: always
     build: .
     depends_on:
       - postgis
@@ -34,6 +36,7 @@ services:
 
   giano:
     image: romamobile
+    restart: always
     build: .
     depends_on:
       - postgis
