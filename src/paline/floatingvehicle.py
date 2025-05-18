@@ -83,7 +83,7 @@ class FVPath(object):
 				if old is not None:
 					dt = float((new[0] - old[0]).seconds)
 					dd = old[1] - new[1]
-					if new[0] >= old[0] and dd >= 0:
+					if dt > 0 and dd >= 0:
 						speed = dd / dt
 						if speed < SPEED_LIMIT:
 							self.speed.append((new[0], (new[1] + old[1]) / 2.0, speed, id, dt))
