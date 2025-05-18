@@ -23,7 +23,7 @@ services:
       - giano
     command: sh -c 'python manage.py wait_for_database &&
       cp -R /js/output /app/percorso/js/output &&
-      python manage.py runserver 0.0.0.0:8000'
+      gunicorn --bind :8000 wsgi:application'
     volumes:
       - "./src:/app"
       - "./src/paline/rete:/app/paline/rete/"
